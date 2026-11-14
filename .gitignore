@@ -1,20 +1,28 @@
-# Public repository uses an explicit allowlist. Everything else stays local.
+# 公开仓库采用允许清单，其余文件默认留在本地。
 /*
 !/.gitignore
 !/README.md
 !/requirements.txt
 !/docs/
+!/.github/
 !/px4_rtl_land_validation/
 
 /docs/*
-!/docs/BASELINE.md
-!/docs/COLLABORATION.md
+!/docs/标准四旋翼验证.md
+!/docs/协作与资料交接.md
+!/docs/仓库阅读指南.md
+!/docs/实验复现说明.md
+
+/.github/*
+!/.github/ISSUE_TEMPLATE/
+/.github/ISSUE_TEMPLATE/*
+!/.github/ISSUE_TEMPLATE/团队反馈.md
 
 /px4_rtl_land_validation/*
 !/px4_rtl_land_validation/validate.py
 !/px4_rtl_land_validation/analyze.py
 
-# Defense in depth for source documents, CAD, CFD, logs and local environments.
+# 原始文档、CAD、气动工程、日志及本地环境继续排除。
 **/.venv/
 **/__pycache__/
 **/PX4-Autopilot/
