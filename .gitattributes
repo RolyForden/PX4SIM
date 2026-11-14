@@ -1,0 +1,4 @@
+# 保留原始 CAD 字节，避免把 CRLF 或几何数据当成代码差异。
+*.STEP binary
+*.stl binary
+*.doc binary
