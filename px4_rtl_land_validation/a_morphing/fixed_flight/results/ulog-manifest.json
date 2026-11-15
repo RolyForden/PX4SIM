@@ -1,5 +1,6 @@
 {
   "status": "uploaded to release a-uav-fixed-hv-2026-11-15",
+  "release": "https://github.com/RolyForden/PX4SIM/releases/tag/a-uav-fixed-hv-2026-11-15",
   "files": [
     {
       "mode": "X",
@@ -9,6 +10,20 @@
       "local_path": "candidate_flight/logs/rigid_20261115_135319.ulg"
     },
     {
+      "mode": "X",
+      "file": "rigid_20261115_141203.ulg",
+      "bytes": 13874886,
+      "sha256": "cd294ec86bf7051b64ede72ae6477ffbda3ef580a70a81089bc66b409ba01c84",
+      "local_path": "candidate_flight/logs/rigid_20261115_141203.ulg"
+    },
+    {
+      "mode": "X",
+      "file": "rigid_20261115_141524.ulg",
+      "bytes": 14033179,
+      "sha256": "1c3c54fb80a29cc0c28bf9b96e29780db04f2319cd7069ae0cff4c9c0b045d21",
+      "local_path": "candidate_flight/logs/rigid_20261115_141524.ulg"
+    },
+    {
       "mode": "H10",
       "file": "fixed_h10_20261115_135506.ulg",
       "bytes": 15729893,
@@ -16,12 +31,39 @@
       "local_path": "a_morphing/fixed_flight/logs/fixed_h10_20261115_135506.ulg"
     },
     {
+      "mode": "H10",
+      "file": "fixed_h_20261115_141310.ulg",
+      "bytes": 14142016,
+      "sha256": "55ecf89d1bb4398590e0a46879155c22aca69927b43b744cbf12d87653d85269",
+      "local_path": "a_morphing/fixed_flight/logs/fixed_h_20261115_141310.ulg"
+    },
+    {
+      "mode": "H10",
+      "file": "fixed_h_20261115_141631.ulg",
+      "bytes": 14136827,
+      "sha256": "58532926408684931db30f70415855f3fc6eb37293e0203adc7292688b8bcb6d",
+      "local_path": "a_morphing/fixed_flight/logs/fixed_h_20261115_141631.ulg"
+    },
+    {
       "mode": "V10",
       "file": "fixed_v10_20261115_135641.ulg",
       "bytes": 15887381,
       "sha256": "b7b1e53015cf6eb7dd71650d0f3dfd3cf0b29873a5e865568f0cb05403e3a0e4",
       "local_path": "a_morphing/fixed_flight/logs/fixed_v10_20261115_135641.ulg"
+    },
+    {
+      "mode": "V10",
+      "file": "fixed_v_20261115_141417.ulg",
+      "bytes": 14045429,
+      "sha256": "e8dc598191a48878bab8e16f104106a9a4ee2d6e127df9189979b048fab5ac05",
+      "local_path": "a_morphing/fixed_flight/logs/fixed_v_20261115_141417.ulg"
+    },
+    {
+      "mode": "V10",
+      "file": "fixed_v_20261115_141737.ulg",
+      "bytes": 14063303,
+      "sha256": "a9e033c011ebb02ce21f70b75e76105f8d1769068030ff696fe8e11912861892",
+      "local_path": "a_morphing/fixed_flight/logs/fixed_v_20261115_141737.ulg"
     }
-  ],
-  "release": "https://github.com/RolyForden/PX4SIM/releases/tag/a-uav-fixed-hv-2026-11-15"
+  ]
 }
