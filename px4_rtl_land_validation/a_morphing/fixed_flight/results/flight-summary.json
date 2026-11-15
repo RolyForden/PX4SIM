@@ -1,0 +1,77 @@
+{
+  "status": "X regression plus fixed H/V 10 deg small-angle flights; approximate and not final-aircraft validation",
+  "runs": {
+    "X": {
+      "run": "rigid_20261115_135319",
+      "model": "candidate_rigid",
+      "airframe_id": 4999,
+      "status": "candidate fixed-rigid flight passed under assumed parameters; NOT final-aircraft validation",
+      "max_relative_height_m": 4.998086452484131,
+      "max_horizontal_displacement_m": 0.05260675400495529,
+      "longest_stable_hover_sim_s": 8.143999999999998,
+      "land_command_to_contact_sim_s": 8.815999999999995,
+      "contact_to_disarm_sim_s": 2.0160000000000053,
+      "max_abs_roll_pitch_deg_above_1m": [
+        0.340783110571089,
+        0.29333143852948323
+      ],
+      "ulog_dropout_count": 0,
+      "checks": {
+        "airborne_detected": true,
+        "hover_event": true,
+        "stable_hover_over_5_sim_s": true,
+        "contact_after_airborne": true,
+        "disarm_after_contact": true,
+        "complete_event": true
+      }
+    },
+    "H10": {
+      "run": "fixed_h10_20261115_135506",
+      "model": "a_fixed_h10",
+      "airframe_id": 4998,
+      "status": "fixed H 10 deg approximate flight passed; NOT final-aircraft validation",
+      "max_relative_height_m": 4.986466407775879,
+      "max_horizontal_displacement_m": 0.06974172592163086,
+      "longest_stable_hover_sim_s": 8.223999999999997,
+      "land_command_to_contact_sim_s": 8.832,
+      "contact_to_disarm_sim_s": 2.0079999999999956,
+      "max_abs_roll_pitch_deg_above_1m": [
+        0.35368491102641997,
+        0.19599314534737536
+      ],
+      "ulog_dropout_count": 0,
+      "checks": {
+        "airborne": true,
+        "hover_event": true,
+        "stable_hover_5s": true,
+        "contact_after_airborne": true,
+        "disarm_after_contact": true,
+        "complete": true
+      }
+    },
+    "V10": {
+      "run": "fixed_v10_20261115_135641",
+      "model": "a_fixed_v10",
+      "airframe_id": 4997,
+      "status": "fixed V 10 deg approximate flight passed; NOT final-aircraft validation",
+      "max_relative_height_m": 4.998815059661865,
+      "max_horizontal_displacement_m": 0.04961679130792618,
+      "longest_stable_hover_sim_s": 8.280000000000001,
+      "land_command_to_contact_sim_s": 8.927999999999997,
+      "contact_to_disarm_sim_s": 2.0080000000000027,
+      "max_abs_roll_pitch_deg_above_1m": [
+        0.2390119312361503,
+        0.35989373974494665
+      ],
+      "ulog_dropout_count": 0,
+      "checks": {
+        "airborne": true,
+        "hover_event": true,
+        "stable_hover_5s": true,
+        "contact_after_airborne": true,
+        "disarm_after_contact": true,
+        "complete": true
+      }
+    }
+  }
+}

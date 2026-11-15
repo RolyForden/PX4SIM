@@ -1,0 +1,40 @@
+{
+  "run": "rigid_20261115_135319",
+  "status": "candidate fixed-rigid flight passed under assumed parameters; NOT final-aircraft validation",
+  "source_ulog": "rigid_20261115_135319.ulg",
+  "sha256": "845923fdac73e2aa9da10014b74a5b6c7b6b8586873a616c7159d9c7c651fbe8",
+  "airframe_id": 4999,
+  "source_cad_sha256": "6a0919a37135a628677304a2fa0e9205ec71cac5e06b61de46f6420e94d868cc",
+  "mass_properties_source": "A-UAV-20261115/parameters/uav_parameters.json",
+  "mass_properties_source_sha256": "8b942c1af15e84174ff1f5c4e5f94bf70f5f981fb8b3fb950909a3e7d342bed1",
+  "mass_properties_status": "BOM_WEIGHTED_PROVISIONAL_NOT_MEASURED",
+  "temporary_frame": "PROVISIONAL debug frame only; aircraft front/up NOT confirmed",
+  "max_relative_height_m": 4.998086452484131,
+  "max_horizontal_displacement_m": 0.05260675400495529,
+  "max_abs_roll_pitch_deg_above_1m": [
+    0.340783110571089,
+    0.29333143852948323
+  ],
+  "longest_stable_hover_sim_s": 8.143999999999998,
+  "land_command_to_contact_sim_s": 8.815999999999995,
+  "contact_to_disarm_sim_s": 2.0160000000000053,
+  "ulog_dropout_count": 0,
+  "checks": {
+    "airborne_detected": true,
+    "hover_event": true,
+    "stable_hover_over_5_sim_s": true,
+    "contact_after_airborne": true,
+    "disarm_after_contact": true,
+    "complete_event": true
+  },
+  "assumptions": [
+    "all elastic/servo/gripper joints locked",
+    "front/up frame is provisional, NOT confirmed aircraft convention",
+    "motor installation origins used as assumed force points, NOT confirmed thrust centres",
+    "effective thrust axes assumed model +Z; rotor spin assignment is illustrative",
+    "0.393kg unlocated mass at CAD origin; five CAD components have no BOM mass",
+    "whole signed inertia is approximate BOM-weighted, not measured",
+    "9g prop carriers use simplified spin inertias/CoG placement; whole rigid tensor preserved",
+    "simplified collision boxes; propulsion borrowed and uncalibrated"
+  ]
+}
