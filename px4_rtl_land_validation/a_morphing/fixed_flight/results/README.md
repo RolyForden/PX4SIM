@@ -27,7 +27,7 @@ X 回归、固定 H 10°、固定 V 10° 三次都完成起飞、约 5 m 悬停�
 - X：`candidate_flight/logs/rigid_20261115_135319.ulg`，参数在 `candidate_flight/parameters/`。
 - H10 / V10：`a_morphing/fixed_flight/logs/`，参数在 `a_morphing/fixed_flight/parameters/`。
 
-ULog 不提交进 Git，后续通过 Release 发布。
+ULog 不提交进 Git，后续通过 Release 发布；文件名、大小和 SHA256 见 [ulog-manifest.json](ulog-manifest.json)。
 
 ## 边界
 

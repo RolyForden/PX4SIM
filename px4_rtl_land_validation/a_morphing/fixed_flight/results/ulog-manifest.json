@@ -1,0 +1,26 @@
+{
+  "status": "local only; ULogs not committed to Git; release upload pending",
+  "files": [
+    {
+      "mode": "X",
+      "file": "rigid_20261115_135319.ulg",
+      "bytes": 15740970,
+      "sha256": "845923fdac73e2aa9da10014b74a5b6c7b6b8586873a616c7159d9c7c651fbe8",
+      "local_path": "candidate_flight/logs/rigid_20261115_135319.ulg"
+    },
+    {
+      "mode": "H10",
+      "file": "fixed_h10_20261115_135506.ulg",
+      "bytes": 15729893,
+      "sha256": "560d43065fa8f6beecc6e7faf1cdf99c7f8fabd3f190c83f3e6f14bb40024ec6",
+      "local_path": "a_morphing/fixed_flight/logs/fixed_h10_20261115_135506.ulg"
+    },
+    {
+      "mode": "V10",
+      "file": "fixed_v10_20261115_135641.ulg",
+      "bytes": 15887381,
+      "sha256": "b7b1e53015cf6eb7dd71650d0f3dfd3cf0b29873a5e865568f0cb05403e3a0e4",
+      "local_path": "a_morphing/fixed_flight/logs/fixed_v10_20261115_135641.ulg"
+    }
+  ]
+}
