@@ -1,5 +1,5 @@
 {
-  "status": "local only; ULogs not committed to Git; release upload pending",
+  "status": "uploaded to release a-uav-fixed-hv-2026-11-15",
   "files": [
     {
       "mode": "X",
@@ -22,5 +22,6 @@
       "sha256": "b7b1e53015cf6eb7dd71650d0f3dfd3cf0b29873a5e865568f0cb05403e3a0e4",
       "local_path": "a_morphing/fixed_flight/logs/fixed_v10_20261115_135641.ulg"
     }
-  ]
+  ],
+  "release": "https://github.com/RolyForden/PX4SIM/releases/tag/a-uav-fixed-hv-2026-11-15"
 }

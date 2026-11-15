@@ -29,7 +29,7 @@
 | H 10° | 4.986 m | 8.224 s | 8.832 s | 2.008 s | 0.35° / 0.20° |
 | V 10° | 4.999 m | 8.280 s | 8.928 s | 2.008 s | 0.24° / 0.36° |
 
-汇总与曲线见 [results](results/README.md)。
+汇总与曲线见 [results](results/README.md)；原始 ULog 见 [Release](https://github.com/RolyForden/PX4SIM/releases/tag/a-uav-fixed-hv-2026-11-15)。
 
 ## 文件
 

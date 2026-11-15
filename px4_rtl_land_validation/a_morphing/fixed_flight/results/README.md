@@ -22,12 +22,14 @@ X 回归、固定 H 10°、固定 V 10° 三次都完成起飞、约 5 m 悬停�
 - [v10-flight-summary.json](v10-flight-summary.json) / [v10-flight.png](v10-flight.png)：V 10°。
 - [hover-feasibility.json](hover-feasibility.json)：X/H10/V10 离线有界悬停检查。
 
+[原始 ULog Release 附件](https://github.com/RolyForden/PX4SIM/releases/tag/a-uav-fixed-hv-2026-11-15)
+
 原始 ULog 和参数快照在本地：
 
 - X：`candidate_flight/logs/rigid_20261115_135319.ulg`，参数在 `candidate_flight/parameters/`。
 - H10 / V10：`a_morphing/fixed_flight/logs/`，参数在 `a_morphing/fixed_flight/parameters/`。
 
-ULog 不提交进 Git，后续通过 Release 发布；文件名、大小和 SHA256 见 [ulog-manifest.json](ulog-manifest.json)。
+ULog 不提交进 Git；已上传到 Release；文件名、大小和 SHA256 见 [ulog-manifest.json](ulog-manifest.json)。
 
 ## 边界
 

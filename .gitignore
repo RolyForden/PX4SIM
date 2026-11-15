@@ -165,6 +165,7 @@
 !/px4_rtl_land_validation/a_morphing/fixed_flight/results/README.md
 !/px4_rtl_land_validation/a_morphing/fixed_flight/results/*.json
 !/px4_rtl_land_validation/a_morphing/fixed_flight/results/*.png
+!/px4_rtl_land_validation/a_morphing/fixed_flight/results/*.txt
 !/px4_rtl_land_validation/a_morphing/fixed_flight/parameters/
 /px4_rtl_land_validation/a_morphing/fixed_flight/parameters/*
 !/px4_rtl_land_validation/a_morphing/fixed_flight/parameters/*.json

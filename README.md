@@ -36,7 +36,7 @@
 | 交底书、构形图、关节图、绕线图 | [现实材料](px4_rtl_land_validation/现实材料/) |
 | 模型资产及交接内容 | [资产清单](px4_rtl_land_validation/现实材料/模型资料交接清单.md) |
 | A 近似变构台架 | [a_morphing](px4_rtl_land_validation/a_morphing/) · [第一轮结果](px4_rtl_land_validation/a_morphing/results/README.md) |
-| 固定 H/V 小角飞行 | [fixed_flight](px4_rtl_land_validation/a_morphing/fixed_flight/) · [飞行结果](px4_rtl_land_validation/a_morphing/fixed_flight/results/README.md) |
+| 固定 H/V 小角飞行 | [fixed_flight](px4_rtl_land_validation/a_morphing/fixed_flight/) · [飞行结果](px4_rtl_land_validation/a_morphing/fixed_flight/results/README.md) · [ULog Release](https://github.com/RolyForden/PX4SIM/releases/tag/a-uav-fixed-hv-2026-11-15) |
 | 参考台架与矩阵公式 | [阶段成果](docs/参考模型阶段成果.md) · [矩阵说明](px4_rtl_land_validation/morphing_prototype/分配矩阵说明.md) |
 | 标准X500测试 | [测试记录](docs/标准四旋翼验证.md) · [日志下载](https://github.com/RolyForden/PX4SIM/releases/tag/validation-2026-11-14) |
 
