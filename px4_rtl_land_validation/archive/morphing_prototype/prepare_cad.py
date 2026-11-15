@@ -18,7 +18,7 @@ from OCP.BRepPrimAPI import BRepPrimAPI_MakeBox
 from OCP.gp import gp_Pnt
 
 ROOT=pathlib.Path(__file__).resolve().parent
-source=ROOT.parent/'现实材料'/'UAV.STEP';meshes=ROOT/'meshes';meshes.mkdir(exist_ok=True)
+source=ROOT.parent.parent/'现实材料'/'UAV.STEP';meshes=ROOT/'meshes';meshes.mkdir(exist_ok=True)
 reader=STEPControl_Reader()
 assert reader.ReadFile(str(source))==IFSelect_RetDone
 reader.TransferRoots();shape=reader.OneShape();explorer=TopExp_Explorer(shape,TopAbs_SOLID)

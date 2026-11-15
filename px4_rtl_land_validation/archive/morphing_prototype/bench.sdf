@@ -56,7 +56,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>/work/morphing_prototype/meshes/body_central.stl</uri>
+              <uri>/work/archive/morphing_prototype/meshes/body_central.stl</uri>
             </mesh>
           </geometry>
           <material>
@@ -100,7 +100,7 @@
           <pose>-0.045 -0.045 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>/work/morphing_prototype/meshes/arm_LF.stl</uri>
+              <uri>/work/archive/morphing_prototype/meshes/arm_LF.stl</uri>
             </mesh>
           </geometry>
           <material>
@@ -112,7 +112,7 @@
           <pose>-0.045 -0.045 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>/work/morphing_prototype/meshes/part_01.stl</uri>
+              <uri>/work/archive/morphing_prototype/meshes/part_01.stl</uri>
             </mesh>
           </geometry>
           <material>
@@ -124,7 +124,7 @@
           <pose>-0.045 -0.045 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>/work/morphing_prototype/meshes/part_05.stl</uri>
+              <uri>/work/archive/morphing_prototype/meshes/part_05.stl</uri>
             </mesh>
           </geometry>
           <material>
@@ -222,7 +222,7 @@
           <pose>0.045 -0.045 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>/work/morphing_prototype/meshes/arm_LR.stl</uri>
+              <uri>/work/archive/morphing_prototype/meshes/arm_LR.stl</uri>
             </mesh>
           </geometry>
           <material>
@@ -234,7 +234,7 @@
           <pose>0.045 -0.045 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>/work/morphing_prototype/meshes/part_02.stl</uri>
+              <uri>/work/archive/morphing_prototype/meshes/part_02.stl</uri>
             </mesh>
           </geometry>
           <material>
@@ -246,7 +246,7 @@
           <pose>0.045 -0.045 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>/work/morphing_prototype/meshes/part_08.stl</uri>
+              <uri>/work/archive/morphing_prototype/meshes/part_08.stl</uri>
             </mesh>
           </geometry>
           <material>
@@ -344,7 +344,7 @@
           <pose>-0.045 0.045 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>/work/morphing_prototype/meshes/arm_RF.stl</uri>
+              <uri>/work/archive/morphing_prototype/meshes/arm_RF.stl</uri>
             </mesh>
           </geometry>
           <material>
@@ -356,7 +356,7 @@
           <pose>-0.045 0.045 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>/work/morphing_prototype/meshes/part_03.stl</uri>
+              <uri>/work/archive/morphing_prototype/meshes/part_03.stl</uri>
             </mesh>
           </geometry>
           <material>
@@ -368,7 +368,7 @@
           <pose>-0.045 0.045 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>/work/morphing_prototype/meshes/part_07.stl</uri>
+              <uri>/work/archive/morphing_prototype/meshes/part_07.stl</uri>
             </mesh>
           </geometry>
           <material>
@@ -466,7 +466,7 @@
           <pose>0.045 0.045 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>/work/morphing_prototype/meshes/arm_RR.stl</uri>
+              <uri>/work/archive/morphing_prototype/meshes/arm_RR.stl</uri>
             </mesh>
           </geometry>
           <material>
@@ -478,7 +478,7 @@
           <pose>0.045 0.045 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>/work/morphing_prototype/meshes/part_04.stl</uri>
+              <uri>/work/archive/morphing_prototype/meshes/part_04.stl</uri>
             </mesh>
           </geometry>
           <material>
@@ -490,7 +490,7 @@
           <pose>0.045 0.045 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>/work/morphing_prototype/meshes/part_06.stl</uri>
+              <uri>/work/archive/morphing_prototype/meshes/part_06.stl</uri>
             </mesh>
           </geometry>
           <material>

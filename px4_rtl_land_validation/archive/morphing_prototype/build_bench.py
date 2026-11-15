@@ -4,7 +4,7 @@ import numpy as np
 from kinematics import NAMES,SIGNS,HINGES,BASE
 
 ROOT=pathlib.Path(__file__).resolve().parent
-CONTAINER_ROOT='/work/morphing_prototype'
+CONTAINER_ROOT='/work/archive/morphing_prototype'
 def add(parent,tag,text=None,**attrs):
     e=E.SubElement(parent,tag,attrs)
     if text is not None:e.text=str(text)
