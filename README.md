@@ -17,7 +17,7 @@
 | 标准 X500 | RTL返航着陆、Land、降落速度对照 | 保留为回归基线 |
 | 自研 A 模型 | 最新STEP、123部件解析、独立SDF、PX4 airframe4999 | 运动部件分组及柔性关节近似 |
 | A 固定构形飞行 | 约5m起飞、稳定悬停、Land、接地、自动上锁 | 固定H/V构形飞行 |
-| H/V 变构 | 参考台架X/H/V切换及位姿核对 | A模型ROS指令与关节反馈 |
+| H/V 变构 | A近似台架X/H/X/V/X实际反馈；ROS指令与状态已跑通 | 固定H/V飞行（待授权），再做动态变构 |
 | 推力分配 | 6×4效能矩阵、A固定构形有界分配检查 | 随实际关节角更新矩阵 |
 
 ## A 无人机飞行结果
@@ -34,6 +34,7 @@
 | 质量属性与参数假设 | [基线接入记录](px4_rtl_land_validation/candidate_flight/handoff_audit/report.md) |
 | 交底书、构形图、关节图、绕线图 | [现实材料](px4_rtl_land_validation/现实材料/) |
 | 模型资产及交接内容 | [资产清单](px4_rtl_land_validation/现实材料/模型资料交接清单.md) |
+| A 近似变构台架 | [a_morphing](px4_rtl_land_validation/a_morphing/) · [第一轮结果](px4_rtl_land_validation/a_morphing/results/README.md) |
 | 参考台架与矩阵公式 | [阶段成果](docs/参考模型阶段成果.md) · [矩阵说明](px4_rtl_land_validation/morphing_prototype/分配矩阵说明.md) |
 | 标准X500测试 | [测试记录](docs/标准四旋翼验证.md) · [日志下载](https://github.com/RolyForden/PX4SIM/releases/tag/validation-2026-11-14) |
 

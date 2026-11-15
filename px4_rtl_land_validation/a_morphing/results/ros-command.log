@@ -1,0 +1,22 @@
+[INFO] [launch]: All log files can be found below /home/ray/.ros/log/2026-11-15-13-26-25-914133-ray-Alpha-17-C7VF-66137
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [python3-1]: process started with pid [66147]
+[INFO] [python3-2]: process started with pid [66149]
+[python3-1] [INFO] [1794720386.111886287] [a_morph_state]: Reading actual Gazebo poses from /world/a_morph_bench/dynamic_pose/info via container px4-rtl-land-harmonic (partition a_morph_bench); temporary adapter, not ros_gz_bridge.
+[python3-2] [INFO] [1794720386.116008528] [a_morph_command]: Send X, H, or V on /a_uav/morph/command
+[python3-2] [INFO] [1794720399.343762874] [a_morph_command]: {"state": "transition", "command": "X", "phase": "reset_to_X"}
+[python3-2] [INFO] [1794720407.070687359] [a_morph_command]: {"state": "done", "command": "X", "verified": true, "target_rad": {"yaw_0": 0.0, "pitch_0": 0.0, "yaw_1": 0.0, "pitch_1": 0.0, "yaw_2": 0.0, "pitch_2": 0.0, "yaw_3": 0.0, "pitch_3": 0.0}}
+[python3-2] [INFO] [1794720420.386984658] [a_morph_command]: {"state": "transition", "command": "H", "phase": "reset_to_X"}
+[python3-2] [INFO] [1794720427.730252188] [a_morph_command]: {"state": "transition", "command": "H", "phase": "go_to_target"}
+[python3-2] [INFO] [1794720435.951830636] [a_morph_command]: {"state": "done", "command": "H", "verified": true, "target_rad": {"yaw_0": 0.4363323129985824, "pitch_0": 0.0, "yaw_1": 0.4363323129985824, "pitch_1": 0.0, "yaw_2": -0.4363323129985824, "pitch_2": 0.0, "yaw_3": -0.4363323129985824, "pitch_3": 0.0}}
+[python3-2] [INFO] [1794720450.894030702] [a_morph_command]: {"state": "transition", "command": "V", "phase": "reset_to_X"}
+[python3-2] [INFO] [1794720459.159048095] [a_morph_command]: {"state": "transition", "command": "V", "phase": "go_to_target"}
+[python3-2] [INFO] [1794720467.961613437] [a_morph_command]: {"state": "done", "command": "V", "verified": true, "target_rad": {"yaw_0": 0.0, "pitch_0": 0.4363323129985824, "yaw_1": 0.0, "pitch_1": 0.4363323129985824, "yaw_2": 0.0, "pitch_2": 0.4363323129985824, "yaw_3": 0.0, "pitch_3": 0.4363323129985824}}
+[python3-2] [INFO] [1794720483.522215851] [a_morph_command]: {"state": "transition", "command": "X", "phase": "reset_to_X"}
+[python3-2] [INFO] [1794720492.366225867] [a_morph_command]: {"state": "done", "command": "X", "verified": true, "target_rad": {"yaw_0": 0.0, "pitch_0": 0.0, "yaw_1": 0.0, "pitch_1": 0.0, "yaw_2": 0.0, "pitch_2": 0.0, "yaw_3": 0.0, "pitch_3": 0.0}}
+[python3-2] [INFO] [1794720728.010015846] [a_morph_command]: {"state": "transition", "command": "H", "phase": "reset_to_X"}
+[python3-2] [INFO] [1794720735.645564702] [a_morph_command]: {"state": "transition", "command": "H", "phase": "go_to_target"}
+[python3-2] [INFO] [1794720743.847909578] [a_morph_command]: {"state": "done", "command": "H", "verified": true, "target_rad": {"yaw_0": 0.4363323129985824, "pitch_0": 0.0, "yaw_1": 0.4363323129985824, "pitch_1": 0.0, "yaw_2": -0.4363323129985824, "pitch_2": 0.0, "yaw_3": -0.4363323129985824, "pitch_3": 0.0}}
+[python3-2] [INFO] [1794720798.105214310] [a_morph_command]: {"state": "transition", "command": "V", "phase": "reset_to_X"}
+[python3-2] [INFO] [1794720806.708987223] [a_morph_command]: {"state": "transition", "command": "V", "phase": "go_to_target"}
+[python3-2] [INFO] [1794720815.871643290] [a_morph_command]: {"state": "done", "command": "V", "verified": true, "target_rad": {"yaw_0": 0.0, "pitch_0": 0.4363323129985824, "yaw_1": 0.0, "pitch_1": 0.4363323129985824, "yaw_2": 0.0, "pitch_2": 0.4363323129985824, "yaw_3": 0.0, "pitch_3": 0.4363323129985824}}
