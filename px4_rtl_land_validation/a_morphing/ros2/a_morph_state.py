@@ -47,7 +47,7 @@ class MorphState(Node):
         self.pub_status = self.create_publisher(String, '/a_uav/morph/status', 10)
         self.last_positions = None
         self.last_time = None
-        self.create_timer(0.4, self.tick)
+        self.create_timer(0.2, self.tick)
         self.get_logger().info(
             f'Reading actual Gazebo poses from {TOPIC} via container {CONTAINER} '
             f'(partition {PARTITION}); temporary adapter, not ros_gz_bridge.')

@@ -36,3 +36,12 @@
 - [离线悬停检查](../px4_rtl_land_validation/a_morphing/fixed_flight/results/hover-feasibility.json)
 
 下一阶段：25° 固定构形和空中连续变构。
+
+## 动态变构链地面联调（2026-11-15）
+
+已完成“实际关节反馈 → 当前重心/旋翼几何 → 6×4 推力效能矩阵 → 有界悬停分配”的地面联调。矩阵链以 20 Hz 运行，关节反馈约 5 Hz；单次计算中位 2.12 ms，关节消息到矩阵发布延迟中位 102 ms、P95 190 ms。X/H/V 构形下矩阵秩均为 4，V 构形同步更新旋翼位置和推力轴。
+
+- [动态链接口与地面联调](../px4_rtl_land_validation/a_morphing/dynamic/README.md)
+- [联调结果](../px4_rtl_land_validation/a_morphing/dynamic/results/README.md)
+
+下一阶段：空中小角慢速变构测试。

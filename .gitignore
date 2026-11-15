@@ -175,3 +175,17 @@
 !/px4_rtl_land_validation/archive/README.md
 !/px4_rtl_land_validation/archive/参考模型阶段成果.md
 !/px4_rtl_land_validation/archive/morphing_prototype/
+
+# 2026-11-15 动态变构链地面联调。
+!/px4_rtl_land_validation/a_morphing/dynamic/
+/px4_rtl_land_validation/a_morphing/dynamic/*
+!/px4_rtl_land_validation/a_morphing/dynamic/README.md
+!/px4_rtl_land_validation/a_morphing/dynamic/ros2/
+/px4_rtl_land_validation/a_morphing/dynamic/ros2/*
+!/px4_rtl_land_validation/a_morphing/dynamic/ros2/*.py
+!/px4_rtl_land_validation/a_morphing/dynamic/results/
+/px4_rtl_land_validation/a_morphing/dynamic/results/*
+!/px4_rtl_land_validation/a_morphing/dynamic/results/README.md
+!/px4_rtl_land_validation/a_morphing/dynamic/results/*.json
+!/px4_rtl_land_validation/a_morphing/dynamic/results/*.gz
+!/px4_rtl_land_validation/a_morphing/dynamic/results/*.log
