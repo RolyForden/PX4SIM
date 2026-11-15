@@ -30,7 +30,7 @@ def write(f,a):
 write(meshdir/'body.stl',body)
 for i,(m,p,o) in enumerate(ordered):a=triangles(p);a['vertices']-=o;write(meshdir/f'prop_{i}.stl',a)
 low=body['vertices'].reshape(-1,3).min(0);high=body['vertices'].reshape(-1,3).max(0)
-config={'status':'version-unconfirmed CAD; fixed rigid-body flight demonstrator, not final-aircraft validation','source_sha256':cad['sha256'],
+config={'status':'project-confirmed latest A CAD; fixed rigid-body demonstrator, not physical-aircraft validation','source_sha256':cad['sha256'],
  'airframe_id':4999,'model':'candidate_rigid','world':'candidate_world','total_mass_kg':settings['total_mass_kg'],'mass_source':settings['mass_source'],
  'base_inertia_kg_m2':settings['base_inertia_kg_m2'],'inertia_source':settings['inertia_source'],'reference_point_flu_m':[0,0,0],'reference_point_source':'CAD origin assumed CoG',
  'rotor_mass_kg':settings['rotor_mass_kg'],'motor_constant_N_per_rad_s2':settings['motor_constant_N_per_rad_s2'],'motor_constant_source':'borrowed X500 coefficient, NOT actual motor characterization','moment_ratio_m':settings['moment_ratio_m'],'max_rad_s':settings['max_rad_s'],

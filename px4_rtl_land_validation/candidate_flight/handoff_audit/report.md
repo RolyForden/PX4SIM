@@ -4,7 +4,7 @@
 
 ## 来源与数据审计
 
-已先读取包内README和完整精度JSON。包内 `cad/airframe.step` 与当前 `A无人机.STEP` SHA256一致，确认这是自研A整机，不是旧下载示例 `UAV.STEP`；是否对应最终加工版仍未独立确认。
+已先读取包内README和完整精度JSON。包内 `cad/airframe.step` 与当前 `A无人机.STEP` SHA256一致，确认这是自研A整机，不是旧下载示例 `UAV.STEP`；原测试时未独立核实加工版本；2026-11-15项目后续已确认A模型是最新版本。该补充不改变原始测试快照，也不表示物理参数已标定。
 
 独立使用 `component_mass_properties.csv` 重算质量、重心、惯量，并在隔离副本运行交接脚本，均与JSON一致。交接脚本的 `mesh_bounds` 会重写STL法向，因此没有在原始包上直接执行。原件SHA256清单和检查结果见 [audit.json](audit.json)。
 

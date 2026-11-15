@@ -1,6 +1,6 @@
 # PX4SIM 自研变构无人机仿真成果
 
-这里展示 Gazebo 模型、PX4 飞行验证和推力分配工作，供老师、师姐直接查看结论与下载文件。
+这里展示 Gazebo 模型、PX4 飞行验证和推力分配工作，供项目成员查看结论、获取关键文件并复现结果。
 
 **自研 A 无人机已完成固定构形起飞、悬停和自动降落。下一步是 A 模型的 ROS 指令变构；柔性响应、空中连续变构与动态推力分配尚未验证。**
 
@@ -17,7 +17,7 @@
 | 工作 | 已完成内容 | 还未完成 |
 |---|---|---|
 | 标准 X500 基线 | 起飞、约40m飞离、RTL返航着陆上锁；Land及降落速度对照 | 不代表 A 机型验证 |
-| 自研 A 整机接入 | STEP 123部件解析、独立SDF、PX4 airframe4999、近似质量属性核对 | 是否最新加工版及实物差异待确认 |
+| 自研 A 整机接入 | STEP 123部件解析、独立SDF、PX4 airframe4999、近似质量属性核对 | A CAD已由项目确认是最新版本；柔性及动力参数仍为近似 |
 | A 固定构形飞行 | 约5m起飞、稳定悬停、Land、接地、自动上锁；Gazebo＋QGC联合画面 | A 模型RTL、手动摇杆飞行未验证 |
 | H/V 变构 | 旧参考模型台架X/H/V运动与几何读回通过；A机构资料已审阅 | A 模型关节、ROS变构链尚未实现 |
 | 推力分配 | 通用6×4效能矩阵、A固定构形离线有界分配检查及PX4旋翼配置 | 随实际关节角更新的PX4实时分配尚未接通 |
@@ -35,7 +35,7 @@
 | A模型生成、启动、验证与分析代码 | [candidate_flight](px4_rtl_land_validation/candidate_flight/) |
 | 本轮质量/惯量接入审计 | [审计报告](px4_rtl_land_validation/candidate_flight/handoff_audit/report.md) |
 | 专利交底书、X/H/V图、关节及绕线图、Visio | [现实材料](px4_rtl_land_validation/现实材料/) |
-| 设计资料能提供什么、剩余确认项 | [材料审阅与交接清单](px4_rtl_land_validation/现实材料/模型资料交接清单.md)；其中长清单供内部筛查，向师姐主要确认当前改动和已有工程 |
+| 设计资料能提供什么、剩余确认项 | [材料审阅与交接清单](px4_rtl_land_validation/现实材料/模型资料交接清单.md)；交接重点为当前设计改动与已有工程资产 |
 | 旧参考模型演示与分配公式 | [参考阶段成果](docs/参考模型阶段成果.md) · [矩阵说明](px4_rtl_land_validation/morphing_prototype/分配矩阵说明.md) |
 | 标准X500结论及原始日志 | [测试说明](docs/标准四旋翼验证.md) · [标准模型日志下载](https://github.com/RolyForden/PX4SIM/releases/tag/validation-2026-11-14) |
 

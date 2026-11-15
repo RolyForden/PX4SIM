@@ -1,7 +1,7 @@
 {
   "source": "A无人机.STEP",
   "sha256": "6a0919a37135a628677304a2fa0e9205ec71cac5e06b61de46f6420e94d868cc",
-  "version": "unconfirmed candidate; not certified final",
+  "version": "project-confirmed latest A CAD on 2026-11-15",
   "units": "CAD mm",
   "parts": [
     {
@@ -2833,5 +2833,11 @@
       "volume_mm3": 11225.117208095913,
       "mesh": "meshes/part_122.stl"
     }
-  ]
+  ],
+  "cad_version_confirmation": {
+    "status": "project-confirmed latest A CAD",
+    "date": "2026-11-15",
+    "source": "project owner confirmation",
+    "scope": "CAD version only; mass, flexibility and propulsion remain provisional"
+  }
 }

@@ -1,4 +1,4 @@
-"""Import version-unconfirmed candidate CAD. Geometric centres are NOT real CoG."""
+"""Import project-confirmed latest A aircraft CAD. Geometric centres are NOT real CoG."""
 import json,pathlib,hashlib,sys
 import numpy as np
 from OCP.STEPCAFControl import STEPCAFControl_Reader
@@ -43,7 +43,7 @@ def walk(label,placement,path):
  shapes.append(shape)
 shapes=[]
 for i in range(1,roots.Length()+1):walk(roots.Value(i),TopLoc_Location(),[])
-out={'source':source.name,'sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'version':'unconfirmed candidate; not certified final','units':'CAD mm','parts':records}
+out={'source':source.name,'sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'version':'project-confirmed latest A CAD on 2026-11-15; physical parameters remain provisional','units':'CAD mm','parts':records}
 (ROOT/'cad_inventory.json').write_text(json.dumps(out,ensure_ascii=False,indent=2))
 for r in records:print(r['index'],r['name'],np.round(r['uniform_volume_centroid_cad_mm'],2),np.round(np.array(r['bbox_cad_mm'][3:])-r['bbox_cad_mm'][:3],2),flush=True)
 if '--export' in sys.argv:

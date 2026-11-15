@@ -1,5 +1,5 @@
 {
-  "status": "version-unconfirmed CAD; fixed rigid-body flight demonstrator, not final-aircraft validation",
+  "status": "project-confirmed latest A CAD; fixed rigid-body demonstrator, not physical-aircraft validation",
   "source_sha256": "6a0919a37135a628677304a2fa0e9205ec71cac5e06b61de46f6420e94d868cc",
   "airframe_id": 4999,
   "model": "candidate_rigid",
@@ -346,5 +346,11 @@
     "reaction_torque_coefficient": null,
     "note": "500g/500N meeting statements not used to infer thrust."
   },
-  "mass_bookkeeping": "whole BOM mass/inertia includes original props; prop actuator carriers subtracted from base; no added HQ meshes or second prop masses"
+  "mass_bookkeeping": "whole BOM mass/inertia includes original props; prop actuator carriers subtracted from base; no added HQ meshes or second prop masses",
+  "cad_version_confirmation": {
+    "status": "project-confirmed latest A CAD",
+    "date": "2026-11-15",
+    "source": "project owner confirmation",
+    "scope": "CAD version only; mass, flexibility and propulsion remain provisional"
+  }
 }
