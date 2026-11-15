@@ -1,0 +1,350 @@
+{
+  "status": "version-unconfirmed CAD; fixed rigid-body flight demonstrator, not final-aircraft validation",
+  "source_sha256": "6a0919a37135a628677304a2fa0e9205ec71cac5e06b61de46f6420e94d868cc",
+  "airframe_id": 4999,
+  "model": "candidate_rigid",
+  "world": "candidate_world",
+  "total_mass_kg": 1.1568200000000002,
+  "mass_source": "BOM-weighted provisional handoff; unmatched 0.393kg at CAD origin; extra equipment mass omitted",
+  "base_inertia_kg_m2": [
+    0.012021212773828657,
+    0.012015590405084979,
+    0.023124652335236785
+  ],
+  "inertia_source": "full signed tensor from BOM-weighted handoff, rotated consistently; not measured",
+  "reference_point_flu_m": [
+    -0.00035799388553090086,
+    -3.987610307206867e-05,
+    0.00675989174605372
+  ],
+  "reference_point_source": "provisional BOM-weighted whole-assembly CoG",
+  "rotor_mass_kg": 0.009,
+  "motor_constant_N_per_rad_s2": 8.54858e-06,
+  "motor_constant_source": "borrowed X500 coefficient, NOT actual motor characterization",
+  "moment_ratio_m": 0.016,
+  "max_rad_s": 1000,
+  "geometry_bounds_flu_m": [
+    [
+      -0.2900204062461853,
+      -0.2900204062461853,
+      -0.30011120438575745
+    ],
+    [
+      0.2900204062461853,
+      0.2900204062461853,
+      0.1274999976158142
+    ]
+  ],
+  "rotors": [
+    {
+      "index": 0,
+      "motor_part": 86,
+      "prop_part": 80,
+      "position_frd_m": [
+        0.1753897395276619,
+        0.17499186953905993,
+        0.01125989174605372
+      ],
+      "axis_frd": [
+        0,
+        0,
+        -1
+      ],
+      "km_m": 0.016,
+      "spin": "ccw",
+      "source_component": "airframe.step-1/无刷电机_2.step-2",
+      "placement_origin_cad_m": [
+        0.175031745642132,
+        -0.0045,
+        -0.175031745642131
+      ],
+      "position_flu_m": [
+        0.175031745642131,
+        -0.175031745642132,
+        -0.0045
+      ],
+      "orientation_flu_from_motor": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0
+        ]
+      ],
+      "orientation_interpretation": "source columns transposed; retained as metadata, not used to infer thrust axis",
+      "force_point_status": "motor placement origin assumed for software debug, not confirmed rotor centre"
+    },
+    {
+      "index": 1,
+      "motor_part": 88,
+      "prop_part": 84,
+      "position_frd_m": [
+        -0.1746737517566021,
+        -0.17507162174520208,
+        0.01125989174605372
+      ],
+      "axis_frd": [
+        0,
+        0,
+        -1
+      ],
+      "km_m": 0.016,
+      "spin": "ccw",
+      "source_component": "airframe.step-1/无刷电机_2.step-5",
+      "placement_origin_cad_m": [
+        -0.17503174564213,
+        -0.0045,
+        0.175031745642133
+      ],
+      "position_flu_m": [
+        -0.175031745642133,
+        0.17503174564213,
+        -0.0045
+      ],
+      "orientation_flu_from_motor": [
+        [
+          -1.0,
+          0.0,
+          -1.8e-14
+        ],
+        [
+          1.8e-14,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0
+        ]
+      ],
+      "orientation_interpretation": "source columns transposed; retained as metadata, not used to infer thrust axis",
+      "force_point_status": "motor placement origin assumed for software debug, not confirmed rotor centre"
+    },
+    {
+      "index": 2,
+      "motor_part": 87,
+      "prop_part": 82,
+      "position_frd_m": [
+        0.1753897395276619,
+        -0.17507162174520308,
+        -0.014740108253946279
+      ],
+      "axis_frd": [
+        0,
+        0,
+        -1
+      ],
+      "km_m": -0.016,
+      "spin": "cw",
+      "source_component": "airframe.step-1/无刷电机_2.step-4",
+      "placement_origin_cad_m": [
+        -0.175031745642131,
+        0.0215,
+        -0.175031745642131
+      ],
+      "position_flu_m": [
+        0.175031745642131,
+        0.175031745642131,
+        0.0215
+      ],
+      "orientation_flu_from_motor": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "orientation_interpretation": "source columns transposed; retained as metadata, not used to infer thrust axis",
+      "force_point_status": "motor placement origin assumed for software debug, not confirmed rotor centre"
+    },
+    {
+      "index": 3,
+      "motor_part": 85,
+      "prop_part": 78,
+      "position_frd_m": [
+        -0.1746737517566011,
+        0.17499186953905893,
+        -0.014740108253946279
+      ],
+      "axis_frd": [
+        0,
+        0,
+        -1
+      ],
+      "km_m": -0.016,
+      "spin": "cw",
+      "source_component": "airframe.step-1/无刷电机_2.step-3",
+      "placement_origin_cad_m": [
+        0.175031745642131,
+        0.0215,
+        0.175031745642132
+      ],
+      "position_flu_m": [
+        -0.175031745642132,
+        -0.175031745642131,
+        0.0215
+      ],
+      "orientation_flu_from_motor": [
+        [
+          -1.0,
+          0.0,
+          -4.7e-14
+        ],
+        [
+          -4.7e-14,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "orientation_interpretation": "source columns transposed; retained as metadata, not used to infer thrust axis",
+      "force_point_status": "motor placement origin assumed for software debug, not confirmed rotor centre"
+    }
+  ],
+  "limitations": [
+    "all elastic/servo/gripper joints locked",
+    "front/up frame is provisional, NOT confirmed aircraft convention",
+    "motor installation origins used as assumed force points, NOT confirmed thrust centres",
+    "effective thrust axes assumed model +Z; rotor spin assignment is illustrative",
+    "0.393kg unlocated mass at CAD origin; five CAD components have no BOM mass",
+    "whole signed inertia is approximate BOM-weighted, not measured",
+    "9g prop carriers use simplified spin inertias/CoG placement; whole rigid tensor preserved",
+    "simplified collision boxes; propulsion borrowed and uncalibrated"
+  ],
+  "mass_properties_source": "A-UAV-20261115/parameters/uav_parameters.json",
+  "mass_properties_source_sha256": "8b942c1af15e84174ff1f5c4e5f94bf70f5f981fb8b3fb950909a3e7d342bed1",
+  "mass_properties_status": "BOM_WEIGHTED_PROVISIONAL_NOT_MEASURED",
+  "center_of_mass_flu_m": [
+    -0.00035799388553090086,
+    -3.987610307206867e-05,
+    0.00675989174605372
+  ],
+  "inertia_com_flu_kg_m2": [
+    [
+      0.013170309372682877,
+      0.000543636676176304,
+      -1.2935598577501984e-05
+    ],
+    [
+      0.000543636676176304,
+      0.013164691706793737,
+      7.189837747224932e-07
+    ],
+    [
+      -1.2935598577501984e-05,
+      7.189837747224928e-07,
+      0.025410457218998324
+    ]
+  ],
+  "frame_status": "PROVISIONAL debug frame only; aircraft front/up NOT confirmed",
+  "R_flu_from_cad": [
+    [
+      0.0,
+      0.0,
+      -1.0
+    ],
+    [
+      -1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0
+    ]
+  ],
+  "rotor_carrier_inertia_kg_m2": [
+    [
+      1e-05,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1e-05,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      2e-05
+    ]
+  ],
+  "base_mass_kg": 1.1208200000000001,
+  "base_com_flu_m": [
+    -0.00036949241328654894,
+    -4.115689723221614e-05,
+    0.006704000615326159
+  ],
+  "base_inertia_com_flu_kg_m2": [
+    [
+      0.012021212773828657,
+      0.0005436372065973345,
+      -1.291245213276922e-05
+    ],
+    [
+      0.0005436372065973345,
+      0.012015590405084979,
+      7.215620031595977e-07
+    ],
+    [
+      -1.291245213276922e-05,
+      7.215620031595972e-07,
+      0.023124652335236785
+    ]
+  ],
+  "unlocated_mass_kg": 0.3930000000000001,
+  "cad_components_without_assigned_mass": [
+    "airframe.step-1/轴承682ZZ_2.step-2",
+    "airframe.step-1/轴承682ZZ_2.step-3",
+    "airframe.step-1/激光雷达_2.step-1",
+    "airframe.step-1/B机械夹爪_2.step-1",
+    "airframe.step-1/夹爪连接件_2.step-1"
+  ],
+  "source_assumptions": [
+    "BOM masses are user-provided reported values, not independently measured.",
+    "Name aliases are provisional correspondences, not verified part-number matches.",
+    "Each matched part has uniform mass density; BOM group mass is equally divided over matching CAD instances.",
+    "Unmatched BOM items are zero-size point masses at CAD origin, NOT measured positions.",
+    "CAD-only items have no assigned mass. Thus BOM total may omit equipment present in CAD.",
+    "Rows 14 and 38 share the combined flight-controller plate geometry.",
+    "Assembly propellers remain original CAD geometry. Separate HQ models are supplied but NOT substituted into the assembly."
+  ],
+  "user_reported_propulsion": {
+    "motor": "EMAX ECO II 2807 1300KV (user reported)",
+    "count": 4,
+    "propeller": "HQ DP7X4X3 CW/CCW separate CAD",
+    "kv_rpm_per_volt": 1300,
+    "battery_voltage_V": null,
+    "max_thrust_N_per_motor": null,
+    "thrust_coefficient": null,
+    "reaction_torque_coefficient": null,
+    "note": "500g/500N meeting statements not used to infer thrust."
+  },
+  "mass_bookkeeping": "whole BOM mass/inertia includes original props; prop actuator carriers subtracted from base; no added HQ meshes or second prop masses"
+}

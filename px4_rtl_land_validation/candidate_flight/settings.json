@@ -1,0 +1,36 @@
+{
+  "total_mass_kg": 1.15682,
+  "mass_source": "BOM-weighted provisional handoff; unmatched 0.393kg at CAD origin; extra equipment mass omitted",
+  "base_inertia_kg_m2": [
+    0.02,
+    0.02,
+    0.035
+  ],
+  "inertia_source": "full signed tensor from BOM-weighted handoff, rotated consistently; not measured",
+  "rotor_mass_kg": 0.009,
+  "motor_constant_N_per_rad_s2": 8.54858e-06,
+  "moment_ratio_m": 0.016,
+  "max_rad_s": 1000,
+  "hover_normalized": 0.5,
+  "max_step_size_s": 0.004,
+  "real_time_factor": 1.0,
+  "mass_properties_json": "../A-UAV-20261115/parameters/uav_parameters.json",
+  "R_flu_from_cad": [
+    [
+      0,
+      0,
+      -1
+    ],
+    [
+      -1,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0
+    ]
+  ],
+  "frame_status": "provisional software-debug convention only, not confirmed physical front/up"
+}

@@ -1,0 +1,373 @@
+{
+  "status": "zero gravity isolated actuator diagnostic; not flight",
+  "results": [
+    {
+      "motor": 0,
+      "gyro_flu_rad_s": [
+        -2.6865905713938716,
+        -2.189430632925741,
+        -0.13009245230074465
+      ],
+      "expected_sign_flu": [
+        -1,
+        -1,
+        -1
+      ],
+      "signs_match": true,
+      "raw": {
+        "header": {
+          "stamp": {
+            "sec": "8",
+            "nsec": 866000000
+          },
+          "data": [
+            {
+              "key": "frame_id",
+              "value": [
+                "base_link"
+              ]
+            },
+            {
+              "key": "seq",
+              "value": [
+                "0"
+              ]
+            }
+          ]
+        },
+        "entityName": "diag_0::base_link::imu_sensor",
+        "orientation": {
+          "x": 0.0964953471570911,
+          "y": 0.08534897571410056,
+          "z": 0.05604819342196722,
+          "w": 0.9900822189776565
+        },
+        "orientationCovariance": {
+          "data": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "angularVelocity": {
+          "x": -2.6865905713938716,
+          "y": -2.189430632925741,
+          "z": -0.13009245230074465
+        },
+        "angularVelocityCovariance": {
+          "data": [
+            7.61543504e-07,
+            0,
+            0,
+            0,
+            7.61543504e-07,
+            0,
+            0,
+            0,
+            7.61543504e-07
+          ]
+        },
+        "linearAcceleration": {
+          "x": 0.0016095127203801353,
+          "y": -0.002222200337660714,
+          "z": 0.07250823570731099
+        },
+        "linearAccelerationCovariance": {
+          "data": [
+            4.05769e-05,
+            0,
+            0,
+            0,
+            4.05769e-05,
+            0,
+            0,
+            0,
+            4.70596e-05
+          ]
+        }
+      }
+    },
+    {
+      "motor": 1,
+      "gyro_flu_rad_s": [
+        2.003638500029946,
+        1.7787888221188237,
+        -0.10186716574109052
+      ],
+      "expected_sign_flu": [
+        1,
+        1,
+        -1
+      ],
+      "signs_match": true,
+      "raw": {
+        "header": {
+          "stamp": {
+            "sec": "9",
+            "nsec": 24000000
+          },
+          "data": [
+            {
+              "key": "frame_id",
+              "value": [
+                "base_link"
+              ]
+            },
+            {
+              "key": "seq",
+              "value": [
+                "1"
+              ]
+            }
+          ]
+        },
+        "entityName": "diag_1::base_link::imu_sensor",
+        "orientation": {
+          "x": 0.709260214366019,
+          "y": 0.6657400459267083,
+          "z": -0.061114507190351657,
+          "w": -0.22361832791131744
+        },
+        "orientationCovariance": {
+          "data": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "angularVelocity": {
+          "x": 2.003638500029946,
+          "y": 1.7787888221188237,
+          "z": -0.10186716574109052
+        },
+        "angularVelocityCovariance": {
+          "data": [
+            7.61543504e-07,
+            0,
+            0,
+            0,
+            7.61543504e-07,
+            0,
+            0,
+            0,
+            7.61543504e-07
+          ]
+        },
+        "linearAcceleration": {
+          "x": -0.0028998297153650324,
+          "y": -0.003020456619885297,
+          "z": 0.07519413033836106
+        },
+        "linearAccelerationCovariance": {
+          "data": [
+            4.05769e-05,
+            0,
+            0,
+            0,
+            4.05769e-05,
+            0,
+            0,
+            0,
+            4.70596e-05
+          ]
+        }
+      }
+    },
+    {
+      "motor": 2,
+      "gyro_flu_rad_s": [
+        1.3502054624738202,
+        -1.2769257905537186,
+        0.0726810096449434
+      ],
+      "expected_sign_flu": [
+        1,
+        -1,
+        1
+      ],
+      "signs_match": true,
+      "raw": {
+        "header": {
+          "stamp": {
+            "sec": "9",
+            "nsec": 152000000
+          },
+          "data": [
+            {
+              "key": "frame_id",
+              "value": [
+                "base_link"
+              ]
+            },
+            {
+              "key": "seq",
+              "value": [
+                "2"
+              ]
+            }
+          ]
+        },
+        "entityName": "diag_2::base_link::imu_sensor",
+        "orientation": {
+          "x": 0.5456589887293917,
+          "y": -0.5297556606201107,
+          "z": 0.034980293136667465,
+          "w": 0.6483761155007488
+        },
+        "orientationCovariance": {
+          "data": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "angularVelocity": {
+          "x": 1.3502054624738202,
+          "y": -1.2769257905537186,
+          "z": 0.0726810096449434
+        },
+        "angularVelocityCovariance": {
+          "data": [
+            7.61543504e-07,
+            0,
+            0,
+            0,
+            7.61543504e-07,
+            0,
+            0,
+            0,
+            7.61543504e-07
+          ]
+        },
+        "linearAcceleration": {
+          "x": 0.012059968114097762,
+          "y": -0.0028719417771980987,
+          "z": 0.07395739306266956
+        },
+        "linearAccelerationCovariance": {
+          "data": [
+            4.05769e-05,
+            0,
+            0,
+            0,
+            4.05769e-05,
+            0,
+            0,
+            0,
+            4.70596e-05
+          ]
+        }
+      }
+    },
+    {
+      "motor": 3,
+      "gyro_flu_rad_s": [
+        -0.7285172506233933,
+        0.7173678915980276,
+        0.043108384318506325
+      ],
+      "expected_sign_flu": [
+        -1,
+        1,
+        1
+      ],
+      "signs_match": true,
+      "raw": {
+        "header": {
+          "stamp": {
+            "sec": "9",
+            "nsec": 259000000
+          },
+          "data": [
+            {
+              "key": "frame_id",
+              "value": [
+                "base_link"
+              ]
+            },
+            {
+              "key": "seq",
+              "value": [
+                "3"
+              ]
+            }
+          ]
+        },
+        "entityName": "diag_3::base_link::imu_sensor",
+        "orientation": {
+          "x": -0.18317755798935903,
+          "y": 0.1815849476770197,
+          "z": 0.012194248966074116,
+          "w": 0.9660870505903402
+        },
+        "orientationCovariance": {
+          "data": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "angularVelocity": {
+          "x": -0.7285172506233933,
+          "y": 0.7173678915980276,
+          "z": 0.043108384318506325
+        },
+        "angularVelocityCovariance": {
+          "data": [
+            7.61543504e-07,
+            0,
+            0,
+            0,
+            7.61543504e-07,
+            0,
+            0,
+            0,
+            7.61543504e-07
+          ]
+        },
+        "linearAcceleration": {
+          "x": 0.0004968284625329482,
+          "y": 0.002493444501241782,
+          "z": 0.06829741906323507
+        },
+        "linearAccelerationCovariance": {
+          "data": [
+            4.05769e-05,
+            0,
+            0,
+            0,
+            4.05769e-05,
+            0,
+            0,
+            0,
+            4.70596e-05
+          ]
+        }
+      }
+    }
+  ]
+}

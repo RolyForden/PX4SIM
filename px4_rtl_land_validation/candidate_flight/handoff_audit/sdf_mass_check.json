@@ -1,0 +1,34 @@
+{
+  "source": "BOM-weighted provisional handoff",
+  "model_mass_kg": 1.1568199999999997,
+  "model_com_flu_m": [
+    -0.00035799388553090113,
+    -3.987610307206862e-05,
+    0.0067598917460537245
+  ],
+  "model_inertia_com_flu_kg_m2": [
+    [
+      0.01317030937268288,
+      0.0005436366761763043,
+      -1.2935598577501988e-05
+    ],
+    [
+      0.0005436366761763043,
+      0.013164691706793737,
+      7.189837747224912e-07
+    ],
+    [
+      -1.2935598577501988e-05,
+      7.189837747224912e-07,
+      0.02541045721899832
+    ]
+  ],
+  "checks": {
+    "aggregate_sdf_mass_matches_source": true,
+    "aggregate_sdf_com_matches_rotated_source": true,
+    "aggregate_sdf_full_signed_tensor_matches_rotated_source": true,
+    "all_link_inertias_positive_physical": true,
+    "px4_lever_arms_relative_to_whole_com": true
+  },
+  "prop_partition": "four 9g simplified actuator carriers SUBTRACTED from base; not added on top of source whole mass"
+}
