@@ -2,3 +2,6 @@
 *.STEP binary
 *.stl binary
 *.doc binary
+
+# Unified diffs retain context-line whitespace.
+*.patch -whitespace

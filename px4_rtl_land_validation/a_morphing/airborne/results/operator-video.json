@@ -1,0 +1,13 @@
+{
+  "filename": "A-UAV-flight-demo.webm",
+  "original_filename": "录屏 2026年11月15日 18时56分21秒.webm",
+  "bytes": 72238842,
+  "sha256": "7bfd7588759fcfb2780be99a2b17eaf0be5a88eefc884d801ae75e3f72abfaaf",
+  "duration_s": 217.958737795,
+  "codec": "VP8",
+  "width": 2560,
+  "height": 1440,
+  "operation": "QGC piloting and ROS morph commands",
+  "closing": "Safe Recovery / RTL, landed and disarmed; final frame Ready To Fly",
+  "quantitative_flight_data": "separate automated regression air_morph_20261115_183407"
+}

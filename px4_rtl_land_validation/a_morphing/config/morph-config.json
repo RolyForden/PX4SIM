@@ -1,12 +1,11 @@
 {
-  "status": "A reference morphing bench; approximate joints/mass groups; NOT final aircraft or flight validation",
+  "status": "A UAV articulated simulation configuration",
   "source": {
-    "cad_inventory_sha256": "6a0919a37135a628677304a2fa0e9205ec71cac5e06b61de46f6420e94d868cc",
-    "flight_config": "candidate_flight/flight_config.json",
-    "mass_properties_json": "8b942c1af15e84174ff1f5c4e5f94bf70f5f981fb8b3fb950909a3e7d342bed1",
-    "frame": "PROVISIONAL debug frame only; aircraft front/up NOT confirmed"
+    "cad_sha256": "6a0919a37135a628677304a2fa0e9205ec71cac5e06b61de46f6420e94d868cc",
+    "mass_properties_sha256": "8b942c1af15e84174ff1f5c4e5f94bf70f5f981fb8b3fb950909a3e7d342bed1",
+    "package": "A-UAV-20261115.zip"
   },
-  "frame": "FLU; CAD->FLU rotation recorded from candidate_flight/settings.json",
+  "frame": "Gazebo FLU; CAD transform in R_flu_from_cad; PX4 uses FRD",
   "R_flu_from_cad": [
     [
       0.0,
@@ -471,22 +470,43 @@
   "unmatched_mass_at_cad_origin_kg": 0.3930000000000001,
   "hinge_radius_m": 0.075,
   "hinge_z_m": 0.0085,
-  "mesh_decimation": {
-    "stride": {
-      "body": 12,
-      "arm": 8,
-      "prop": 3
-    },
-    "purpose": "low-detail visual meshes for repository size; kinematics do not depend on mesh resolution"
-  },
   "H_angle_deg": 25.0,
   "V_angle_deg": 25.0,
   "assumptions": [
-    "四机臂由 CAD 部件按最近旋翼和径向距离近似分组；不是实际铰链识别。",
-    "H 为前后收窄的水平构形，V 为上反角；25 度是可替换演示值，不是实测限位。",
-    "等效 yaw+pitch 两个仿真自由度由同一构形输入协调，不代表实物有多个独立舵机。",
-    "台架固定、零重力、无碰撞、无电机推力；只验证运动学与反馈链路。",
-    "质量来自 BOM 近似；0.393 kg 未定位质量仍在机身，5 个 CAD 实例无 BOM 质量。",
-    "机身和机臂惯量是近似值；本台架不用于飞行或动态变构结论。"
-  ]
+    "CAD部件按旋翼位置及径向距离近似分组。",
+    "H/V由单个构形输入协调等效yaw/pitch关节，目标角0至25度。",
+    "质量采用BOM近似；0.393kg位置暂置机身，5个CAD实例待补质量。",
+    "机身和机臂采用近似对角惯量。",
+    "四个1g数值关节载体的质量由机身扣除，总质量保持1.15682kg。",
+    "旋翼动力和关节驱动采用当前仿真配置，后续按性能数据细化。"
+  ],
+  "cad_version": "Latest A assembly, project-confirmed 2026-11-15",
+  "visual_mesh": {
+    "method": "complete source triangles",
+    "body_triangles": 423560,
+    "arm_triangles": [
+      27794,
+      27794,
+      27782,
+      27782
+    ]
+  },
+  "flight_model": {
+    "name": "a_air",
+    "airframe": 4996,
+    "gravity_m_s2": [
+      0,
+      0,
+      -9.8
+    ],
+    "collision": "simplified body envelope",
+    "joint_driver": {
+      "type": "force PID",
+      "p": 40,
+      "i": 10,
+      "d": 0.5,
+      "limit_Nm": 2,
+      "integral_limit": 0.5
+    }
+  }
 }

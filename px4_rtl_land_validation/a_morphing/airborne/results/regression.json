@@ -1,0 +1,24 @@
+{
+  "name": "air_morph_20261115_183407",
+  "passed": true,
+  "max_height_m": 5.036679267883301,
+  "max_horizontal_offset_m": 0.08937210589647293,
+  "max_abs_roll_pitch_deg": [
+    0.5238122940063477,
+    0.44403988122940063
+  ],
+  "land_to_contact_sim_s": 8.6,
+  "contact_to_disarm_sim_s": 2.544,
+  "morph_reached": [
+    "H:10",
+    "X",
+    "V:10",
+    "X",
+    "H:25",
+    "X",
+    "V:25",
+    "X"
+  ],
+  "ulog_dropout_count": 0,
+  "ulog_sha256": "e66d6f3e58198b429734b115666ed9845fc9e52f530e30d8083d653d4bb8dc02"
+}

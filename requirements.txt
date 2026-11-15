@@ -1,8 +1,5 @@
-# Python dependencies for the shared baseline scripts, not the PX4 build toolchain.
+# Python tools for the current A UAV simulation.
 pymavlink==2.4.50
 pyulog==1.3.0
 numpy==2.2.6
 matplotlib==3.10.9
-
-# Optional CAD/BOM handoff audit and parameter recomputation.
-openpyxl==3.1.5

@@ -1,48 +1,33 @@
-# PX4SIM 自研变构无人机仿真
+# PX4SIM · A 无人机变构飞行仿真
 
-自研 A 无人机已完成固定构形起飞、悬停和自动降落，已跑通 ROS 指令 X/H/V 变构、X/H10/V10 各 3 次固定构形飞行，以及动态变构链地面联调。下一步是空中小角慢速变构。
+自研 A 无人机已接入 PX4、Gazebo Harmonic 和 QGroundControl，支持 ROS 指令控制 H/V 25°空中变构。PX4 根据实际关节反馈更新旋翼分配几何。
 
 更新：2026年11月15日。
 
-## 成果入口
+## 成果
 
-- [A 无人机阶段成果](docs/A无人机阶段成果.md)：飞行结果、曲线与参数说明。
-- [下载模型、参数包、录像和日志](https://github.com/RolyForden/PX4SIM/releases/tag/a-uav-baseline-2026-11-15)。
-- [后续实施计划](docs/OpenCode后续执行计划.md)：关节模型、ROS接口及分阶段验证。
-
-## 工作进度
-
-| 工作 | 当前成果 | 下一步 |
-|---|---|---|
-| 标准 X500 | RTL返航着陆、Land、降落速度对照 | 保留为回归基线 |
-| 自研 A 模型 | 最新STEP、123部件解析、独立SDF、PX4 airframe4999 | 运动部件分组及柔性关节近似 |
-| A 固定构形飞行 | 约5m起飞、稳定悬停、Land、接地、自动上锁 | H10/V10 已通过；更大角度与重复性 |
-| H/V 变构 | A近似台架X/H/X/V/X反馈；ROS指令已跑通 | 25°固定构形，再做空中连续变构 |
-| 固定 H/V 飞行 | X/H10/V10 各 3 次起飞、悬停、Land、接地、自动上锁通过 | 25° 构形与空中变构 |
-| 推力分配 | 6×4效能矩阵、固定构形有界分配检查 | 随实际关节角更新矩阵 |
-| 动态变构链 | 实际关节→B矩阵→悬停分配，20 Hz；延迟中位 102 ms | 空中小角慢速变构 |
-
-## A 无人机飞行结果
-
-![固定构形飞行曲线](px4_rtl_land_validation/candidate_flight/analysis/demo_20261115_112750.png)
-
-最大相对高度 **5.002m**，稳定悬停 **10.168仿真秒**，Land至接地 **9.032仿真秒**，接地至自动上锁 **2.012仿真秒**。Gazebo与QGC联合录像约37秒，采用脚本自动起降。
-
-## 文件目录
-
-| 内容 | 入口 |
+| 项目 | 当前结果 |
 |---|---|
-| A模型代码与运行方法 | [candidate_flight](px4_rtl_land_validation/candidate_flight/) |
-| 质量属性与参数假设 | [基线接入记录](px4_rtl_land_validation/candidate_flight/handoff_audit/report.md) |
-| 交底书、构形图、关节图、绕线图 | [现实材料](px4_rtl_land_validation/现实材料/) |
-| 模型资产及交接内容 | [资产清单](px4_rtl_land_validation/现实材料/模型资料交接清单.md) |
-| A 近似变构台架 | [a_morphing](px4_rtl_land_validation/a_morphing/) · [第一轮结果](px4_rtl_land_validation/a_morphing/results/README.md) |
-| 固定 H/V 小角飞行 | [fixed_flight](px4_rtl_land_validation/a_morphing/fixed_flight/) · [飞行结果](px4_rtl_land_validation/a_morphing/fixed_flight/results/README.md) · [ULog Release](https://github.com/RolyForden/PX4SIM/releases/tag/a-uav-fixed-hv-2026-11-15) |
-| 动态变构链地面联调 | [dynamic](px4_rtl_land_validation/a_morphing/dynamic/) · [联调结果](px4_rtl_land_validation/a_morphing/dynamic/results/README.md) |
-| 标准X500测试 | [测试记录](docs/标准四旋翼验证.md) · [日志下载](https://github.com/RolyForden/PX4SIM/releases/tag/validation-2026-11-14) |
+| 空中变构 | H10→X→V10→X→H25→X→V25→X，完成起飞、悬停变构、降落和自动上锁 |
+| 飞行回归 | 最大高度5.037m，最大水平偏移0.089m，滚转/俯仰峰值0.524°/0.444° |
+| PX4分配接口 | 原生效能矩阵读回与实测几何核对通过 |
+| 人工演示 | QGC操纵＋ROS构形指令，录屏约3分38秒 |
 
-自研A整机及参数位于Release附件`A-UAV-20261115.zip`；`现实材料/UAV.STEP`用于早期参考台架。
+[查看当前成果](docs/当前成果.md) · [运行与操作](px4_rtl_land_validation/a_morphing/airborne/README.md) · [下载视频、模型和日志](https://github.com/RolyForden/PX4SIM/releases/tag/a-uav-airborne-2026-11-15)
 
-单个文件可用 **Raw / Download raw file** 下载；Release附件位于 **Assets**；完整源码可用 **Code → Download ZIP** 获取。运行环境见[复现说明](docs/实验复现说明.md)。
+![空中变构演示画面](px4_rtl_land_validation/a_morphing/airborne/results/demo-preview.png)
 
-早期参考台架与阶段记录见[归档](px4_rtl_land_validation/archive/)。
+## 仓库结构
+
+```text
+docs/当前成果.md                       结果、配置与后续工作
+px4_rtl_land_validation/
+  a_morphing/
+    config/morph-config.json          机构与质量参数
+    airborne/                         当前飞行模型、PX4适配、ROS和测试工具
+      models/                         SDF模型
+      results/                        最新数据、曲线与截图
+  现实材料/                            机构设计与构形图
+```
+
+代码和说明在仓库，CAD、完整网格、ULog和录像在Release附件。单个文件使用 **Raw / Download raw file** 下载，完整源码使用 **Code → Download ZIP**。
