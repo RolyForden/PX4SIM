@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "measured_drop_m": 0.07167029039999998,
+  "expected_freefall_drop_m": 0.0715612032,
+  "duration_end_s": 0.1212,
+  "support_force_n": [
+    0,
+    0,
+    0
+  ]
+}

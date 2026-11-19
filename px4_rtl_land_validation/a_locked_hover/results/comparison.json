@@ -1,0 +1,313 @@
+{
+  "all_passed": true,
+  "groups": {
+    "empty": {
+      "trials": 3,
+      "mass_kg": 1.4688800000000004,
+      "mean_hover_height_m": 1.9992754062016804,
+      "worst_hover_height_error_m": 0.04577624797821045,
+      "worst_hover_horizontal_offset_m": 0.06882414221763611,
+      "worst_hover_abs_roll_pitch_deg": 0.37100446224212646,
+      "mean_motor_control": 0.5870969891548157
+    },
+    "load50g": {
+      "trials": 3,
+      "mass_kg": 1.5188800000000005,
+      "mean_hover_height_m": 1.996782700220744,
+      "worst_hover_height_error_m": 0.05775916576385498,
+      "worst_hover_horizontal_offset_m": 0.06114524230360985,
+      "worst_hover_abs_roll_pitch_deg": 0.44226911664009094,
+      "mean_motor_control": 0.5999995072682699
+    }
+  },
+  "trials": [
+    {
+      "name": "empty_01",
+      "payload_kg": 0.0,
+      "mass_kg": 1.4688800000000004,
+      "passed": true,
+      "hover_sim_s": 20.048,
+      "hover_mean_height_m": 1.9992891550064087,
+      "hover_max_height_error_m": 0.033212900161743164,
+      "hover_max_horizontal_offset_m": 0.045712776482105255,
+      "hover_max_abs_roll_pitch_deg": [
+        0.2314203530550003,
+        0.37100446224212646
+      ],
+      "hover_max_abs_vertical_speed_m_s": 0.013467367738485336,
+      "flight_max_height_m": 2.013044834136963,
+      "hover_motor_control_min": [
+        0.5847356915473938,
+        0.5863944888114929,
+        0.5847081542015076,
+        0.5861135721206665
+      ],
+      "hover_motor_control_max": [
+        0.5889976620674133,
+        0.5899194478988647,
+        0.5882996916770935,
+        0.5891414284706116
+      ],
+      "hover_upper_saturation_fraction": 0.0,
+      "hover_longest_upper_saturation_s": 0.0,
+      "hover_torque_setpoint_achieved_fraction": 1.0,
+      "hover_thrust_setpoint_achieved_fraction": 1.0,
+      "hover_nav_states": [
+        4
+      ],
+      "flight_failsafe_count": 0,
+      "auto_landed_and_disarmed": true,
+      "latest_disarming_reason": 6,
+      "event_enum_auto_disarm_land": 6,
+      "land_to_contact_sim_s": 4.8,
+      "contact_to_auto_disarm_sim_s": 1.952,
+      "ulog_dropout_count": 0,
+      "ulog_sha256": "b70758a683497481bccb4ea05e793fcc643d8f872597a3aea75ffeb2ea78022d",
+      "ulog_bytes": 12514526,
+      "px4_git_revision": "d6f12ad1c4f70ad3230afd7d86e971421e02fef4",
+      "control_parameters_unchanged": true,
+      "hover_mean_motor_control": 0.5870952606201172
+    },
+    {
+      "name": "empty_02_retry1",
+      "payload_kg": 0.0,
+      "mass_kg": 1.4688800000000004,
+      "passed": true,
+      "hover_sim_s": 20.048,
+      "hover_mean_height_m": 2.0029430389404297,
+      "hover_max_height_error_m": 0.034806251525878906,
+      "hover_max_horizontal_offset_m": 0.04312513768672943,
+      "hover_max_abs_roll_pitch_deg": [
+        0.20649057626724243,
+        0.20826764404773712
+      ],
+      "hover_max_abs_vertical_speed_m_s": 0.021409718319773674,
+      "flight_max_height_m": 2.023956060409546,
+      "hover_motor_control_min": [
+        0.5838742256164551,
+        0.5857453942298889,
+        0.5843495726585388,
+        0.5855083465576172
+      ],
+      "hover_motor_control_max": [
+        0.587914228439331,
+        0.589431881904602,
+        0.588502824306488,
+        0.5895057320594788
+      ],
+      "hover_upper_saturation_fraction": 0.0,
+      "hover_longest_upper_saturation_s": 0.0,
+      "hover_torque_setpoint_achieved_fraction": 1.0,
+      "hover_thrust_setpoint_achieved_fraction": 1.0,
+      "hover_nav_states": [
+        4
+      ],
+      "flight_failsafe_count": 0,
+      "auto_landed_and_disarmed": true,
+      "latest_disarming_reason": 6,
+      "event_enum_auto_disarm_land": 6,
+      "land_to_contact_sim_s": 4.752,
+      "contact_to_auto_disarm_sim_s": 2.152,
+      "ulog_dropout_count": 0,
+      "ulog_sha256": "de4c65f82eca9fde4f4ba10919fea1c7e789270c60aa6e0a49b58971360617e4",
+      "ulog_bytes": 12225796,
+      "px4_git_revision": "d6f12ad1c4f70ad3230afd7d86e971421e02fef4",
+      "control_parameters_unchanged": true,
+      "hover_mean_motor_control": 0.5870869755744934
+    },
+    {
+      "name": "empty_03",
+      "payload_kg": 0.0,
+      "mass_kg": 1.4688800000000004,
+      "passed": true,
+      "hover_sim_s": 20.048,
+      "hover_mean_height_m": 1.9955940246582031,
+      "hover_max_height_error_m": 0.04577624797821045,
+      "hover_max_horizontal_offset_m": 0.06882414221763611,
+      "hover_max_abs_roll_pitch_deg": [
+        0.31660470366477966,
+        0.2508555054664612
+      ],
+      "hover_max_abs_vertical_speed_m_s": 0.025542765855789185,
+      "flight_max_height_m": 2.0212602615356445,
+      "hover_motor_control_min": [
+        0.5846284627914429,
+        0.5863533616065979,
+        0.5844906568527222,
+        0.5855910778045654
+      ],
+      "hover_motor_control_max": [
+        0.5880484580993652,
+        0.5904268622398376,
+        0.5879999995231628,
+        0.5896398425102234
+      ],
+      "hover_upper_saturation_fraction": 0.0,
+      "hover_longest_upper_saturation_s": 0.0,
+      "hover_torque_setpoint_achieved_fraction": 1.0,
+      "hover_thrust_setpoint_achieved_fraction": 1.0,
+      "hover_nav_states": [
+        4
+      ],
+      "flight_failsafe_count": 0,
+      "auto_landed_and_disarmed": true,
+      "latest_disarming_reason": 6,
+      "event_enum_auto_disarm_land": 6,
+      "land_to_contact_sim_s": 4.848,
+      "contact_to_auto_disarm_sim_s": 1.952,
+      "ulog_dropout_count": 0,
+      "ulog_sha256": "5e813c1a29081e6e64e8ab2fbca97e8690c8d16f00e14d7c30f6583cdaaf0cd3",
+      "ulog_bytes": 12384645,
+      "px4_git_revision": "d6f12ad1c4f70ad3230afd7d86e971421e02fef4",
+      "control_parameters_unchanged": true,
+      "hover_mean_motor_control": 0.5871087312698364
+    },
+    {
+      "name": "load50g_01",
+      "payload_kg": 0.05,
+      "mass_kg": 1.5188800000000005,
+      "passed": true,
+      "hover_sim_s": 20.096,
+      "hover_mean_height_m": 1.9981098175048828,
+      "hover_max_height_error_m": 0.05775916576385498,
+      "hover_max_horizontal_offset_m": 0.05081331357359886,
+      "hover_max_abs_roll_pitch_deg": [
+        0.29839617013931274,
+        0.3146747350692749
+      ],
+      "hover_max_abs_vertical_speed_m_s": 0.04263971000909805,
+      "flight_max_height_m": 2.0142593383789062,
+      "hover_motor_control_min": [
+        0.5972066521644592,
+        0.5986750721931458,
+        0.597676694393158,
+        0.5983102917671204
+      ],
+      "hover_motor_control_max": [
+        0.6009284853935242,
+        0.6027255654335022,
+        0.600959062576294,
+        0.6019780039787292
+      ],
+      "hover_upper_saturation_fraction": 0.0,
+      "hover_longest_upper_saturation_s": 0.0,
+      "hover_torque_setpoint_achieved_fraction": 1.0,
+      "hover_thrust_setpoint_achieved_fraction": 1.0,
+      "hover_nav_states": [
+        4
+      ],
+      "flight_failsafe_count": 0,
+      "auto_landed_and_disarmed": true,
+      "latest_disarming_reason": 6,
+      "event_enum_auto_disarm_land": 6,
+      "land_to_contact_sim_s": 4.704,
+      "contact_to_auto_disarm_sim_s": 2.952,
+      "ulog_dropout_count": 0,
+      "ulog_sha256": "fd6f69ab7730607710c66c6d3b7e83c6a066583a0b60dcf3102af2f20397bed0",
+      "ulog_bytes": 12298367,
+      "px4_git_revision": "d6f12ad1c4f70ad3230afd7d86e971421e02fef4",
+      "control_parameters_unchanged": true,
+      "hover_mean_motor_control": 0.5999741554260254
+    },
+    {
+      "name": "load50g_02",
+      "payload_kg": 0.05,
+      "mass_kg": 1.5188800000000005,
+      "passed": true,
+      "hover_sim_s": 20.056,
+      "hover_mean_height_m": 1.9946222305297852,
+      "hover_max_height_error_m": 0.03450179100036621,
+      "hover_max_horizontal_offset_m": 0.04460490122437477,
+      "hover_max_abs_roll_pitch_deg": [
+        0.2685435116291046,
+        0.26637721061706543
+      ],
+      "hover_max_abs_vertical_speed_m_s": 0.01873423345386982,
+      "flight_max_height_m": 2.016005516052246,
+      "hover_motor_control_min": [
+        0.5971918106079102,
+        0.5989193916320801,
+        0.5980514883995056,
+        0.5986103415489197
+      ],
+      "hover_motor_control_max": [
+        0.600865364074707,
+        0.6034145355224609,
+        0.6010635495185852,
+        0.6021215319633484
+      ],
+      "hover_upper_saturation_fraction": 0.0,
+      "hover_longest_upper_saturation_s": 0.0,
+      "hover_torque_setpoint_achieved_fraction": 1.0,
+      "hover_thrust_setpoint_achieved_fraction": 1.0,
+      "hover_nav_states": [
+        4
+      ],
+      "flight_failsafe_count": 0,
+      "auto_landed_and_disarmed": true,
+      "latest_disarming_reason": 6,
+      "event_enum_auto_disarm_land": 6,
+      "land_to_contact_sim_s": 4.848,
+      "contact_to_auto_disarm_sim_s": 2.752,
+      "ulog_dropout_count": 0,
+      "ulog_sha256": "b345f5a3e906d1b6d8966eaf6898ea6439bba59d581bb72c0bee4e3e29c6b68e",
+      "ulog_bytes": 12351713,
+      "px4_git_revision": "d6f12ad1c4f70ad3230afd7d86e971421e02fef4",
+      "control_parameters_unchanged": true,
+      "hover_mean_motor_control": 0.6000011563301086
+    },
+    {
+      "name": "load50g_03",
+      "payload_kg": 0.05,
+      "mass_kg": 1.5188800000000005,
+      "passed": true,
+      "hover_sim_s": 20.048,
+      "hover_mean_height_m": 1.9976160526275635,
+      "hover_max_height_error_m": 0.033248066902160645,
+      "hover_max_horizontal_offset_m": 0.06114524230360985,
+      "hover_max_abs_roll_pitch_deg": [
+        0.2730787694454193,
+        0.44226911664009094
+      ],
+      "hover_max_abs_vertical_speed_m_s": 0.01578107289969921,
+      "flight_max_height_m": 2.010568380355835,
+      "hover_motor_control_min": [
+        0.5969206690788269,
+        0.5983576774597168,
+        0.5978639125823975,
+        0.5987071990966797
+      ],
+      "hover_motor_control_max": [
+        0.6015195846557617,
+        0.602898359298706,
+        0.6012970209121704,
+        0.6023271083831787
+      ],
+      "hover_upper_saturation_fraction": 0.0,
+      "hover_longest_upper_saturation_s": 0.0,
+      "hover_torque_setpoint_achieved_fraction": 1.0,
+      "hover_thrust_setpoint_achieved_fraction": 1.0,
+      "hover_nav_states": [
+        4
+      ],
+      "flight_failsafe_count": 0,
+      "auto_landed_and_disarmed": true,
+      "latest_disarming_reason": 6,
+      "event_enum_auto_disarm_land": 6,
+      "land_to_contact_sim_s": 4.8,
+      "contact_to_auto_disarm_sim_s": 2.904,
+      "ulog_dropout_count": 0,
+      "ulog_sha256": "1c02c0f51cfe8adffd5a12e1110e3fc0bf9d7c64258aa89f84c6e625ea3d3b9f",
+      "ulog_bytes": 12447601,
+      "px4_git_revision": "d6f12ad1c4f70ad3230afd7d86e971421e02fef4",
+      "control_parameters_unchanged": true,
+      "hover_mean_motor_control": 0.6000232100486755
+    }
+  ],
+  "startup_failure": {
+    "trial": "empty_02",
+    "armed": false,
+    "ulog": null,
+    "cause": "Heartbeat check ran before PX4 finished spawning; wait now up to 30 s"
+  }
+}

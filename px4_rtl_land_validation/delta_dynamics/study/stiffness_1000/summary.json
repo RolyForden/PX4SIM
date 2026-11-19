@@ -1,0 +1,23 @@
+{
+  "passed": false,
+  "settings": {
+    "output": "world.sdf",
+    "payload": 0.05,
+    "gravity": 9.81,
+    "dt": 0.0002,
+    "stiffness": 1000.0,
+    "damping": 3.0,
+    "upper_mass_kg": 0.03,
+    "rod_mass_kg": 0.012,
+    "platform_mass_kg": 0.05,
+    "constraint": "6 equal/opposite 3D spring-damper ball closures",
+    "passive_position_reset": false,
+    "base_fixed": true,
+    "mass_source": "explicit simulation test values; not BOM calibration"
+  },
+  "error": "RuntimeError: 实际末端未在 5 s 内到达目标",
+  "max_closure_m": 0.0004698503552,
+  "max_tracking_error_m": 0.001213596158784676,
+  "final_tracking_error_m": 0.0007762953542504287,
+  "segment": 3
+}

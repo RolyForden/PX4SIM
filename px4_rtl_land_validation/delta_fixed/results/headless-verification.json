@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "sim_duration_s": 18.988,
+  "feedback_samples": 951,
+  "max_tracking_error_m": 0.0003993036081260871,
+  "rms_tracking_error_m": 0.0002329013567268845,
+  "max_rod_endpoint_closure_m": 6.725063107e-05,
+  "max_platform_fk_error_m": 5.318796761e-05,
+  "final_home_error_m": 5.529718165176951e-06,
+  "max_base_displacement_m": 0.0,
+  "position_min_m": [
+    -0.01499212808,
+    -0.01364062345,
+    -0.2740842031
+  ],
+  "position_max_m": [
+    0.01503144093,
+    0.01637823535,
+    -0.2490616182
+  ],
+  "joint_min_rad": [
+    -0.006212152753,
+    -0.004246251055,
+    -0.0836493971
+  ],
+  "joint_max_rad": [
+    0.1594692048,
+    0.1598312404,
+    0.1595954812
+  ],
+  "segments": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "sequence": "home -> down 25 mm -> home -> x +15 mm -> home -> circle radius 15 mm (z -15 mm) -> home",
+  "method": "three force-controlled Gazebo joints; passive links reset from actual joint FK; no passive force closure",
+  "flight": false
+}

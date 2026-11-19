@@ -1,0 +1,51 @@
+{
+  "name": "sensitivity_damping_1p5",
+  "settings": {
+    "output": "world.sdf",
+    "payload": 0.05,
+    "gravity": 9.81,
+    "dt": 0.0002,
+    "stiffness": 2000.0,
+    "damping": 1.5,
+    "upper_mass_kg": 0.03,
+    "rod_mass_kg": 0.012,
+    "platform_mass_kg": 0.05,
+    "constraint": "6 equal/opposite 3D spring-damper ball closures",
+    "passive_position_reset": false,
+    "base_fixed": true,
+    "mass_source": "explicit simulation test values; not BOM calibration"
+  },
+  "passed": true,
+  "sim_duration_s": 30.2342,
+  "samples": 1516,
+  "static_support_force_n": [
+    2.4263890549699998e-05,
+    -0.0002861591870569999,
+    0.9810006976649995
+  ],
+  "expected_platform_payload_weight_n": 0.9810000000000001,
+  "static_vertical_force_balance_error_n": 6.976649999934637e-07,
+  "static_joint_torque_nm": [
+    -0.12449124183799996,
+    -0.126808057328,
+    -0.125159197982
+  ],
+  "static_joint_torque_std_nm": [
+    5.3071310400783826e-05,
+    5.207443539261724e-05,
+    4.6366869886608854e-05
+  ],
+  "max_closure_m": 0.000258558811,
+  "max_tracking_error_m": 0.0008044787786165582,
+  "final_home_error_m": 0.00022707172780363536,
+  "max_base_displacement_m": 0.0,
+  "max_platform_tilt_rad": 0.00981791877413101,
+  "final_max_speed_m_s": 4.1013107425740465e-05,
+  "max_applied_joint_torque_nm": [
+    0.1691690401,
+    0.1712663406,
+    0.1697792581
+  ],
+  "trajectory_tested": true,
+  "passive_resets_used": false
+}

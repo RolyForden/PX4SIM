@@ -1,0 +1,40 @@
+{
+  "name": "empty_01",
+  "passed": false,
+  "failure_phase": "V25_arm",
+  "error": "Abort: roll/pitch >20deg",
+  "first_abort_boot_ms": 112741,
+  "last_completed_phase": "V25_transition",
+  "H25_arm_completed": true,
+  "V25_arm_completed": false,
+  "simultaneous_tests_executed": false,
+  "load50g_executed": false,
+  "abort_land_requested": true,
+  "abort_ground_detected": true,
+  "abort_auto_disarmed": true,
+  "ulog": {
+    "file": "logs/empty_01.ulg",
+    "bytes": 29684760,
+    "sha256": "67f72006bbdf169253266ec5051c3521afaa585ea625fb5668d9dad357f69d81"
+  },
+  "adapter": "previous full 6-row effectiveness adapter",
+  "replay_diagnosis": {
+    "full": {
+      "samples": 2413,
+      "rank_counts": {
+        "4.0": 2408,
+        "5.0": 5
+      },
+      "max_reconstruction_error": 914116544.0,
+      "max_inverse_element": 6684944.0
+    },
+    "four_axes": {
+      "samples": 2413,
+      "rank_counts": {
+        "4.0": 2413
+      },
+      "max_reconstruction_error": 1.57356262207e-05,
+      "max_inverse_element": 2.68368601799
+    }
+  }
+}

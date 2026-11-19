@@ -1,0 +1,38 @@
+[
+  {
+    "trial": "empty_01",
+    "file": "runs/empty_01/logs/empty_01.ulg",
+    "bytes": 12514526,
+    "sha256": "b70758a683497481bccb4ea05e793fcc643d8f872597a3aea75ffeb2ea78022d"
+  },
+  {
+    "trial": "empty_02_retry1",
+    "file": "runs/empty_02_retry1/logs/empty_02_retry1.ulg",
+    "bytes": 12225796,
+    "sha256": "de4c65f82eca9fde4f4ba10919fea1c7e789270c60aa6e0a49b58971360617e4"
+  },
+  {
+    "trial": "empty_03",
+    "file": "runs/empty_03/logs/empty_03.ulg",
+    "bytes": 12384645,
+    "sha256": "5e813c1a29081e6e64e8ab2fbca97e8690c8d16f00e14d7c30f6583cdaaf0cd3"
+  },
+  {
+    "trial": "load50g_01",
+    "file": "runs/load50g_01/logs/load50g_01.ulg",
+    "bytes": 12298367,
+    "sha256": "fd6f69ab7730607710c66c6d3b7e83c6a066583a0b60dcf3102af2f20397bed0"
+  },
+  {
+    "trial": "load50g_02",
+    "file": "runs/load50g_02/logs/load50g_02.ulg",
+    "bytes": 12351713,
+    "sha256": "b345f5a3e906d1b6d8966eaf6898ea6439bba59d581bb72c0bee4e3e29c6b68e"
+  },
+  {
+    "trial": "load50g_03",
+    "file": "runs/load50g_03/logs/load50g_03.ulg",
+    "bytes": 12447601,
+    "sha256": "1c02c0f51cfe8adffd5a12e1110e3fc0bf9d7c64258aa89f84c6e625ea3d3b9f"
+  }
+]

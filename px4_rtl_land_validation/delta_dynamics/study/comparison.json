@@ -1,0 +1,189 @@
+{
+  "elastic_cases": [
+    {
+      "case": "baseline",
+      "K_n_m": 2000.0,
+      "D_ns_m": 3.0,
+      "passed": true,
+      "max_tracking_mm": 0.8166139763408339,
+      "max_closure_mm": 0.25483594660000003,
+      "reason": null,
+      "fixture_wrench": {
+        "joint_frame": "fixed body joint frame; force at body origin",
+        "static_force_n": [
+          -0.000256762470352063,
+          0.00034843808739456875,
+          12.380289318786886
+        ],
+        "static_torque_nm": [
+          0.002008319573272632,
+          1.7474496666923952e-06,
+          -4.585861108843115e-06
+        ],
+        "dynamic_force_peak_from_static_n": 0.5753349257171757,
+        "dynamic_torque_peak_from_static_nm": 0.09531698454019004
+      }
+    },
+    {
+      "case": "stiffness_1000",
+      "K_n_m": 1000.0,
+      "D_ns_m": 3.0,
+      "passed": false,
+      "max_tracking_mm": 1.2135961587846762,
+      "max_closure_mm": 0.4698503552,
+      "reason": "RuntimeError: 实际末端未在 5 s 内到达目标"
+    },
+    {
+      "case": "stiffness_4000",
+      "K_n_m": 4000.0,
+      "D_ns_m": 3.0,
+      "passed": true,
+      "max_tracking_mm": 0.6624322972921185,
+      "max_closure_mm": 0.132488406,
+      "reason": null,
+      "fixture_wrench": {
+        "joint_frame": "fixed body joint frame; force at body origin",
+        "static_force_n": [
+          -0.0001396377615511889,
+          5.082822004643841e-06,
+          12.380190982106567
+        ],
+        "static_torque_nm": [
+          0.00199030318295054,
+          -2.3852580903962595e-05,
+          -1.93387802486683e-05
+        ],
+        "dynamic_force_peak_from_static_n": 0.5560605340758685,
+        "dynamic_torque_peak_from_static_nm": 0.0857977328257029
+      }
+    },
+    {
+      "case": "damping_1p5",
+      "K_n_m": 2000.0,
+      "D_ns_m": 1.5,
+      "passed": true,
+      "max_tracking_mm": 0.8044787786165583,
+      "max_closure_mm": 0.258558811,
+      "reason": null,
+      "fixture_wrench": {
+        "joint_frame": "fixed body joint frame; force at body origin",
+        "static_force_n": [
+          1.7067220311510105e-05,
+          -1.9870774735159965e-05,
+          12.380224684170702
+        ],
+        "static_torque_nm": [
+          0.0019692361260220197,
+          -3.0820222348958886e-05,
+          -1.0687121714554183e-06
+        ],
+        "dynamic_force_peak_from_static_n": 0.5826147617902956,
+        "dynamic_torque_peak_from_static_nm": 0.09005998281117447
+      }
+    },
+    {
+      "case": "damping_6",
+      "K_n_m": 2000.0,
+      "D_ns_m": 6.0,
+      "passed": true,
+      "max_tracking_mm": 0.810418412988631,
+      "max_closure_mm": 0.25305274549999995,
+      "reason": null,
+      "fixture_wrench": {
+        "joint_frame": "fixed body joint frame; force at body origin",
+        "static_force_n": [
+          6.167392480304928e-05,
+          -8.386355947140179e-05,
+          12.380242508368696
+        ],
+        "static_torque_nm": [
+          0.001962161085945066,
+          -3.5263004193524445e-05,
+          1.1927601158554478e-05
+        ],
+        "dynamic_force_peak_from_static_n": 0.5820654078178836,
+        "dynamic_torque_peak_from_static_nm": 0.09092295352103229
+      }
+    }
+  ],
+  "native_cases": [
+    {
+      "case": "gravity_empty",
+      "passed": true,
+      "max_tracking_mm": 0.5764935163513915,
+      "max_closure_mm": 0.001399436369,
+      "final_home_error_mm": 0.015317573258844704,
+      "fixture_wrench": {
+        "joint_frame": "fixed body joint frame; force at body origin",
+        "static_force_n": [
+          -8.059094655633703e-13,
+          1.9570731169343719e-10,
+          11.890308230108069
+        ],
+        "static_torque_nm": [
+          0.001320250278793536,
+          -1.8793868658915656e-05,
+          -1.1824688099659906e-12
+        ],
+        "dynamic_force_peak_from_static_n": 0.6416509222872788,
+        "dynamic_torque_peak_from_static_nm": 0.11248837247448239
+      },
+      "extra_proxy_mass_kg": 6e-05
+    },
+    {
+      "case": "payload_50g",
+      "passed": true,
+      "max_tracking_mm": 0.5719268215422154,
+      "max_closure_mm": 0.001398739548,
+      "final_home_error_mm": 0.014839911119897735,
+      "fixture_wrench": {
+        "joint_frame": "fixed body joint frame; force at body origin",
+        "static_force_n": [
+          4.033902553374884e-15,
+          1.4329951847233233e-14,
+          12.380808599999956
+        ],
+        "static_torque_nm": [
+          0.0019923947088223873,
+          -2.8069931678418295e-05,
+          -6.363366597264934e-16
+        ],
+        "dynamic_force_peak_from_static_n": 0.5681008960100686,
+        "dynamic_torque_peak_from_static_nm": 0.11832314902766154
+      },
+      "extra_proxy_mass_kg": 6e-05
+    },
+    {
+      "case": "payload_50g_rotated",
+      "passed": true,
+      "max_tracking_mm": 0.5806613188752779,
+      "max_closure_mm": 0.001417396779,
+      "final_home_error_mm": 0.014776766052585174,
+      "fixture_wrench": {
+        "joint_frame": "fixed body joint frame; force at body origin",
+        "static_force_n": [
+          0.9894084845990506,
+          1.4773935579034343,
+          12.252460322911107
+        ],
+        "static_torque_nm": [
+          0.05910286093756765,
+          -0.03828840944005606,
+          -0.00015587259891484352
+        ],
+        "dynamic_force_peak_from_static_n": 0.585679380988504,
+        "dynamic_torque_peak_from_static_nm": 0.10696563243861351
+      },
+      "extra_proxy_mass_kg": 6e-05
+    }
+  ],
+  "conclusion": {
+    "direct_sdf_closure_supported": false,
+    "runtime_fixed_proxy_closure_supported": true,
+    "selected_backend": "native constraints via ball joints and runtime fixed proxy welds",
+    "native_payload_closure_improvement_factor": 182.1897056992343,
+    "soft_stiffness_completion_failed": true,
+    "native_full_tests_passed": true,
+    "flight_tested": false
+  }
+}

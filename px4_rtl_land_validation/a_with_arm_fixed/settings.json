@@ -1,0 +1,28 @@
+{
+  "payload": 0.05,
+  "gravity": 9.81,
+  "proxy_total_mass_kg": 6e-05,
+  "base_rpy_rad": [
+    0,
+    0,
+    0
+  ],
+  "mass_ledger": {
+    "aircraft_baseline_kg": 1.1568200000000002,
+    "removed_mechanism_bom_mass_kg": 0,
+    "fixed_mechanism_test_mass_kg": 0.1,
+    "upper_arm_mass_kg": 0.09,
+    "lower_rod_mass_kg": 0.07200000000000001,
+    "platform_mass_kg": 0.05,
+    "proxy_mass_kg": 6e-05,
+    "payload_mass_kg": 0.05,
+    "expected_total_kg": 1.5188800000000005,
+    "baseline_mechanism_mass_assignment": "B\u673a\u68b0\u5939\u722a and connector have no BOM mass; no subtraction",
+    "unlocated_baseline_mass_kg": 0.3930000000000001
+  },
+  "mount_origin_flu_m": [
+    0.0,
+    0.0,
+    -0.000999999899999998
+  ]
+}

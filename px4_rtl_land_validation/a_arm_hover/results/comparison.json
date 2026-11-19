@@ -1,0 +1,979 @@
+{
+  "accepted": [
+    {
+      "name": "empty_imu5000",
+      "payload_kg": 0.0,
+      "mass_kg": 1.4688800000000004,
+      "passed": true,
+      "phases": {
+        "before": {
+          "sim_s": 10.003,
+          "height_mean_m": 2.992400646209717,
+          "height_max_error_m": 0.03832054138183594,
+          "height_rms_error_m": 0.014009973034262657,
+          "horizontal_max_offset_m": 0.02203325927257538,
+          "horizontal_rms_offset_m": 0.013450895436108112,
+          "roll_pitch_peak_deg": [
+            0.21723873913288116,
+            0.18615248799324036
+          ],
+          "roll_pitch_rms_deg": [
+            0.07755748927593231,
+            0.10338931530714035
+          ],
+          "motor_mean_control": 0.5871037244796753,
+          "upper_saturation_fraction": 0.0,
+          "torque_achieved_fraction": 1.0,
+          "thrust_achieved_fraction": 1.0,
+          "arm_max_tracking_error_m": 3.348690859763671e-06,
+          "arm_max_closure_m": 1.408295748e-06,
+          "arm_position_range_m": [
+            2.082767490000001e-06,
+            2.1134309999999972e-06,
+            4.894599999999416e-06
+          ],
+          "arm_joint_range_rad": [
+            2.641845059e-05,
+            2.913339632e-05,
+            2.6035079957e-05
+          ],
+          "arm_max_abs_joint_torque_nm": [
+            0.09281195446,
+            0.0943797441,
+            0.09321993352
+          ],
+          "com_range_flu_m": [
+            3.4263720000003066e-07,
+            3.288901200000001e-07,
+            4.886199999991347e-07
+          ],
+          "mount_wrench_mean_n_nm": [
+            -2.9468026093573428e-05,
+            -0.00010219152044518799,
+            3.060315815712999,
+            0.00129751316382414,
+            -2.3114376533749993e-05,
+            -1.2745749024159657e-06
+          ],
+          "mount_wrench_peak_to_peak_n_nm": [
+            0.00652785130808,
+            0.00509924080167,
+            0.025946925830000023,
+            0.0011324583422040002,
+            0.001456244984564,
+            0.0001026624566722
+          ],
+          "mount_wrench_min_n_nm": [
+            -0.00263969133658,
+            -0.00290751482916,
+            3.04928160466,
+            0.000619286179586,
+            -0.000861220477491,
+            -4.09988433711e-05
+          ],
+          "mount_wrench_max_n_nm": [
+            0.0038881599715,
+            0.00219172597251,
+            3.07522853049,
+            0.00175174452179,
+            0.000595024507073,
+            6.16636133011e-05
+          ],
+          "truth_height_mean_m": 3.00389695788,
+          "truth_height_max_error_m": 0.020163200099999834,
+          "truth_horizontal_max_offset_m": 0.044675837777339404,
+          "truth_base_height_range_m": 0.03984943699999999,
+          "truth_base_horizontal_range_m": [
+            0.026201459116,
+            0.03200710305
+          ],
+          "truth_base_roll_pitch_peak_deg": [
+            0.2145531153919012,
+            0.1841963389043367
+          ],
+          "nav_states": [
+            4
+          ]
+        },
+        "motion": {
+          "sim_s": 23.702,
+          "height_mean_m": 2.9978082180023193,
+          "height_max_error_m": 0.01682305335998535,
+          "height_rms_error_m": 0.006783246994018555,
+          "horizontal_max_offset_m": 0.05732579901814461,
+          "horizontal_rms_offset_m": 0.02527282014489174,
+          "roll_pitch_peak_deg": [
+            0.45063114166259766,
+            0.27228471636772156
+          ],
+          "roll_pitch_rms_deg": [
+            0.1888853758573532,
+            0.11120370030403137
+          ],
+          "motor_mean_control": 0.5871924757957458,
+          "upper_saturation_fraction": 0.0,
+          "torque_achieved_fraction": 1.0,
+          "thrust_achieved_fraction": 1.0,
+          "arm_max_tracking_error_m": 0.0005156616292511535,
+          "arm_max_closure_m": 4.11186845e-09,
+          "arm_position_range_m": [
+            0.03013717655,
+            0.03015473674,
+            0.025249362000000025
+          ],
+          "arm_joint_range_rad": [
+            0.22112092437,
+            0.24339416260000002,
+            0.24410770384
+          ],
+          "arm_max_abs_joint_torque_nm": [
+            0.114462038,
+            0.1160508425,
+            0.1199595951
+          ],
+          "com_range_flu_m": [
+            0.0020454523588,
+            0.0020424246302,
+            0.0024149393399999983
+          ],
+          "mount_wrench_mean_n_nm": [
+            0.0005827867554927312,
+            -0.0012628052432507525,
+            3.0650303964415975,
+            0.0007888363158537063,
+            -0.002720503971050374,
+            -2.2891947815026475e-05
+          ],
+          "mount_wrench_peak_to_peak_n_nm": [
+            0.1970891072554,
+            0.17708036756220003,
+            0.3781532115899999,
+            0.0819869322198,
+            0.092815118055,
+            0.0027303861367510003
+          ],
+          "mount_wrench_min_n_nm": [
+            -0.0867145203934,
+            -0.103507194216,
+            2.88392195164,
+            -0.0403546956442,
+            -0.0544385536669,
+            -0.000761499903531
+          ],
+          "mount_wrench_max_n_nm": [
+            0.110374586862,
+            0.0735731733462,
+            3.26207516323,
+            0.0416322365756,
+            0.0383765643881,
+            0.00196888623322
+          ],
+          "truth_height_mean_m": 2.999424067845022,
+          "truth_height_max_error_m": 0.02454575289999994,
+          "truth_horizontal_max_offset_m": 0.07400397074620177,
+          "truth_base_height_range_m": 0.04138930799999985,
+          "truth_base_horizontal_range_m": [
+            0.07083141702,
+            0.10841050076
+          ],
+          "truth_base_roll_pitch_peak_deg": [
+            0.471244504015608,
+            0.2866762282407592
+          ],
+          "nav_states": [
+            4
+          ]
+        },
+        "after": {
+          "sim_s": 10.099,
+          "height_mean_m": 2.99759578704834,
+          "height_max_error_m": 0.01360464096069336,
+          "height_rms_error_m": 0.006234842352569103,
+          "horizontal_max_offset_m": 0.03213449940085411,
+          "horizontal_rms_offset_m": 0.020574141293764114,
+          "roll_pitch_peak_deg": [
+            0.2213517129421234,
+            0.33436423540115356
+          ],
+          "roll_pitch_rms_deg": [
+            0.10478010028600693,
+            0.15442484617233276
+          ],
+          "motor_mean_control": 0.5872328877449036,
+          "upper_saturation_fraction": 0.0,
+          "torque_achieved_fraction": 1.0,
+          "thrust_achieved_fraction": 1.0,
+          "arm_max_tracking_error_m": 3.171973634748422e-05,
+          "arm_max_closure_m": 9.378963124e-11,
+          "arm_position_range_m": [
+            2.1985671200000006e-06,
+            3.1972952e-05,
+            4.036000000012807e-06
+          ],
+          "arm_joint_range_rad": [
+            0.000124465713627,
+            0.00020300698023699998,
+            4.7346551848e-05
+          ],
+          "arm_max_abs_joint_torque_nm": [
+            0.09261517393,
+            0.0941949991,
+            0.09321329248
+          ],
+          "com_range_flu_m": [
+            1.4705969999997265e-07,
+            2.1365767399999974e-06,
+            3.8419000000095016e-07
+          ],
+          "mount_wrench_mean_n_nm": [
+            8.313064593514605e-05,
+            -0.000246952986673256,
+            3.0614006221116004,
+            0.0012998216421680603,
+            -4.305724322614799e-05,
+            2.6044371487763995e-07
+          ],
+          "mount_wrench_peak_to_peak_n_nm": [
+            0.006156905363339999,
+            0.00558797833891,
+            0.02020368012000029,
+            0.001102709204386,
+            0.001281442996966,
+            7.99510110217e-05
+          ],
+          "mount_wrench_min_n_nm": [
+            -0.00247510893175,
+            -0.00367447858774,
+            3.04859328427,
+            0.000637780362294,
+            -0.000795913053544,
+            -4.1822866948e-05
+          ],
+          "mount_wrench_max_n_nm": [
+            0.00368179643159,
+            0.00191349975117,
+            3.06879696439,
+            0.00174048956668,
+            0.000485529943422,
+            3.81281440737e-05
+          ],
+          "truth_height_mean_m": 3.0167817612600003,
+          "truth_height_max_error_m": 0.050137091099999864,
+          "truth_horizontal_max_offset_m": 0.042705133141068746,
+          "truth_base_height_range_m": 0.04682846699999965,
+          "truth_base_horizontal_range_m": [
+            0.0575265638,
+            0.04945522551
+          ],
+          "truth_base_roll_pitch_peak_deg": [
+            0.22274155134670431,
+            0.3422067371629319
+          ],
+          "nav_states": [
+            4
+          ]
+        }
+      },
+      "motion_minus_before_mean_mount_wrench_n_nm": [
+        0.0006122547815863046,
+        -0.0011606137228055645,
+        0.004714580728598428,
+        -0.0005086768479704337,
+        -0.0026973895945166244,
+        -2.161737291261051e-05
+      ],
+      "all_arm_segments": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "arm_completed_id": 1,
+      "auto_landed_and_disarmed": true,
+      "land_to_contact_sim_s": 6.056,
+      "contact_to_disarm_sim_s": 2.393,
+      "flight_failsafe_count": 0,
+      "ulog_dropout_count": 0,
+      "ulog": {
+        "file": "logs/empty_imu5000.ulg",
+        "bytes": 20096521,
+        "sha256": "48d7e1b4f8f63fc428c14df6ed8b80a7db43f01b32c61d4501ec6f65a360e19b"
+      },
+      "px4_revision": "d6f12ad1c4f70ad3230afd7d86e971421e02fef4",
+      "parameter_changes": {
+        "COM_FLIGHT_UUID": [
+          0,
+          1
+        ],
+        "LND_FLIGHT_T_LO": [
+          0,
+          63821200
+        ]
+      },
+      "control_parameters_unchanged": true,
+      "dynamic_CA_updates": false,
+      "max_mass_deviation_kg": 4.440892098500626e-16,
+      "all_runtime_inertias_positive": true,
+      "flight_dynamics_passed": true,
+      "landing_estimator_max_height_error_vs_truth_m": 0.11295851081434427,
+      "final_truth_height_above_ground_m": 3.594999999911863e-07,
+      "landing_estimator_check_passed": true
+    },
+    {
+      "name": "load50g_01",
+      "payload_kg": 0.05,
+      "mass_kg": 1.5188800000000005,
+      "passed": true,
+      "phases": {
+        "before": {
+          "sim_s": 10.001,
+          "height_mean_m": 2.989168167114258,
+          "height_max_error_m": 0.03487372398376465,
+          "height_rms_error_m": 0.01845598593354225,
+          "horizontal_max_offset_m": 0.03282998129725456,
+          "horizontal_rms_offset_m": 0.021724442020058632,
+          "roll_pitch_peak_deg": [
+            0.2016107439994812,
+            0.2699194848537445
+          ],
+          "roll_pitch_rms_deg": [
+            0.09430563449859619,
+            0.1293482482433319
+          ],
+          "motor_mean_control": 0.6000257730484009,
+          "upper_saturation_fraction": 0.0,
+          "torque_achieved_fraction": 1.0,
+          "thrust_achieved_fraction": 1.0,
+          "arm_max_tracking_error_m": 2.467661435009688e-06,
+          "arm_max_closure_m": 1.655992992e-09,
+          "arm_position_range_m": [
+            1.7286237299999993e-06,
+            2.042387000000031e-06,
+            4.8046000000190325e-06
+          ],
+          "arm_joint_range_rad": [
+            3.004934308e-05,
+            2.609052775e-05,
+            2.8156753839999998e-05
+          ],
+          "arm_max_abs_joint_torque_nm": [
+            0.1248657901,
+            0.1272805501,
+            0.1257406086
+          ],
+          "com_range_flu_m": [
+            1.6882340000002726e-07,
+            1.9909569999999703e-07,
+            6.096399999995505e-07
+          ],
+          "mount_wrench_mean_n_nm": [
+            0.0003757936610085838,
+            -6.892420638782952e-05,
+            3.5510630114587998,
+            0.0019808797001631996,
+            -0.0001331810655653528,
+            -1.7429124992175799e-06
+          ],
+          "mount_wrench_peak_to_peak_n_nm": [
+            0.00567867176401,
+            0.00610198644655,
+            0.018783180649999842,
+            0.0014322457113600002,
+            0.001248423429261,
+            7.89664655926e-05
+          ],
+          "mount_wrench_min_n_nm": [
+            -0.00275301748523,
+            -0.00337732382837,
+            3.5426698152,
+            0.00126250551196,
+            -0.000723798422205,
+            -4.16579980422e-05
+          ],
+          "mount_wrench_max_n_nm": [
+            0.00292565427878,
+            0.00272466261818,
+            3.56145299585,
+            0.00269475122332,
+            0.000524625007056,
+            3.73084675504e-05
+          ],
+          "truth_height_mean_m": 2.9878065287199997,
+          "truth_height_max_error_m": 0.06552507389999995,
+          "truth_horizontal_max_offset_m": 0.0631624299631721,
+          "truth_base_height_range_m": 0.09135087800000008,
+          "truth_base_horizontal_range_m": [
+            0.08992472962,
+            0.054793216081
+          ],
+          "truth_base_roll_pitch_peak_deg": [
+            0.20450674535601016,
+            0.26923758314544466
+          ],
+          "nav_states": [
+            4
+          ]
+        },
+        "motion": {
+          "sim_s": 23.651,
+          "height_mean_m": 2.9977073669433594,
+          "height_max_error_m": 0.013210296630859375,
+          "height_rms_error_m": 0.006815311498939991,
+          "horizontal_max_offset_m": 0.07149938493967056,
+          "horizontal_rms_offset_m": 0.0275820754468441,
+          "roll_pitch_peak_deg": [
+            0.4168081283569336,
+            0.4117492735385895
+          ],
+          "roll_pitch_rms_deg": [
+            0.16174247860908508,
+            0.16561846435070038
+          ],
+          "motor_mean_control": 0.6000637412071228,
+          "upper_saturation_fraction": 0.0,
+          "torque_achieved_fraction": 1.0,
+          "thrust_achieved_fraction": 1.0,
+          "arm_max_tracking_error_m": 0.0005329756283496213,
+          "arm_max_closure_m": 3.83450178e-09,
+          "arm_position_range_m": [
+            0.030095590630000002,
+            0.03011197585,
+            0.025251419199999986
+          ],
+          "arm_joint_range_rad": [
+            0.22094658349000001,
+            0.24315626783,
+            0.24388713115
+          ],
+          "arm_max_abs_joint_torque_nm": [
+            0.1486686154,
+            0.1530156578,
+            0.1497907876
+          ],
+          "com_range_flu_m": [
+            0.002965763267,
+            0.0029629743090000002,
+            0.003166890229999997
+          ],
+          "mount_wrench_mean_n_nm": [
+            0.0006107834922048439,
+            -7.648615360370504e-05,
+            3.552200039244216,
+            0.001892626208571376,
+            -0.004004312532130964,
+            -4.277112675371685e-05
+          ],
+          "mount_wrench_peak_to_peak_n_nm": [
+            0.20349916062099999,
+            0.2007948258619,
+            0.40494544358999995,
+            0.1058682278018,
+            0.086961830866,
+            0.002816748691859
+          ],
+          "mount_wrench_min_n_nm": [
+            -0.101470072947,
+            -0.108389111053,
+            3.37722694177,
+            -0.0540536178109,
+            -0.0492477946775,
+            -0.000961431749769
+          ],
+          "mount_wrench_max_n_nm": [
+            0.102029087674,
+            0.0924057148089,
+            3.78217238536,
+            0.0518146099909,
+            0.0377140361885,
+            0.00185531694209
+          ],
+          "truth_height_mean_m": 3.0084955383075638,
+          "truth_height_max_error_m": 0.04195616709999994,
+          "truth_horizontal_max_offset_m": 0.1048160939621783,
+          "truth_base_height_range_m": 0.06834447199999971,
+          "truth_base_horizontal_range_m": [
+            0.06775886473899999,
+            0.11190193861
+          ],
+          "truth_base_roll_pitch_peak_deg": [
+            0.4352236590500163,
+            0.4269603061133024
+          ],
+          "nav_states": [
+            4
+          ]
+        },
+        "after": {
+          "sim_s": 10.106,
+          "height_mean_m": 3.000873565673828,
+          "height_max_error_m": 0.010927438735961914,
+          "height_rms_error_m": 0.006692600902169943,
+          "horizontal_max_offset_m": 0.03747541457414627,
+          "horizontal_rms_offset_m": 0.020347904413938522,
+          "roll_pitch_peak_deg": [
+            0.29722481966018677,
+            0.28028321266174316
+          ],
+          "roll_pitch_rms_deg": [
+            0.13929355144500732,
+            0.12711100280284882
+          ],
+          "motor_mean_control": 0.6001012921333313,
+          "upper_saturation_fraction": 0.0,
+          "torque_achieved_fraction": 1.0,
+          "thrust_achieved_fraction": 1.0,
+          "arm_max_tracking_error_m": 2.3881633440725634e-05,
+          "arm_max_closure_m": 1.69829551e-10,
+          "arm_position_range_m": [
+            2.4421096100000023e-06,
+            2.414573200000005e-05,
+            6.038699999988406e-06
+          ],
+          "arm_joint_range_rad": [
+            8.910477393100001e-05,
+            0.000164636954084,
+            3.9105506209999996e-05
+          ],
+          "arm_max_abs_joint_torque_nm": [
+            0.1249406594,
+            0.1273839928,
+            0.1256449061
+          ],
+          "com_range_flu_m": [
+            2.385271999999711e-07,
+            2.355048400000005e-06,
+            7.599599999991158e-07
+          ],
+          "mount_wrench_mean_n_nm": [
+            1.7886150584205994e-05,
+            -0.00015218638212261928,
+            3.551622219146,
+            0.001965797228055,
+            -2.967051946822105e-05,
+            4.3916021314198e-06
+          ],
+          "mount_wrench_peak_to_peak_n_nm": [
+            0.00740455555917,
+            0.00772710249449,
+            0.014471940530000005,
+            0.00177937627742,
+            0.001791009046251,
+            7.25231944392e-05
+          ],
+          "mount_wrench_min_n_nm": [
+            -0.00417602818269,
+            -0.00360124774812,
+            3.54470382419,
+            0.00116430466302,
+            -0.000749508538331,
+            -3.31345582736e-05
+          ],
+          "mount_wrench_max_n_nm": [
+            0.00322852737648,
+            0.00412585474637,
+            3.55917576472,
+            0.00294368094044,
+            0.00104150050792,
+            3.93886361656e-05
+          ],
+          "truth_height_mean_m": 3.0112776857399997,
+          "truth_height_max_error_m": 0.033184176099999796,
+          "truth_horizontal_max_offset_m": 0.06922701631091212,
+          "truth_base_height_range_m": 0.04006903099999981,
+          "truth_base_horizontal_range_m": [
+            0.06793813781,
+            0.06043268337299999
+          ],
+          "truth_base_roll_pitch_peak_deg": [
+            0.3079811511127681,
+            0.2938897676835972
+          ],
+          "nav_states": [
+            4
+          ]
+        }
+      },
+      "motion_minus_before_mean_mount_wrench_n_nm": [
+        0.0002349898311962601,
+        -7.561947215875523e-06,
+        0.0011370277854161337,
+        -8.825349159182361e-05,
+        -0.003871131466565611,
+        -4.102821425449927e-05
+      ],
+      "all_arm_segments": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "arm_completed_id": 1,
+      "auto_landed_and_disarmed": true,
+      "land_to_contact_sim_s": 6.201,
+      "contact_to_disarm_sim_s": 2.195,
+      "flight_failsafe_count": 0,
+      "ulog_dropout_count": 0,
+      "ulog": {
+        "file": "logs/load50g_01.ulg",
+        "bytes": 20114041,
+        "sha256": "81b1418491c3906a94ff95d33787090d395f23fb980ce5774b254a59559aed0a"
+      },
+      "px4_revision": "d6f12ad1c4f70ad3230afd7d86e971421e02fef4",
+      "parameter_changes": {
+        "COM_FLIGHT_UUID": [
+          0,
+          1
+        ],
+        "LND_FLIGHT_T_LO": [
+          0,
+          63880600
+        ]
+      },
+      "control_parameters_unchanged": true,
+      "dynamic_CA_updates": false,
+      "max_mass_deviation_kg": 4.440892098500626e-16,
+      "all_runtime_inertias_positive": true,
+      "flight_dynamics_passed": true,
+      "landing_estimator_max_height_error_vs_truth_m": 0.1062185916162014,
+      "final_truth_height_above_ground_m": 3.311000000283393e-07,
+      "landing_estimator_check_passed": true
+    }
+  ],
+  "diagnostic": {
+    "name": "empty_01",
+    "payload_kg": 0.0,
+    "mass_kg": 1.4688800000000004,
+    "passed": false,
+    "phases": {
+      "before": {
+        "sim_s": 10.048,
+        "height_mean_m": 2.995635509490967,
+        "height_max_error_m": 0.033495426177978516,
+        "height_rms_error_m": 0.015900133177638054,
+        "horizontal_max_offset_m": 0.03773584961891174,
+        "horizontal_rms_offset_m": 0.022814249619841576,
+        "roll_pitch_peak_deg": [
+          0.2667098939418793,
+          0.29934078454971313
+        ],
+        "roll_pitch_rms_deg": [
+          0.14863358438014984,
+          0.12205922603607178
+        ],
+        "motor_mean_control": 0.5871495604515076,
+        "upper_saturation_fraction": 0.0,
+        "torque_achieved_fraction": 1.0,
+        "thrust_achieved_fraction": 1.0,
+        "arm_max_tracking_error_m": 2.7917841162842783e-06,
+        "arm_max_closure_m": 2.530782594e-09,
+        "arm_position_range_m": [
+          1.864602920000002e-06,
+          2.2752400000000585e-06,
+          5.192299999984273e-06
+        ],
+        "arm_joint_range_rad": [
+          2.451224584e-05,
+          2.6349673256e-05,
+          3.058192049e-05
+        ],
+        "arm_max_abs_joint_torque_nm": [
+          0.09270577051,
+          0.09439625751,
+          0.09306925114
+        ],
+        "com_range_flu_m": [
+          1.247039000000288e-07,
+          1.52036539999997e-07,
+          5.042999999989306e-07
+        ],
+        "mount_wrench_mean_n_nm": [
+          0.000230093554077824,
+          2.4176390424149943e-05,
+          3.0612253101461993,
+          0.0013340845634073,
+          -6.909514513826323e-05,
+          1.3295214839156598e-06
+        ],
+        "mount_wrench_peak_to_peak_n_nm": [
+          0.00685925482219,
+          0.00762286921152,
+          0.023844374180000294,
+          0.0016841389470930001,
+          0.001372676391672,
+          8.50849079975e-05
+        ],
+        "mount_wrench_min_n_nm": [
+          -0.00253585444273,
+          -0.00314581349774,
+          3.04721278159,
+          0.000598524011087,
+          -0.000876000403099,
+          -4.13460378011e-05
+        ],
+        "mount_wrench_max_n_nm": [
+          0.00432340037946,
+          0.00447705571378,
+          3.07105715577,
+          0.00228266295818,
+          0.000496675988573,
+          4.37388701964e-05
+        ],
+        "truth_height_mean_m": 3.0159462421200005,
+        "truth_height_max_error_m": 0.0394300810999999,
+        "truth_horizontal_max_offset_m": 0.07676830362533334,
+        "truth_base_height_range_m": 0.07147200899999984,
+        "truth_base_horizontal_range_m": [
+          0.07398845725,
+          0.041414917931
+        ],
+        "truth_base_roll_pitch_peak_deg": [
+          0.2992124039078998,
+          0.2578193151726663
+        ],
+        "nav_states": [
+          4
+        ]
+      },
+      "motion": {
+        "sim_s": 23.656,
+        "height_mean_m": 2.9976282119750977,
+        "height_max_error_m": 0.014652252197265625,
+        "height_rms_error_m": 0.006485277786850929,
+        "horizontal_max_offset_m": 0.04255223274230957,
+        "horizontal_rms_offset_m": 0.01981258951127529,
+        "roll_pitch_peak_deg": [
+          0.3078606426715851,
+          0.2863122522830963
+        ],
+        "roll_pitch_rms_deg": [
+          0.11636572331190109,
+          0.12658224999904633
+        ],
+        "motor_mean_control": 0.5871435403823853,
+        "upper_saturation_fraction": 0.0,
+        "torque_achieved_fraction": 1.0,
+        "thrust_achieved_fraction": 1.0,
+        "arm_max_tracking_error_m": 0.0005280849305442275,
+        "arm_max_closure_m": 1.424577198e-06,
+        "arm_position_range_m": [
+          0.03013828672,
+          0.03015407965,
+          0.02524807029999998
+        ],
+        "arm_joint_range_rad": [
+          0.22110901815,
+          0.24339209411999999,
+          0.24410805392
+        ],
+        "arm_max_abs_joint_torque_nm": [
+          0.1125713336,
+          0.1160760429,
+          0.1180129726
+        ],
+        "com_range_flu_m": [
+          0.0020454774031,
+          0.0020424360026,
+          0.0024148210900000015
+        ],
+        "mount_wrench_mean_n_nm": [
+          0.0009732429923924001,
+          -0.0010729769182120346,
+          3.0589111854722932,
+          0.000898163823016085,
+          -0.0028642593987067986,
+          -1.5484910663578715e-05
+        ],
+        "mount_wrench_peak_to_peak_n_nm": [
+          0.18315071352419998,
+          0.208690553907,
+          0.4107717583799997,
+          0.0914307648678,
+          0.08410445640370001,
+          0.002603496683343
+        ],
+        "mount_wrench_min_n_nm": [
+          -0.0814001415052,
+          -0.106901395722,
+          2.89509087434,
+          -0.0446444111434,
+          -0.050102950536,
+          -0.000765316647793
+        ],
+        "mount_wrench_max_n_nm": [
+          0.101750572019,
+          0.101789158185,
+          3.30586263272,
+          0.0467863537244,
+          0.0340015058677,
+          0.00183818003555
+        ],
+        "truth_height_mean_m": 3.013578108018198,
+        "truth_height_max_error_m": 0.0450692171,
+        "truth_horizontal_max_offset_m": 0.05922846809636415,
+        "truth_base_height_range_m": 0.05588489000000019,
+        "truth_base_horizontal_range_m": [
+          0.06705485949000001,
+          0.06610376033
+        ],
+        "truth_base_roll_pitch_peak_deg": [
+          0.3269630155157991,
+          0.31653874830134054
+        ],
+        "nav_states": [
+          4
+        ]
+      },
+      "after": {
+        "sim_s": 10.048,
+        "height_mean_m": 3.0009260177612305,
+        "height_max_error_m": 0.014171600341796875,
+        "height_rms_error_m": 0.006376613397151232,
+        "horizontal_max_offset_m": 0.04782923683524132,
+        "horizontal_rms_offset_m": 0.025505702942609787,
+        "roll_pitch_peak_deg": [
+          0.34055840969085693,
+          0.2722611427307129
+        ],
+        "roll_pitch_rms_deg": [
+          0.15867653489112854,
+          0.13345029950141907
+        ],
+        "motor_mean_control": 0.5871573090553284,
+        "upper_saturation_fraction": 0.0,
+        "torque_achieved_fraction": 1.0,
+        "thrust_achieved_fraction": 1.0,
+        "arm_max_tracking_error_m": 3.244089534115181e-05,
+        "arm_max_closure_m": 1.058880245e-06,
+        "arm_position_range_m": [
+          2.1358095199999998e-06,
+          3.37072439999999e-05,
+          5.304800000022203e-06
+        ],
+        "arm_joint_range_rad": [
+          0.000127355319716,
+          0.00020925115775,
+          3.9152850623e-05
+        ],
+        "arm_max_abs_joint_torque_nm": [
+          0.09267101245,
+          0.0941919206,
+          0.0932247256
+        ],
+        "com_range_flu_m": [
+          1.4333530000003357e-07,
+          2.2290274400000015e-06,
+          5.093500000004358e-07
+        ],
+        "mount_wrench_mean_n_nm": [
+          8.261126541756805e-05,
+          -0.000118144414228698,
+          3.0613731723329987,
+          0.0013187604281734004,
+          -5.0640336247521596e-05,
+          1.9873119160039646e-06
+        ],
+        "mount_wrench_peak_to_peak_n_nm": [
+          0.00656069768333,
+          0.00604248452545,
+          0.016142694900000087,
+          0.0012031706150270002,
+          0.001537813789585,
+          7.44430559252e-05
+        ],
+        "mount_wrench_min_n_nm": [
+          -0.00355364087289,
+          -0.00317371959049,
+          3.05402429009,
+          0.000623322516463,
+          -0.000779652638384,
+          -3.89620817444e-05
+        ],
+        "mount_wrench_max_n_nm": [
+          0.00300705681044,
+          0.00286876493496,
+          3.07016698499,
+          0.00182649313149,
+          0.000758161151201,
+          3.54809741808e-05
+        ],
+        "truth_height_mean_m": 3.0080808810800006,
+        "truth_height_max_error_m": 0.037250551100000084,
+        "truth_horizontal_max_offset_m": 0.05741219529998636,
+        "truth_base_height_range_m": 0.04237733300000013,
+        "truth_base_horizontal_range_m": [
+          0.052770893709999996,
+          0.0732809065
+        ],
+        "truth_base_roll_pitch_peak_deg": [
+          0.36004005472432293,
+          0.2836711793687444
+        ],
+        "nav_states": [
+          4
+        ]
+      }
+    },
+    "motion_minus_before_mean_mount_wrench_n_nm": [
+      0.0007431494383145761,
+      -0.0010971533086361846,
+      -0.002314124673906015,
+      -0.00043592074039121493,
+      -0.0027951642535685352,
+      -1.6814432147494376e-05
+    ],
+    "all_arm_segments": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "arm_completed_id": 1,
+    "auto_landed_and_disarmed": true,
+    "land_to_contact_sim_s": 8.448,
+    "contact_to_disarm_sim_s": 2.0,
+    "flight_failsafe_count": 0,
+    "ulog_dropout_count": 0,
+    "ulog": {
+      "file": "logs/empty_01.ulg",
+      "bytes": 21275267,
+      "sha256": "f088de575bf13ce0e67d800c9defff51967d0c3300abca3dc2ecee1f5f8cfa95"
+    },
+    "px4_revision": "d6f12ad1c4f70ad3230afd7d86e971421e02fef4",
+    "parameter_changes": {
+      "LND_FLIGHT_T_LO": [
+        0,
+        66104000
+      ],
+      "COM_FLIGHT_UUID": [
+        0,
+        1
+      ]
+    },
+    "control_parameters_unchanged": true,
+    "dynamic_CA_updates": false,
+    "max_mass_deviation_kg": 4.440892098500626e-16,
+    "all_runtime_inertias_positive": true,
+    "flight_dynamics_passed": true,
+    "landing_estimator_max_height_error_vs_truth_m": 0.900751165063733,
+    "final_truth_height_above_ground_m": 4.0880000001797256e-07,
+    "landing_estimator_check_passed": false
+  }
+}

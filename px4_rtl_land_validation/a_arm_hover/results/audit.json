@@ -1,0 +1,38 @@
+[
+  {
+    "trial": "empty_imu5000",
+    "passed": true,
+    "no_world_anchor": true,
+    "native_ball_joints": 12,
+    "actuated_revolute_joints": 3,
+    "rotor_revolute_joints": 4,
+    "no_passive_pose_reset": true,
+    "control_parameter_count": 113,
+    "control_and_CA_parameters_unchanged": true,
+    "source_hashes_match": true,
+    "imu_rate_hz": 5000,
+    "source_fingerprints": {
+      "controller.cpp": "b48906cf2909c1fa78df89b69b552cb600e5784aa1284c6b24d1df369ad50198",
+      "ros_control.py": "782c509288135d592a853ddff012956374a7e0b29ab50f8238f8c608b16db078",
+      "world.sdf": "da2b5667f19ac55566fad798bec72e142e5d44a9bd30a2b386a981aa206eb830"
+    }
+  },
+  {
+    "trial": "load50g_01",
+    "passed": true,
+    "no_world_anchor": true,
+    "native_ball_joints": 12,
+    "actuated_revolute_joints": 3,
+    "rotor_revolute_joints": 4,
+    "no_passive_pose_reset": true,
+    "control_parameter_count": 113,
+    "control_and_CA_parameters_unchanged": true,
+    "source_hashes_match": true,
+    "imu_rate_hz": 5000,
+    "source_fingerprints": {
+      "controller.cpp": "b48906cf2909c1fa78df89b69b552cb600e5784aa1284c6b24d1df369ad50198",
+      "ros_control.py": "782c509288135d592a853ddff012956374a7e0b29ab50f8238f8c608b16db078",
+      "world.sdf": "47a2ed7b19b8290b01bc073f2a24c01902d219ba9c31ddfc1aeafdb151ccff73"
+    }
+  }
+]

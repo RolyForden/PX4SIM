@@ -1,0 +1,936 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sdf version="1.9">
+  <model name="a_locked">
+    <self_collide>false</self_collide>
+    <link name="base_link">
+      <visual name="body">
+        <geometry>
+          <mesh>
+            <uri>model://a_with_arm_fixed/meshes/body.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.32 0.45 0.62 1</ambient>
+          <diffuse>0.32 0.45 0.62 1</diffuse>
+        </material>
+      </visual>
+      <sensor name="air_pressure_sensor" type="air_pressure">
+        <gz_frame_id>base_link</gz_frame_id>
+        <always_on>1</always_on>
+        <update_rate>50</update_rate>
+        <air_pressure>
+          <pressure>
+            <noise type="gaussian">
+              <mean>0</mean>
+              <stddev>3</stddev>
+            </noise>
+          </pressure>
+        </air_pressure>
+      </sensor>
+      <sensor name="magnetometer_sensor" type="magnetometer">
+        <gz_frame_id>base_link</gz_frame_id>
+        <always_on>1</always_on>
+        <update_rate>100</update_rate>
+        <magnetometer>
+          <x>
+            <noise type="gaussian">
+              <stddev>0.0001</stddev>
+            </noise>
+          </x>
+          <y>
+            <noise type="gaussian">
+              <stddev>0.0001</stddev>
+            </noise>
+          </y>
+          <z>
+            <noise type="gaussian">
+              <stddev>0.0001</stddev>
+            </noise>
+          </z>
+        </magnetometer>
+      </sensor>
+      <sensor name="imu_sensor" type="imu">
+        <gz_frame_id>base_link</gz_frame_id>
+        <always_on>1</always_on>
+        <update_rate>250</update_rate>
+        <imu>
+          <angular_velocity>
+            <x>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>0.0008726646</stddev>
+              </noise>
+            </x>
+            <y>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>0.0008726646</stddev>
+              </noise>
+            </y>
+            <z>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>0.0008726646</stddev>
+              </noise>
+            </z>
+          </angular_velocity>
+          <linear_acceleration>
+            <x>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>0.00637</stddev>
+              </noise>
+            </x>
+            <y>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>0.00637</stddev>
+              </noise>
+            </y>
+            <z>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>0.00686</stddev>
+              </noise>
+            </z>
+          </linear_acceleration>
+        </imu>
+      </sensor>
+      <sensor name="navsat_sensor" type="navsat">
+        <gz_frame_id>base_link</gz_frame_id>
+        <always_on>1</always_on>
+        <update_rate>30</update_rate>
+      </sensor>
+      <collision name="core">
+        <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
+        <geometry>
+          <box>
+            <size>0.1 0.1 0.08</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name="landing_envelope">
+        <pose>0.0 0.0 -0.2901112139225006 0.0 0.0 0.0</pose>
+        <geometry>
+          <box>
+            <size>0.16 0.16 0.02</size>
+          </box>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass>0.71890000000000009</mass>
+        <pose>-0.00062009937184739645 -5.4240624738617408e-05 0.0054216797770780924 0 0 0</pose>
+        <inertia>
+          <ixx>0.00075784228557317578</ixx>
+          <iyy>0.00076127260796277107</iyy>
+          <izz>0.00082533018442850121</izz>
+          <ixy>3.3774200384275595e-06</ixy>
+          <ixz>-1.2587349389322934e-05</ixz>
+          <iyz>1.0704905374068586e-06</iyz>
+        </inertia>
+      </inertial>
+    </link>
+    <link name="yaw_frame_0">
+      <pose>0.053033008589 -0.053033008589 0.0085 0 0 0</pose>
+      <inertial>
+        <mass>0.001</mass>
+        <inertia>
+          <ixx>1e-07</ixx>
+          <iyy>1e-07</iyy>
+          <izz>1e-07</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <link name="arm_0">
+      <pose>0.053033008589 -0.053033008589 0.0085 0 0 0</pose>
+      <inertial>
+        <mass>0.10547999999999999</mass>
+        <pose>0.107664017053 -0.107547762466 -0.0100099307796 0 0 0</pose>
+        <inertia>
+          <ixx>0.00021801811714614256</ixx>
+          <iyy>0.000216955094774298</iyy>
+          <izz>0.0004025009604906893</izz>
+        </inertia>
+      </inertial>
+      <visual name="arm_0">
+        <geometry>
+          <mesh>
+            <uri>model://a_air/meshes/arm_0.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.35 0.57 0.70 1</ambient>
+          <diffuse>0.35 0.57 0.70 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    <joint name="yaw_0" type="fixed">
+      <parent>base_link</parent>
+      <child>yaw_frame_0</child>
+    </joint>
+    <joint name="pitch_0" type="fixed">
+      <parent>yaw_frame_0</parent>
+      <child>arm_0</child>
+    </joint>
+    <link name="rotor_0">
+      <pose>0.175031745642 -0.175031745642 -0.0045 0 0 0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1e-05</ixx>
+          <iyy>1e-05</iyy>
+          <izz>2e-05</izz>
+        </inertia>
+      </inertial>
+      <visual name="prop">
+        <geometry>
+          <mesh>
+            <uri>model://a_air/meshes/prop_0.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.9 0.44 0.14 1</ambient>
+          <diffuse>0.9 0.44 0.14 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    <link name="yaw_frame_1">
+      <pose>-0.053033008589 0.053033008589 0.0085 0 0 0</pose>
+      <inertial>
+        <mass>0.001</mass>
+        <inertia>
+          <ixx>1e-07</ixx>
+          <iyy>1e-07</iyy>
+          <izz>1e-07</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <link name="arm_1">
+      <pose>-0.053033008589 0.053033008589 0.0085 0 0 0</pose>
+      <inertial>
+        <mass>0.10547999999999999</mass>
+        <pose>-0.107369167075 0.107485364738 -0.0100025007132 0 0 0</pose>
+        <inertia>
+          <ixx>0.00021803390002238376</ixx>
+          <iyy>0.00021767364956090806</iyy>
+          <izz>0.0004032460701571542</izz>
+        </inertia>
+      </inertial>
+      <visual name="arm_1">
+        <geometry>
+          <mesh>
+            <uri>model://a_air/meshes/arm_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.35 0.57 0.70 1</ambient>
+          <diffuse>0.35 0.57 0.70 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    <joint name="yaw_1" type="fixed">
+      <parent>base_link</parent>
+      <child>yaw_frame_1</child>
+    </joint>
+    <joint name="pitch_1" type="fixed">
+      <parent>yaw_frame_1</parent>
+      <child>arm_1</child>
+    </joint>
+    <link name="rotor_1">
+      <pose>-0.175031745642 0.175031745642 -0.0045 0 0 0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1e-05</ixx>
+          <iyy>1e-05</iyy>
+          <izz>2e-05</izz>
+        </inertia>
+      </inertial>
+      <visual name="prop">
+        <geometry>
+          <mesh>
+            <uri>model://a_air/meshes/prop_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.9 0.44 0.14 1</ambient>
+          <diffuse>0.9 0.44 0.14 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    <link name="yaw_frame_2">
+      <pose>0.053033008589 0.053033008589 0.0085 0 0 0</pose>
+      <inertial>
+        <mass>0.001</mass>
+        <inertia>
+          <ixx>1e-07</ixx>
+          <iyy>1e-07</iyy>
+          <izz>1e-07</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <link name="arm_2">
+      <pose>0.053033008589 0.053033008589 0.0085 0 0 0</pose>
+      <inertial>
+        <mass>0.09348000000000001</mass>
+        <pose>0.10874007351 0.108893241832 0.0123647163842 0 0 0</pose>
+        <inertia>
+          <ixx>0.00021140796527488467</ixx>
+          <iyy>0.00021222928489918555</iyy>
+          <izz>0.0004000449649024161</izz>
+        </inertia>
+      </inertial>
+      <visual name="arm_2">
+        <geometry>
+          <mesh>
+            <uri>model://a_air/meshes/arm_2.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.35 0.57 0.70 1</ambient>
+          <diffuse>0.35 0.57 0.70 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    <joint name="yaw_2" type="fixed">
+      <parent>base_link</parent>
+      <child>yaw_frame_2</child>
+    </joint>
+    <joint name="pitch_2" type="fixed">
+      <parent>yaw_frame_2</parent>
+      <child>arm_2</child>
+    </joint>
+    <link name="rotor_2">
+      <pose>0.175031745642 0.175031745642 0.0215 0 0 0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1e-05</ixx>
+          <iyy>1e-05</iyy>
+          <izz>2e-05</izz>
+        </inertia>
+      </inertial>
+      <visual name="prop">
+        <geometry>
+          <mesh>
+            <uri>model://a_air/meshes/prop_2.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.9 0.44 0.14 1</ambient>
+          <diffuse>0.9 0.44 0.14 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    <link name="yaw_frame_3">
+      <pose>-0.053033008589 -0.053033008589 0.0085 0 0 0</pose>
+      <inertial>
+        <mass>0.001</mass>
+        <inertia>
+          <ixx>1e-07</ixx>
+          <iyy>1e-07</iyy>
+          <izz>1e-07</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <link name="arm_3">
+      <pose>-0.053033008589 -0.053033008589 0.0085 0 0 0</pose>
+      <inertial>
+        <mass>0.09348000000000001</mass>
+        <pose>-0.108734145225 -0.108899170117 0.0123563325224 0 0 0</pose>
+        <inertia>
+          <ixx>0.00021134546832538755</ixx>
+          <iyy>0.00021239356508081803</iyy>
+          <izz>0.0004000658587799645</izz>
+        </inertia>
+      </inertial>
+      <visual name="arm_3">
+        <geometry>
+          <mesh>
+            <uri>model://a_air/meshes/arm_3.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.35 0.57 0.70 1</ambient>
+          <diffuse>0.35 0.57 0.70 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    <joint name="yaw_3" type="fixed">
+      <parent>base_link</parent>
+      <child>yaw_frame_3</child>
+    </joint>
+    <joint name="pitch_3" type="fixed">
+      <parent>yaw_frame_3</parent>
+      <child>arm_3</child>
+    </joint>
+    <link name="rotor_3">
+      <pose>-0.175031745642 -0.175031745642 0.0215 0 0 0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1e-05</ixx>
+          <iyy>1e-05</iyy>
+          <izz>2e-05</izz>
+        </inertia>
+      </inertial>
+      <visual name="prop">
+        <geometry>
+          <mesh>
+            <uri>model://a_air/meshes/prop_3.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.9 0.44 0.14 1</ambient>
+          <diffuse>0.9 0.44 0.14 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    <link name="arm_mount">
+      <pose>0.0 0.0 -0.000999999899999998 0 0 0</pose>
+      <gravity>true</gravity>
+      <inertial>
+        <mass>0.10000000000000001</mass>
+        <pose>1.1361497790076918e-05 9.4919631292997848e-06 -0.059448034078940677 0 0 0</pose>
+        <inertia>
+          <ixx>0.00015125126431463857</ixx>
+          <iyy>0.00013216958050823381</iyy>
+          <izz>0.00024194799521002361</izz>
+          <ixy>-1.6905949187924073e-08</ixy>
+          <ixz>-1.2070124840101015e-08</ixz>
+          <iyz>-1.7731782905072194e-09</iyz>
+        </inertia>
+      </inertial>
+      <visual name="mount">
+        <geometry>
+          <mesh>
+            <uri>model://a_with_arm_fixed/meshes/mount.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.45 0.50 0.60 1</ambient>
+          <diffuse>0.45 0.50 0.60 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    <joint name="arm_mount_joint" type="fixed">
+      <parent>base_link</parent>
+      <child>arm_mount</child>
+    </joint>
+    <link name="upper_0">
+      <pose>-0.034715828019983 -0.035244297305191 -0.070126869422681 0 0 0</pose>
+      <gravity>true</gravity>
+      <inertial>
+        <mass>0.03</mass>
+        <pose>-0.048753671260805 -0.049548414861613 -0.025593318230826 0 0 0</pose>
+        <inertia>
+          <ixx>0.0002</ixx>
+          <iyy>0.0002</iyy>
+          <izz>0.0002</izz>
+        </inertia>
+      </inertial>
+      <visual name="upper_0">
+        <geometry>
+          <mesh>
+            <uri>model://a_delta_fixed/meshes/upper_0.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.95 0.45 0.12 1</ambient>
+          <diffuse>0.95 0.45 0.12 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    <link name="rod_0_0">
+      <pose>-0.14362797434602 -0.12311925329082 -0.12131350588433 -2.2637195429142 0.0029428177906456 -0.77376920931209</pose>
+      <gravity>true</gravity>
+      <inertial>
+        <mass>0.012</mass>
+        <pose>0 0 0.1 0 0 0</pose>
+        <inertia>
+          <ixx>4.005e-05</ixx>
+          <iyy>4.005e-05</iyy>
+          <izz>9.6e-08</izz>
+        </inertia>
+      </inertial>
+      <visual name="rod_0_0">
+        <geometry>
+          <mesh>
+            <uri>model://a_delta_fixed/meshes/rod_0_0.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.25 0.65 0.4 1</ambient>
+          <diffuse>0.25 0.65 0.4 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    <link name="rod_0_1">
+      <pose>-0.12081836673717 -0.14556300076601 -0.12131350588433 -2.2637195429142 0.0029428177906475 -0.77376920931209</pose>
+      <gravity>true</gravity>
+      <inertial>
+        <mass>0.012</mass>
+        <pose>0 0 0.1 0 0 0</pose>
+        <inertia>
+          <ixx>4.005e-05</ixx>
+          <iyy>4.005e-05</iyy>
+          <izz>9.6e-08</izz>
+        </inertia>
+      </inertial>
+      <visual name="rod_0_1">
+        <geometry>
+          <mesh>
+            <uri>model://a_delta_fixed/meshes/rod_0_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.25 0.65 0.4 1</ambient>
+          <diffuse>0.25 0.65 0.4 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    <link name="upper_1">
+      <pose>-0.013164542791872 0.047686937629317 -0.070126869422682 0 0 0</pose>
+      <gravity>true</gravity>
+      <inertial>
+        <mass>0.03</mass>
+        <pose>-0.018625653853573 0.067329792767112 -0.02463265798151 0 0 0</pose>
+        <inertia>
+          <ixx>0.0002</ixx>
+          <iyy>0.0002</iyy>
+          <izz>0.0002</izz>
+        </inertia>
+      </inertial>
+      <visual name="upper_1">
+        <geometry>
+          <mesh>
+            <uri>model://a_delta_fixed/meshes/upper_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.95 0.45 0.12 1</ambient>
+          <diffuse>0.95 0.45 0.12 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    <link name="rod_1_0">
+      <pose>-0.034995020861985 0.18661243611456 -0.1193921853857 -2.276268342146 0.0011584364484092 -2.8703485670966</pose>
+      <gravity>true</gravity>
+      <inertial>
+        <mass>0.012</mass>
+        <pose>0 0 0.1 0 0 0</pose>
+        <inertia>
+          <ixx>4.005e-05</ixx>
+          <iyy>4.005e-05</iyy>
+          <izz>9.6e-08</izz>
+        </inertia>
+      </inertial>
+      <visual name="rod_1_0">
+        <geometry>
+          <mesh>
+            <uri>model://a_delta_fixed/meshes/rod_1_0.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.25 0.65 0.4 1</ambient>
+          <diffuse>0.25 0.65 0.4 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    <link name="rod_1_1">
+      <pose>-0.06583668013605 0.17808061021253 -0.1193921853857 -2.276268342146 0.0011584364484099 -2.8703485670966</pose>
+      <gravity>true</gravity>
+      <inertial>
+        <mass>0.012</mass>
+        <pose>0 0 0.1 0 0 0</pose>
+        <inertia>
+          <ixx>4.005e-05</ixx>
+          <iyy>4.005e-05</iyy>
+          <izz>9.6e-08</izz>
+        </inertia>
+      </inertial>
+      <visual name="rod_1_1">
+        <geometry>
+          <mesh>
+            <uri>model://a_delta_fixed/meshes/rod_1_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.25 0.65 0.4 1</ambient>
+          <diffuse>0.25 0.65 0.4 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    <link name="upper_2">
+      <pose>0.04788037081457 -0.012442640329688 -0.07012686942268 0 0 0</pose>
+      <gravity>true</gravity>
+      <inertial>
+        <mass>0.03</mass>
+        <pose>0.067384663517892 -0.017473029222978 -0.025317665514872 0 0 0</pose>
+        <inertia>
+          <ixx>0.0002</ixx>
+          <iyy>0.0002</iyy>
+          <izz>0.0002</izz>
+        </inertia>
+      </inertial>
+      <visual name="upper_2">
+        <geometry>
+          <mesh>
+            <uri>model://a_delta_fixed/meshes/upper_2.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.95 0.45 0.12 1</ambient>
+          <diffuse>0.95 0.45 0.12 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    <link name="rod_2_0">
+      <pose>0.17863367201775 -0.062876485464252 -0.12076220045242 -2.2673119996448 -0.0043544906550374 1.311874989537</pose>
+      <gravity>true</gravity>
+      <inertial>
+        <mass>0.012</mass>
+        <pose>0 0 0.1 0 0 0</pose>
+        <inertia>
+          <ixx>4.005e-05</ixx>
+          <iyy>4.005e-05</iyy>
+          <izz>9.6e-08</izz>
+        </inertia>
+      </inertial>
+      <visual name="rod_2_0">
+        <geometry>
+          <mesh>
+            <uri>model://a_delta_fixed/meshes/rod_2_0.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.25 0.65 0.4 1</ambient>
+          <diffuse>0.25 0.65 0.4 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    <link name="rod_2_1">
+      <pose>0.18666572368296 -0.031900912087035 -0.12076220045242 -2.2673119996448 -0.0043544906550359 1.311874989537</pose>
+      <gravity>true</gravity>
+      <inertial>
+        <mass>0.012</mass>
+        <pose>0 0 0.1 0 0 0</pose>
+        <inertia>
+          <ixx>4.005e-05</ixx>
+          <iyy>4.005e-05</iyy>
+          <izz>9.6e-08</izz>
+        </inertia>
+      </inertial>
+      <visual name="rod_2_1">
+        <geometry>
+          <mesh>
+            <uri>model://a_delta_fixed/meshes/rod_2_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.25 0.65 0.4 1</ambient>
+          <diffuse>0.25 0.65 0.4 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    <link name="tip_0_0">
+      <pose>-0.036362493551122546 -0.01279154309021236 -0.24907074830812254 0 0 0</pose>
+      <gravity>true</gravity>
+      <inertial>
+        <mass>0.00001</mass>
+        <inertia>
+          <ixx>1e-8</ixx>
+          <iyy>1e-8</iyy>
+          <izz>1e-8</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <link name="tip_0_1">
+      <pose>-0.013552885942269109 -0.03523529056540235 -0.24907074830812273 0 0 0</pose>
+      <gravity>true</gravity>
+      <inertial>
+        <mass>0.00001</mass>
+        <inertia>
+          <ixx>1e-8</ixx>
+          <iyy>1e-8</iyy>
+          <izz>1e-8</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <link name="tip_1_0">
+      <pose>0.005945069398809928 0.039958491988210096 -0.24907074830812165 0 0 0</pose>
+      <gravity>true</gravity>
+      <inertial>
+        <mass>0.00001</mass>
+        <inertia>
+          <ixx>1e-8</ixx>
+          <iyy>1e-8</iyy>
+          <izz>1e-8</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <link name="tip_1_1">
+      <pose>-0.024896589875254595 0.031426666086183205 -0.24907074830812204 0 0 0</pose>
+      <gravity>true</gravity>
+      <inertial>
+        <mass>0.00001</mass>
+        <inertia>
+          <ixx>1e-8</ixx>
+          <iyy>1e-8</iyy>
+          <izz>1e-8</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <link name="tip_2_0">
+      <pose>0.030474158352279714 -0.023055949837849928 -0.2490707483081217 0 0 0</pose>
+      <gravity>true</gravity>
+      <inertial>
+        <mass>0.00001</mass>
+        <inertia>
+          <ixx>1e-8</ixx>
+          <iyy>1e-8</iyy>
+          <izz>1e-8</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <link name="tip_2_1">
+      <pose>0.03850621001749082 0.00791962353936696 -0.2490707483081213 0 0 0</pose>
+      <gravity>true</gravity>
+      <inertial>
+        <mass>0.00001</mass>
+        <inertia>
+          <ixx>1e-8</ixx>
+          <iyy>1e-8</iyy>
+          <izz>1e-8</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <joint name="act_0" type="fixed">
+      <parent>arm_mount</parent>
+      <child>upper_0</child>
+    </joint>
+    <joint name="elbow_0_0" type="fixed">
+      <parent>upper_0</parent>
+      <child>rod_0_0</child>
+    </joint>
+    <joint name="elbow_0_1" type="fixed">
+      <parent>upper_0</parent>
+      <child>rod_0_1</child>
+    </joint>
+    <joint name="act_1" type="fixed">
+      <parent>arm_mount</parent>
+      <child>upper_1</child>
+    </joint>
+    <joint name="elbow_1_0" type="fixed">
+      <parent>upper_1</parent>
+      <child>rod_1_0</child>
+    </joint>
+    <joint name="elbow_1_1" type="fixed">
+      <parent>upper_1</parent>
+      <child>rod_1_1</child>
+    </joint>
+    <joint name="act_2" type="fixed">
+      <parent>arm_mount</parent>
+      <child>upper_2</child>
+    </joint>
+    <joint name="elbow_2_0" type="fixed">
+      <parent>upper_2</parent>
+      <child>rod_2_0</child>
+    </joint>
+    <joint name="elbow_2_1" type="fixed">
+      <parent>upper_2</parent>
+      <child>rod_2_1</child>
+    </joint>
+    <joint name="end_0_0" type="fixed">
+      <parent>rod_0_0</parent>
+      <child>tip_0_0</child>
+    </joint>
+    <joint name="end_0_1" type="fixed">
+      <parent>rod_0_1</parent>
+      <child>tip_0_1</child>
+    </joint>
+    <joint name="end_1_0" type="fixed">
+      <parent>rod_1_0</parent>
+      <child>tip_1_0</child>
+    </joint>
+    <joint name="end_1_1" type="fixed">
+      <parent>rod_1_1</parent>
+      <child>tip_1_1</child>
+    </joint>
+    <joint name="end_2_0" type="fixed">
+      <parent>rod_2_0</parent>
+      <child>tip_2_0</child>
+    </joint>
+    <joint name="end_2_1" type="fixed">
+      <parent>rod_2_1</parent>
+      <child>tip_2_1</child>
+    </joint>
+    <link name="platform">
+      <pose>1.8911399989033722e-05 0.00137033302004927 -0.24907074830812204 0.0 0.0 0.0</pose>
+      <gravity>true</gravity>
+      <inertial>
+        <mass>0.05</mass>
+        <pose>0 0 0 0 0 0</pose>
+        <inertia>
+          <ixx>8e-05</ixx>
+          <iyy>8e-05</iyy>
+          <izz>0.00012</izz>
+        </inertia>
+      </inertial>
+      <visual name="platform">
+        <geometry>
+          <mesh>
+            <uri>model://a_delta_fixed/meshes/platform.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.25 0.65 0.4 1</ambient>
+          <diffuse>0.25 0.65 0.4 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    <link name="payload">
+      <pose>1.8911399989033722e-05 0.00137033302004927 -0.289070748308122 0.0 0.0 0.0</pose>
+      <gravity>true</gravity>
+      <inertial>
+        <mass>0.050000000000000003</mass>
+        <pose>0 0 0 0 0 0</pose>
+        <inertia>
+          <ixx>7.4999999999999993e-06</ixx>
+          <iyy>7.4999999999999993e-06</iyy>
+          <izz>7.4999999999999993e-06</izz>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyz>0</iyz>
+        </inertia>
+      </inertial>
+      <visual name="load">
+        <geometry>
+          <box>
+            <size>.03 .03 .03</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>.8 .2 .2 1</ambient>
+          <diffuse>.8 .2 .2 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    <joint name="payload_fixed" type="fixed">
+      <parent>platform</parent>
+      <child>payload</child>
+    </joint>
+    <joint name="locked_platform" type="fixed">
+      <parent>arm_mount</parent>
+      <child>platform</child>
+    </joint>
+    <joint name="rotor_0_joint" type="revolute">
+      <parent>arm_0</parent>
+      <child>rotor_0</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e16</lower>
+          <upper>1e16</upper>
+        </limit>
+      </axis>
+    </joint>
+    <joint name="rotor_1_joint" type="revolute">
+      <parent>arm_1</parent>
+      <child>rotor_1</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e16</lower>
+          <upper>1e16</upper>
+        </limit>
+      </axis>
+    </joint>
+    <joint name="rotor_2_joint" type="revolute">
+      <parent>arm_2</parent>
+      <child>rotor_2</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e16</lower>
+          <upper>1e16</upper>
+        </limit>
+      </axis>
+    </joint>
+    <joint name="rotor_3_joint" type="revolute">
+      <parent>arm_3</parent>
+      <child>rotor_3</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e16</lower>
+          <upper>1e16</upper>
+        </limit>
+      </axis>
+    </joint>
+    <plugin filename="gz-sim-multicopter-motor-model-system" name="gz::sim::systems::MulticopterMotorModel">
+      <jointName>rotor_0_joint</jointName>
+      <linkName>rotor_0</linkName>
+      <turningDirection>ccw</turningDirection>
+      <timeConstantUp>0.0125</timeConstantUp>
+      <timeConstantDown>0.025</timeConstantDown>
+      <maxRotVelocity>1000</maxRotVelocity>
+      <motorConstant>8.54858e-06</motorConstant>
+      <momentConstant>0.016</momentConstant>
+      <commandSubTopic>command/motor_speed</commandSubTopic>
+      <motorNumber>0</motorNumber>
+      <rotorDragCoefficient>8.06428e-05</rotorDragCoefficient>
+      <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
+      <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
+      <motorType>velocity</motorType>
+    </plugin>
+    <plugin filename="gz-sim-multicopter-motor-model-system" name="gz::sim::systems::MulticopterMotorModel">
+      <jointName>rotor_1_joint</jointName>
+      <linkName>rotor_1</linkName>
+      <turningDirection>ccw</turningDirection>
+      <timeConstantUp>0.0125</timeConstantUp>
+      <timeConstantDown>0.025</timeConstantDown>
+      <maxRotVelocity>1000</maxRotVelocity>
+      <motorConstant>8.54858e-06</motorConstant>
+      <momentConstant>0.016</momentConstant>
+      <commandSubTopic>command/motor_speed</commandSubTopic>
+      <motorNumber>1</motorNumber>
+      <rotorDragCoefficient>8.06428e-05</rotorDragCoefficient>
+      <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
+      <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
+      <motorType>velocity</motorType>
+    </plugin>
+    <plugin filename="gz-sim-multicopter-motor-model-system" name="gz::sim::systems::MulticopterMotorModel">
+      <jointName>rotor_2_joint</jointName>
+      <linkName>rotor_2</linkName>
+      <turningDirection>cw</turningDirection>
+      <timeConstantUp>0.0125</timeConstantUp>
+      <timeConstantDown>0.025</timeConstantDown>
+      <maxRotVelocity>1000</maxRotVelocity>
+      <motorConstant>8.54858e-06</motorConstant>
+      <momentConstant>0.016</momentConstant>
+      <commandSubTopic>command/motor_speed</commandSubTopic>
+      <motorNumber>2</motorNumber>
+      <rotorDragCoefficient>8.06428e-05</rotorDragCoefficient>
+      <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
+      <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
+      <motorType>velocity</motorType>
+    </plugin>
+    <plugin filename="gz-sim-multicopter-motor-model-system" name="gz::sim::systems::MulticopterMotorModel">
+      <jointName>rotor_3_joint</jointName>
+      <linkName>rotor_3</linkName>
+      <turningDirection>cw</turningDirection>
+      <timeConstantUp>0.0125</timeConstantUp>
+      <timeConstantDown>0.025</timeConstantDown>
+      <maxRotVelocity>1000</maxRotVelocity>
+      <motorConstant>8.54858e-06</motorConstant>
+      <momentConstant>0.016</momentConstant>
+      <commandSubTopic>command/motor_speed</commandSubTopic>
+      <motorNumber>3</motorNumber>
+      <rotorDragCoefficient>8.06428e-05</rotorDragCoefficient>
+      <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
+      <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
+      <motorType>velocity</motorType>
+    </plugin>
+  </model>
+</sdf>

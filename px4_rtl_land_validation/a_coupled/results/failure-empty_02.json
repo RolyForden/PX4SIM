@@ -1,0 +1,14 @@
+{
+  "name": "empty_02",
+  "passed": false,
+  "kind": "test harness concurrent-file reader interrupted otherwise stable H25 flight",
+  "error": "Expecting ',' delimiter: line 1 column 1439 (char 1438)",
+  "simulation_paused": true,
+  "normal_landing_completed": false,
+  "ulog": {
+    "file": "logs/empty_02.ulg",
+    "bytes": 17437671,
+    "sha256": "d14674450ba365838dcdaafb778dc8b2f8afb3517504d1235df8a370995f4fb2"
+  },
+  "fix": "only consume complete newline-terminated JSON rows, rewind partial rows; saved complete logs validate without errors"
+}

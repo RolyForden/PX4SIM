@@ -1,0 +1,170 @@
+{
+  "date": "2026-11-19",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 5019,
+      "sha256": "d4ec1e431ae6ed965fcb1c57815cb565e9e2d9e0134988858d9ae5ecae7388dd"
+    },
+    {
+      "path": "analyze.py",
+      "bytes": 3575,
+      "sha256": "8d0f4d1d4308469313a4e6b5a8f682b4be05a78b07902a3cf9f257f372d9355e"
+    },
+    {
+      "path": "audit.py",
+      "bytes": 1844,
+      "sha256": "464f8a360ccd4e60e8f06cbebd9c4bb86612fffa04bcadcfcec6e0d0abc948ce"
+    },
+    {
+      "path": "build_model.py",
+      "bytes": 4269,
+      "sha256": "fa14d9e786e4eff728aa6a546077b1c9eab1623e6cbef0f5d575ae799f36411f"
+    },
+    {
+      "path": "cad_geometry.hh",
+      "bytes": 1852,
+      "sha256": "4b009d2e145055f90b8d052b87e847978f64ebb16f8f15dca5fab2152c5ec669"
+    },
+    {
+      "path": "config.json",
+      "bytes": 7234,
+      "sha256": "958378f4c20ca088594878659fe1b395a63ae60b3a9506b31156f7e0b283f863"
+    },
+    {
+      "path": "controller.cpp",
+      "bytes": 5962,
+      "sha256": "10ba9cf8e3e2b5f67c9a8049583c1b2384715da1b123054130d4bf4e8b755b2e"
+    },
+    {
+      "path": "kinematics.py",
+      "bytes": 2329,
+      "sha256": "a2183eea4c990435049e9c542857a356e2fdc2d5c8a74f46a8a664cc9eff292d"
+    },
+    {
+      "path": "libdelta_dynamics.so",
+      "bytes": 276088,
+      "sha256": "6f4bf07a1940fbb13abd54e9c46137c458bd6a7c3e09973260c8b0a86917fa4c"
+    },
+    {
+      "path": "probe.py",
+      "bytes": 1220,
+      "sha256": "640c887121269f9e7be7b01b32a774537e940c74173c2caba2cbdac595624808"
+    },
+    {
+      "path": "results/comparison.json",
+      "bytes": 1528,
+      "sha256": "2b3d2d40a60a1a4677e84ae4548064b41f0f27328ddd09a5ccbf84d540179f00"
+    },
+    {
+      "path": "results/comparison.png",
+      "bytes": 339079,
+      "sha256": "2d62d61f295cb3adb10ff8e71a12a66678d0b8651d9ab7eb5b3316bbb1791bf2"
+    },
+    {
+      "path": "results/disconnected_freefall.jsonl",
+      "bytes": 5814,
+      "sha256": "4be79c95fc818533b0fcb7d45cc58b7283b370d3f8b5a0140e5fd550a13c1d41"
+    },
+    {
+      "path": "results/freefall-check.json",
+      "bytes": 182,
+      "sha256": "01e77d0576827cbedc80e03df1acd61cfcdfaed4f7a6ebeb2484d424eac5d4e7"
+    },
+    {
+      "path": "results/gazebo-payload.png",
+      "bytes": 58883,
+      "sha256": "559786e11e5e6d18d23820b72db675e12b966cc499253b5305d13f8299ecd3f2"
+    },
+    {
+      "path": "results/gravity_empty/feedback.jsonl",
+      "bytes": 1510097,
+      "sha256": "0a1b936b809720d616138e40e76bb3e44b3ec36aabc0035e55d618c064d893a0"
+    },
+    {
+      "path": "results/gravity_empty/settings.json",
+      "bytes": 366,
+      "sha256": "f487f466299c737ce8c4c0621d61f414b32d340fdd6e3808b565c2d08e353bf1"
+    },
+    {
+      "path": "results/gravity_empty/summary.json",
+      "bytes": 1389,
+      "sha256": "ffe2d231b4042016f5801218bd54e93aabbe4e36bec985695f3e2620cc50f852"
+    },
+    {
+      "path": "results/gravity_payload_50g/feedback.jsonl",
+      "bytes": 1511217,
+      "sha256": "36aa940add349541dad31b46c1a0f0324d2d96d27468550db29291b219429038"
+    },
+    {
+      "path": "results/gravity_payload_50g/settings.json",
+      "bytes": 367,
+      "sha256": "71f660e73c4f1b00f65d4ee14cc0290687a19affe776cc688df698e8fb7046fb"
+    },
+    {
+      "path": "results/gravity_payload_50g/summary.json",
+      "bytes": 1398,
+      "sha256": "906156b0b673cf8662e3a430b4a73b5e796f291492b591e7dcfd7d84aaa56352"
+    },
+    {
+      "path": "results/payload_50g_half_step/feedback.jsonl",
+      "bytes": 589931,
+      "sha256": "2d2da1a230d5e5694275d9882a932df1999e201d86ce00065a11ad37f546bb75"
+    },
+    {
+      "path": "results/payload_50g_half_step/settings.json",
+      "bytes": 392,
+      "sha256": "75fa6bae59881e8b3fcbf3ff00efa14949ec16714e0a17cabeee69534e509a9a"
+    },
+    {
+      "path": "results/payload_50g_half_step/summary.json",
+      "bytes": 1421,
+      "sha256": "ca390d194c2b732b35f6941688aa6ef1de22fa103347f39ffd5f5b5f8fee7038"
+    },
+    {
+      "path": "results/validation.json",
+      "bytes": 655,
+      "sha256": "230cc933ef1f9aa4641403901ab3ba003bbd9581a55bff9d05a0a219428571fa"
+    },
+    {
+      "path": "results/zero_g/feedback.jsonl",
+      "bytes": 1512026,
+      "sha256": "0ce0a905bd50ef2f0e5d2f168ab9f0e875e729b9b1b45323b81750debb5fac2e"
+    },
+    {
+      "path": "results/zero_g/settings.json",
+      "bytes": 365,
+      "sha256": "38206ad54c865d7ad20d87d987c7d2d881a674c9aeb1b7b55f16a5806ed7cb5d"
+    },
+    {
+      "path": "results/zero_g/summary.json",
+      "bytes": 1393,
+      "sha256": "7e8fb9150e433b925feba15f02d2a12053b7e576df51c737e210db72893aea27"
+    },
+    {
+      "path": "ros_control.py",
+      "bytes": 6744,
+      "sha256": "f1daa1fe3dca60264cfe69ac6abb48561c831222f0dc661aac5b90c62d6109d4"
+    },
+    {
+      "path": "run.py",
+      "bytes": 2129,
+      "sha256": "6ffef2514ea1c7c644c21d78cacd430f701d730b51c97064d7484d0101431a2f"
+    },
+    {
+      "path": "run_suite.py",
+      "bytes": 858,
+      "sha256": "9b8c46c5147eea3048f9382d71a4f85d055aa02c1dc3a76f51c757dbcc0be9e2"
+    },
+    {
+      "path": "stop.py",
+      "bytes": 544,
+      "sha256": "4c6f78ae6e6656451ef4cd8e74c3aba62139a6da2cf35e72749cc56c492c7828"
+    },
+    {
+      "path": "verify.py",
+      "bytes": 4002,
+      "sha256": "ad78bbb4735c9cccf5167a6ced3049dcefc173f689a5b941b84cd706415305f7"
+    }
+  ]
+}

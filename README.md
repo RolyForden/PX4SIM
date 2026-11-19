@@ -1,33 +1,54 @@
-# PX4SIM · A 无人机变构飞行仿真
+# PX4SIM · A 无人机变构与机械臂仿真
 
-自研 A 无人机已接入 PX4、Gazebo Harmonic 和 QGroundControl，支持 ROS 指令控制 H/V 25°空中变构。PX4 根据实际关节反馈更新旋翼分配几何。
+PX4、Gazebo Harmonic、ROS 2 与 QGroundControl 的 A 无人机仿真工程。当前已完成 **H/V 25°变构与机械臂同时运动的悬停验证**，空载通过后完成 50 g 负载对照。
 
-更新：2026年11月15日。
+更新：2026年11月19日。
 
-## 成果
+## 最新结果
 
-| 项目 | 当前结果 |
+5 m 起飞 → 固定 H25/V25 下操作机械臂 → 变构中左右往返／连续画圆 → 回 X、机械臂回位 → 降落、自动上锁。
+
+| 全部悬停阶段最差指标 | 空载 | 50 g |
+|---|---:|---:|
+| 真实高度误差 | 7.31 cm | 7.79 cm |
+| 真实水平偏移 | 8.76 cm | 12.19 cm |
+| 滚转／俯仰峰值 | 0.424° | 0.538° |
+| 机械臂末端跟踪误差 | 0.481 mm | 0.481 mm |
+
+两轮均无电机上限饱和、failsafe 或 ULog dropout。每轮六次 PX4 原生矩阵读回通过，两段实际同时动作各约 18.8 个仿真秒。PID 沿用前轮。
+
+[完整测试报告](px4_rtl_land_validation/a_coupled/results/README.md) · [运行与 ROS 操作](px4_rtl_land_validation/a_coupled/README.md) · [当前成果与文件入口](docs/当前成果.md) · [技术问题与处理记录](docs/技术问题与处理记录.md)
+
+![变构与机械臂耦合悬停结果](px4_rtl_land_validation/a_coupled/results/comparison.png)
+
+## 代码与证据
+
+| 目录 | 内容 |
 |---|---|
-| 空中变构 | H10→X→V10→X→H25→X→V25→X，完成起飞、悬停变构、降落和自动上锁 |
-| 飞行回归 | 最大高度5.037m，最大水平偏移0.089m，滚转/俯仰峰值0.524°/0.444° |
-| PX4分配接口 | 原生效能矩阵读回与实测几何核对通过 |
-| 人工演示 | QGC操纵＋ROS构形指令，录屏约3分38秒 |
+| `a_coupled/` | 当前耦合模型、ROS 控制、专用 SITL 分配接口、完整测试及矩阵读回 |
+| `a_arm_hover/` | 固定 X 构形下机械臂运动，空载／50 g 对照与 IMU 采样诊断 |
+| `a_locked_hover/` | 修正质量惯量后的锁臂悬停基线，各负载三次飞行；共享基线输入 |
+| `a_with_arm_fixed/` | A 整机与机械臂安装接口、质量惯量修正、固定机身受力验证 |
+| `delta_dynamics/native/` | 原生闭链机械臂固定台架 |
+| `delta_dynamics/study/`、`delta_fixed/` | 闭链兼容性、参数对照及 CAD 拆分参考实现 |
+| `a_morphing/airborne/` | 已完成的独立空中变构与 QGC 人工演示 |
 
-[查看当前成果](docs/当前成果.md) · [运行与操作](px4_rtl_land_validation/a_morphing/airborne/README.md) · [下载视频、模型和日志](https://github.com/RolyForden/PX4SIM/releases/tag/a-uav-airborne-2026-11-15)
+以上目录均位于 `px4_rtl_land_validation/`。各阶段结果保存在对应 `results/`。
 
-![空中变构演示画面](px4_rtl_land_validation/a_morphing/airborne/results/demo-preview.png)
+首次查看建议先读最新报告，再按运行说明查看入口脚本。模型由 Python 构建脚本生成 SDF，C++ 插件执行物理驱动，ROS 下发机构指令，PX4 产生电机输出。
 
-## 仓库结构
+## 下载与复现
 
-```text
-docs/当前成果.md                       结果、配置与后续工作
-px4_rtl_land_validation/
-  a_morphing/
-    config/morph-config.json          机构与质量参数
-    airborne/                         当前飞行模型、PX4适配、ROS和测试工具
-      models/                         SDF模型
-      results/                        最新数据、曲线与截图
-  现实材料/                            机构设计与构形图
+[11月19日运行网格附件](https://github.com/RolyForden/PX4SIM/releases/tag/a-uav-coupled-2026-11-19) 提供三个模型目录的网格，下载 `A-UAV-arm-morph-runtime-assets.zip` 后在仓库根目录解压：
+
+```bash
+unzip A-UAV-arm-morph-runtime-assets.zip -d px4_rtl_land_validation
 ```
 
-代码和说明在仓库，CAD、完整网格、ULog和录像在Release附件。单个文件使用 **Raw / Download raw file** 下载，完整源码使用 **Code → Download ZIP**。
+源码、SDF 输入快照、控制参数、汇总曲线及日志 SHA256 在 Git 中。原生大日志和运行目录保留本地，当前四份日志的路径及校验值见 [ULog 清单](px4_rtl_land_validation/a_coupled/results/ulog-manifest.json)。
+
+已有环境：Ubuntu 22.04、Gazebo Harmonic 8.15.0、ROS 2 Humble、PX4 v1.17.0；本机通过 Docker 运行 Harmonic 与 SITL，ROS 节点在主机运行。Python 分析依赖见 `requirements.txt`，具体构建及启动步骤见各目录 README。
+
+[11月15日 QGC 人工演示录像、原 A 模型和日志](https://github.com/RolyForden/PX4SIM/releases/tag/a-uav-airborne-2026-11-15)。该录像对应独立变构阶段，本轮耦合测试未录屏。
+
+当前质量、惯量、动力与关节采用仿真近似设定。两种负载各完整通过一次，后续开展重复性、机身平移中操作及参数标定。

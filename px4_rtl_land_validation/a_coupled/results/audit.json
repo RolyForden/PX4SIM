@@ -1,0 +1,121 @@
+{
+  "trials": [
+    {
+      "name": "empty_03",
+      "passed": true,
+      "morph_revolutes": 8,
+      "arm_revolutes": 3,
+      "rotor_revolutes": 4,
+      "native_balls": 12,
+      "no_world_fixture": true,
+      "no_passive_pose_reset": true,
+      "MC_MPC_parameter_count": 113,
+      "control_and_CA_parameters_unchanged": true,
+      "physical_B_and_four_axis_control_B_consistent": true,
+      "native_matrix_readbacks": [
+        {
+          "label": "H25",
+          "passed": true,
+          "max_abs_error": 1.1620518015870163e-05
+        },
+        {
+          "label": "V25",
+          "passed": true,
+          "max_abs_error": 5.707750000016887e-05
+        },
+        {
+          "label": "X-final",
+          "passed": true,
+          "max_abs_error": 6.3797787004382656e-06
+        },
+        {
+          "label": "X-ground",
+          "passed": true,
+          "max_abs_error": 1.831945285912795e-06
+        },
+        {
+          "label": "coupled-H",
+          "passed": true,
+          "max_abs_error": 0.008998880494428763
+        },
+        {
+          "label": "coupled-V",
+          "passed": true,
+          "max_abs_error": 0.003945843300000362
+        }
+      ],
+      "independent_mass_crosscheck": {
+        "samples": 578,
+        "max_com_error_m": 1.9664311704152632e-05,
+        "max_tensor_error_kg_m2": 6.322485829806518e-06,
+        "com_tolerance_m": 0.0001,
+        "tensor_tolerance_kg_m2": 1e-05,
+        "method": "independent CAD FK plus measured platform pose and interpolated morph joints, signed tensor and parallel-axis aggregation",
+        "passed": true
+      },
+      "original_ULog_finalized_and_verified": true
+    },
+    {
+      "name": "load50g_01",
+      "passed": true,
+      "morph_revolutes": 8,
+      "arm_revolutes": 3,
+      "rotor_revolutes": 4,
+      "native_balls": 12,
+      "no_world_fixture": true,
+      "no_passive_pose_reset": true,
+      "MC_MPC_parameter_count": 113,
+      "control_and_CA_parameters_unchanged": true,
+      "physical_B_and_four_axis_control_B_consistent": true,
+      "native_matrix_readbacks": [
+        {
+          "label": "H25",
+          "passed": true,
+          "max_abs_error": 9.16704268627555e-06
+        },
+        {
+          "label": "V25",
+          "passed": true,
+          "max_abs_error": 7.051039999961262e-05
+        },
+        {
+          "label": "X-final",
+          "passed": true,
+          "max_abs_error": 4.524722872378817e-06
+        },
+        {
+          "label": "X-ground",
+          "passed": true,
+          "max_abs_error": 7.723318806718282e-06
+        },
+        {
+          "label": "coupled-H",
+          "passed": true,
+          "max_abs_error": 0.008391090575616045
+        },
+        {
+          "label": "coupled-V",
+          "passed": true,
+          "max_abs_error": 0.003941118550000233
+        }
+      ],
+      "independent_mass_crosscheck": {
+        "samples": 578,
+        "max_com_error_m": 7.26349640700202e-06,
+        "max_tensor_error_kg_m2": 2.199508523589161e-06,
+        "com_tolerance_m": 0.0001,
+        "tensor_tolerance_kg_m2": 1e-05,
+        "method": "independent CAD FK plus measured platform pose and interpolated morph joints, signed tensor and parallel-axis aggregation",
+        "passed": true
+      },
+      "original_ULog_finalized_and_verified": true
+    }
+  ],
+  "baseline_source_and_binary_restored": true,
+  "dedicated_adapter": {
+    "baseline_sha256": "ba93af857caad7387178bd98f06775df2861b14fe531601f05bf379b6b0a6e86",
+    "morph_sha256": "3cf34908f7993e34d77fbba0a8eae1cae5db8639cd5866c0b970791321807c96",
+    "source_patch": "px4-morph-geometry.patch",
+    "adapter": "opt-in loopback UDP rotor geometry, PX4 native allocation and controllers"
+  }
+}

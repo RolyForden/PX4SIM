@@ -1,0 +1,47 @@
+{
+  "name": "empty",
+  "passed": true,
+  "payload_kg": 0.0,
+  "total_mass_kg": 1.4688800000000004,
+  "mechanism_mass_kg": 0.31206,
+  "samples": 1666,
+  "sim_duration_s": 30.081199999999995,
+  "max_tracking_error_m": 0.0005306364142960818,
+  "max_closure_m": 1.38898117e-06,
+  "final_home_error_m": 1.5316843362124244e-05,
+  "base_displacement_m": 0.0,
+  "static_mount_wrench_n_nm": [
+    1.971256239070027e-14,
+    -1.9939754675959647e-15,
+    3.0613086000000007,
+    0.0013295579783092523,
+    -2.993951929815794e-05,
+    6.1692581785862444e-15
+  ],
+  "expected_mount_gravity_n_nm": [
+    0.0,
+    0.0,
+    3.0613086000000007,
+    0.001329564860999999,
+    -2.992280949999996e-05,
+    0.0
+  ],
+  "max_static_mount_balance_error": 1.6709798157981336e-08,
+  "max_fixture_minus_mount_force_residual_n": 5.000266867227765e-11,
+  "max_fixture_minus_mount_torque_residual_nm": 9.787396587634944e-14,
+  "max_runtime_mass_error_kg": 4.440892098500626e-16,
+  "max_runtime_com_crosscheck_error_m": 3.158929400484604e-08,
+  "max_runtime_tensor_crosscheck_error_kg_m2": 1.1664241374859108e-08,
+  "all_runtime_inertias_valid": true,
+  "com_min_flu_m": [
+    -0.00130665423,
+    -0.0009629901643,
+    -0.02458100417
+  ],
+  "com_max_flu_m": [
+    0.0007388000376,
+    0.001079392496,
+    -0.02216647806
+  ],
+  "flight": false
+}

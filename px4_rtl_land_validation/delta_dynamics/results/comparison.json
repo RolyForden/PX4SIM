@@ -1,0 +1,63 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "case": "zero_g",
+      "expected_static_torque_nm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "measured_static_torque_nm": [
+        1.288388665595999e-05,
+        1.5046199597079996e-05,
+        8.972921902973008e-06
+      ],
+      "max_torque_difference_nm": 1.5046199597079996e-05,
+      "statics_check_passed": true
+    },
+    {
+      "case": "gravity_empty",
+      "expected_static_torque_nm": [
+        -0.09227620129670376,
+        -0.09385266397377022,
+        -0.09273050531888315
+      ],
+      "measured_static_torque_nm": [
+        -0.09226614714279996,
+        -0.0938018784676,
+        -0.09272216214279999
+      ],
+      "max_torque_difference_nm": 5.078550617021449e-05,
+      "statics_check_passed": true
+    },
+    {
+      "case": "gravity_payload_50g",
+      "expected_static_torque_nm": [
+        -0.12451616207831416,
+        -0.1269025474676111,
+        -0.12520352920541988
+      ],
+      "measured_static_torque_nm": [
+        -0.12448831216200004,
+        -0.12680641680600005,
+        -0.12515377615900003
+      ],
+      "max_torque_difference_nm": 9.613066161104356e-05,
+      "statics_check_passed": true
+    }
+  ],
+  "added_payload_kg": 0.05,
+  "measured_support_force_increment_n": 0.4906116209789996,
+  "expected_increment_n": 0.49050000000000005,
+  "measured_holding_torque_increment_nm": [
+    -0.03222216501920008,
+    -0.033004538338400044,
+    -0.03243161401620004
+  ],
+  "all_base_displacements_m": [
+    0.0,
+    0.0,
+    0.0
+  ]
+}

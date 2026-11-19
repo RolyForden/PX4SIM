@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "checks": {
+    "direct_sdf_failed_to_close": true,
+    "native_proxy_minimal_closed": true,
+    "gravity_empty": true,
+    "payload_50g": true,
+    "payload_50g_rotated": true,
+    "no_manual_passive_motion_or_force": true,
+    "twelve_native_ball_joints": true,
+    "runtime_fixed_loop_creation": true
+  },
+  "cases": [
+    {
+      "case": "gravity_empty",
+      "passed": true,
+      "closure_m": 1.399436369e-06,
+      "support_force_error_with_proxy_mass_n": 1.3457799996619002e-07,
+      "fixture_wrench_samples": 9698
+    },
+    {
+      "case": "payload_50g",
+      "passed": true,
+      "closure_m": 1.398739548e-06,
+      "support_force_error_with_proxy_mass_n": 1.4432899320127035e-15,
+      "fixture_wrench_samples": 15423
+    },
+    {
+      "case": "payload_50g_rotated",
+      "passed": true,
+      "closure_m": 1.417396779e-06,
+      "support_force_error_with_proxy_mass_n": 3.7029405908217683e-07,
+      "fixture_wrench_samples": 4899
+    }
+  ],
+  "forbidden_api_found": [],
+  "flight_tested": false
+}

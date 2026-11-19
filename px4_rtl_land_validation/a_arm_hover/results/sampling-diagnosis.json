@@ -1,0 +1,30 @@
+[
+  {
+    "trial": "empty_01",
+    "imu_rate_hz": 250,
+    "window_sim_s": [
+      83.752,
+      88.752
+    ],
+    "truth_down_delta_velocity_m_s": -0.6799256459567715,
+    "logged_imu_world_down_delta_velocity_m_s": 0.4717557546269807,
+    "absolute_delta_velocity_mismatch_m_s": 1.1516814005837523,
+    "landing_height_estimate_max_error_vs_truth_m": 0.900751165063733,
+    "all_control_parameters_unchanged": true,
+    "interpretation": "sampling/impulse consistency comparison; not a general sensor calibration"
+  },
+  {
+    "trial": "empty_imu5000",
+    "imu_rate_hz": 5000,
+    "window_sim_s": [
+      82.762,
+      87.762
+    ],
+    "truth_down_delta_velocity_m_s": -0.6821066485687499,
+    "logged_imu_world_down_delta_velocity_m_s": -0.7564358056007424,
+    "absolute_delta_velocity_mismatch_m_s": 0.0743291570319925,
+    "landing_height_estimate_max_error_vs_truth_m": 0.11295851081434427,
+    "all_control_parameters_unchanged": true,
+    "interpretation": "sampling/impulse consistency comparison; not a general sensor calibration"
+  }
+]

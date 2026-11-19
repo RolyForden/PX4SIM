@@ -1,0 +1,6 @@
+{
+  "sampled_reachable_points": 150,
+  "max_ik_fk_position_error_m": 2.392254238482694e-13,
+  "max_six_rod_length_error_m": 3.0531133177191805e-16,
+  "unreachable_target_rejected": true
+}

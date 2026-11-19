@@ -1,0 +1,122 @@
+[
+  {
+    "trial": "empty_01",
+    "source_and_model_hashes_match": true,
+    "no_world_anchor": true,
+    "only_four_rotors_revolute": true,
+    "motor_plugins_only": true,
+    "parameter_changes": {
+      "LND_FLIGHT_T_LO": [
+        0,
+        37928000
+      ],
+      "COM_FLIGHT_UUID": [
+        0,
+        1
+      ]
+    },
+    "control_parameter_count": 113,
+    "control_parameters_unchanged": true,
+    "rotor_geometry_axes_CT_KM_readback_matches": true
+  },
+  {
+    "trial": "empty_02_retry1",
+    "source_and_model_hashes_match": true,
+    "no_world_anchor": true,
+    "only_four_rotors_revolute": true,
+    "motor_plugins_only": true,
+    "parameter_changes": {
+      "LND_FLIGHT_T_LO": [
+        0,
+        37624000
+      ],
+      "COM_FLIGHT_UUID": [
+        0,
+        1
+      ]
+    },
+    "control_parameter_count": 113,
+    "control_parameters_unchanged": true,
+    "rotor_geometry_axes_CT_KM_readback_matches": true
+  },
+  {
+    "trial": "empty_03",
+    "source_and_model_hashes_match": true,
+    "no_world_anchor": true,
+    "only_four_rotors_revolute": true,
+    "motor_plugins_only": true,
+    "parameter_changes": {
+      "LND_FLIGHT_T_LO": [
+        0,
+        37808000
+      ],
+      "COM_FLIGHT_UUID": [
+        0,
+        1
+      ]
+    },
+    "control_parameter_count": 113,
+    "control_parameters_unchanged": true,
+    "rotor_geometry_axes_CT_KM_readback_matches": true
+  },
+  {
+    "trial": "load50g_01",
+    "source_and_model_hashes_match": true,
+    "no_world_anchor": true,
+    "only_four_rotors_revolute": true,
+    "motor_plugins_only": true,
+    "parameter_changes": {
+      "LND_FLIGHT_T_LO": [
+        0,
+        37904000
+      ],
+      "COM_FLIGHT_UUID": [
+        0,
+        1
+      ]
+    },
+    "control_parameter_count": 113,
+    "control_parameters_unchanged": true,
+    "rotor_geometry_axes_CT_KM_readback_matches": true
+  },
+  {
+    "trial": "load50g_02",
+    "source_and_model_hashes_match": true,
+    "no_world_anchor": true,
+    "only_four_rotors_revolute": true,
+    "motor_plugins_only": true,
+    "parameter_changes": {
+      "LND_FLIGHT_T_LO": [
+        0,
+        37896000
+      ],
+      "COM_FLIGHT_UUID": [
+        0,
+        1
+      ]
+    },
+    "control_parameter_count": 113,
+    "control_parameters_unchanged": true,
+    "rotor_geometry_axes_CT_KM_readback_matches": true
+  },
+  {
+    "trial": "load50g_03",
+    "source_and_model_hashes_match": true,
+    "no_world_anchor": true,
+    "only_four_rotors_revolute": true,
+    "motor_plugins_only": true,
+    "parameter_changes": {
+      "LND_FLIGHT_T_LO": [
+        0,
+        38000000
+      ],
+      "COM_FLIGHT_UUID": [
+        0,
+        1
+      ]
+    },
+    "control_parameter_count": 113,
+    "control_parameters_unchanged": true,
+    "rotor_geometry_axes_CT_KM_readback_matches": true
+  }
+]

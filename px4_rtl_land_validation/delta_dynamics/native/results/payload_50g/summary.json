@@ -1,0 +1,54 @@
+{
+  "name": "payload_50g",
+  "settings": {
+    "output": "native/world.sdf",
+    "payload": 0.05,
+    "gravity": 9.81,
+    "dt": 0.0002,
+    "stiffness": null,
+    "damping": null,
+    "upper_mass_kg": 0.03,
+    "rod_mass_kg": 0.012,
+    "platform_mass_kg": 0.05,
+    "constraint": "native 12 ball joints + 6 runtime fixed loop welds",
+    "passive_position_reset": false,
+    "base_fixed": true,
+    "mass_source": "explicit simulation test values; not BOM calibration",
+    "proxy_mass_each_kg": 1e-05,
+    "proxy_total_mass_kg": 6e-05
+  },
+  "passed": true,
+  "sim_duration_s": 30.114600000000003,
+  "samples": 1521,
+  "static_support_force_n": [
+    -5.443940128609902e-15,
+    -6.7220706474724745e-15,
+    0.9815885999999987
+  ],
+  "expected_platform_payload_weight_n": 0.9810000000000001,
+  "static_vertical_force_balance_error_n": 1.4432899320127035e-15,
+  "static_joint_torque_nm": [
+    -0.12455484999999968,
+    -0.12694220730000028,
+    -0.12524249680000019
+  ],
+  "static_joint_torque_std_nm": [
+    3.191891195797325e-16,
+    2.7755575615628914e-16,
+    1.942890293094024e-16
+  ],
+  "max_closure_m": 1.398739548e-06,
+  "max_tracking_error_m": 0.0005719268215422154,
+  "final_home_error_m": 1.4839911119897734e-05,
+  "max_base_displacement_m": 0.0,
+  "max_platform_tilt_rad": 1.5491682841420615e-11,
+  "final_max_speed_m_s": 1.8048486606251282e-05,
+  "max_applied_joint_torque_nm": [
+    0.1453085849,
+    0.1477616591,
+    0.1479762883
+  ],
+  "trajectory_tested": true,
+  "passive_resets_used": false,
+  "expected_platform_payload_proxy_weight_n": 0.9815886000000001
+}

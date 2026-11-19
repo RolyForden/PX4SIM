@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "checks": {
+    "original_source_files_unchanged": true,
+    "original_cad_parts_partition_unique": true,
+    "mechanism_101_solids_partition_unique": true,
+    "embedded_mechanism_removed_from_body": true,
+    "airframe_12_joints_locked": true,
+    "motor_force_plugins_absent": true,
+    "independent_mount_joint": true,
+    "fixture_independent_of_mount": true,
+    "no_passive_pose_reset_or_external_rod_forces": true,
+    "airframe_mass_preserved": true,
+    "airframe_full_signed_inertia_recovered": true,
+    "all_link_inertias_valid": true,
+    "empty_actual_test": true,
+    "payload_50g_actual_test": true,
+    "total_mass_matches_ledger": true
+  },
+  "flight": false
+}

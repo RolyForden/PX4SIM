@@ -1,0 +1,10 @@
+{
+  "release_tag": "a-uav-coupled-2026-11-19",
+  "file": "A-UAV-arm-morph-runtime-assets.zip",
+  "sha256": "ed935764ac47c7045aa5c859745b2aa1b5d582fdf0280ddc9ff5cbe80f6287b3",
+  "compressed_bytes": 24178683,
+  "mesh_files": 24,
+  "uncompressed_bytes": 71136916,
+  "extract_into": "px4_rtl_land_validation",
+  "contains": "runtime meshes; no ULogs, CAD originals, credentials or binaries"
+}

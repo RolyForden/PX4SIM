@@ -1,0 +1,30 @@
+[
+  {
+    "name": "empty_01",
+    "role": "allocation failure",
+    "file": "runs/empty_01/logs/empty_01.ulg",
+    "bytes": 29684760,
+    "sha256": "67f72006bbdf169253266ec5051c3521afaa585ea625fb5668d9dad357f69d81"
+  },
+  {
+    "name": "empty_02",
+    "role": "partial-line reader interruption",
+    "file": "runs/empty_02/logs/empty_02.ulg",
+    "bytes": 17437671,
+    "sha256": "d14674450ba365838dcdaafb778dc8b2f8afb3517504d1235df8a370995f4fb2"
+  },
+  {
+    "name": "empty_03",
+    "role": "accepted empty",
+    "file": "runs/empty_03/logs/empty_03.ulg",
+    "bytes": 55870320,
+    "sha256": "d543ee1174a224e64f9ca802a5174779ee2933dd3de04753a5f299710d563a6b"
+  },
+  {
+    "name": "load50g_01",
+    "role": "accepted 50 g",
+    "file": "runs/load50g_01/logs/load50g_01.ulg",
+    "bytes": 55702438,
+    "sha256": "d5c747ade4cac02ab82c5653831123f4b2f04a629f3f902c958a86c370e07e37"
+  }
+]

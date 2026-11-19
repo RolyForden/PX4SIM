@@ -1,0 +1,19 @@
+{
+  "full": {
+    "samples": 2413,
+    "rank_counts": {
+      "4.0": 2408,
+      "5.0": 5
+    },
+    "max_reconstruction_error": 914116544.0,
+    "max_inverse_element": 6684944.0
+  },
+  "four_axes": {
+    "samples": 2413,
+    "rank_counts": {
+      "4.0": 2413
+    },
+    "max_reconstruction_error": 1.57356262207e-05,
+    "max_inverse_element": 2.68368601799
+  }
+}

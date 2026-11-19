@@ -1,0 +1,114 @@
+--- a/src/modules/control_allocator/VehicleActuatorEffectiveness/ActuatorEffectivenessMultirotor.hpp
++++ b/src/modules/control_allocator/VehicleActuatorEffectiveness/ActuatorEffectivenessMultirotor.hpp
+@@ -40,7 +40,7 @@
+ {
+ public:
+ 	ActuatorEffectivenessMultirotor(ModuleParams *parent);
+-	virtual ~ActuatorEffectivenessMultirotor() = default;
++	virtual ~ActuatorEffectivenessMultirotor();
+ 
+ 	bool getEffectivenessMatrix(Configuration &configuration, EffectivenessUpdateReason external_update) override;
+ 
+@@ -58,4 +58,11 @@
+ 
+ protected:
+ 	ActuatorEffectivenessRotors _mc_rotors;
++#if defined(__PX4_POSIX)
++ int _morph_fd{-1};
++ uint32_t _morph_seq{0};
++ uint64_t _morph_received{0};
++ float _morph_data[24]{};
++ bool _morph_valid{false};
++#endif
+ };
+--- a/src/modules/control_allocator/VehicleActuatorEffectiveness/ActuatorEffectivenessMultirotor.cpp
++++ b/src/modules/control_allocator/VehicleActuatorEffectiveness/ActuatorEffectivenessMultirotor.cpp
+@@ -33,21 +33,85 @@
+ 
+ #include "ActuatorEffectivenessMultirotor.hpp"
+ 
++#if defined(__PX4_POSIX)
++#include <sys/socket.h>
++#include <netinet/in.h>
++#include <unistd.h>
++#include <cstdlib>
++#include <cmath>
++#include <cstring>
++#include <drivers/drv_hrt.h>
++#endif
+ using namespace matrix;
+ 
+ ActuatorEffectivenessMultirotor::ActuatorEffectivenessMultirotor(ModuleParams *parent)
+ 	: ModuleParams(parent),
+ 	  _mc_rotors(this)
+ {
++#if defined(__PX4_POSIX)
++ if (std::getenv("PX4SIM_MORPH_UDP")) {
++  _morph_fd = ::socket(AF_INET, SOCK_DGRAM | SOCK_NONBLOCK, 0);
++  sockaddr_in addr{}; addr.sin_family = AF_INET; addr.sin_port = htons(14780);
++  addr.sin_addr.s_addr = htonl(INADDR_LOOPBACK);
++  if (_morph_fd >= 0 && ::bind(_morph_fd, reinterpret_cast<sockaddr *>(&addr), sizeof(addr)) != 0) {
++   ::close(_morph_fd); _morph_fd = -1;
++  }
++  PX4_INFO("SITL morph geometry UDP: %s", _morph_fd >= 0 ? "127.0.0.1:14780" : "unavailable");
++ }
++#endif
++}
++
++ActuatorEffectivenessMultirotor::~ActuatorEffectivenessMultirotor()
++{
++#if defined(__PX4_POSIX)
++ if (_morph_fd >= 0) { ::close(_morph_fd); }
++#endif
+ }
+ 
+ bool
+ ActuatorEffectivenessMultirotor::getEffectivenessMatrix(Configuration &configuration,
+ 		EffectivenessUpdateReason external_update)
+ {
+-	if (external_update == EffectivenessUpdateReason::NO_EXTERNAL_UPDATE) {
+-		return false;
+-	}
++#if defined(__PX4_POSIX)
++ bool changed = false;
++ struct Packet { uint32_t magic; uint32_t seq; float data[24]; } packet{};
++ static_assert(sizeof(Packet) == 104, "Morph packet layout");
++ while (_morph_fd >= 0 && ::recv(_morph_fd, &packet, sizeof(packet), MSG_DONTWAIT) == sizeof(packet)) {
++  bool valid = packet.magic == 0x41555631u;
++  for (int i = 0; i < 24; ++i) { valid = valid && std::isfinite(packet.data[i]) && fabsf(packet.data[i]) < 2.f; }
++  for (int i = 0; i < 4; ++i) {
++   Vector3f axis(packet.data[6*i+3], packet.data[6*i+4], packet.data[6*i+5]);
++   valid = valid && axis.norm() > .95f && axis.norm() < 1.05f;
++  }
++  if (valid) {
++   memcpy(_morph_data, packet.data, sizeof(_morph_data));
++   _morph_seq = packet.seq; _morph_received = hrt_absolute_time(); _morph_valid = true; changed = true;
++  }
++ }
++ if (_morph_valid && (changed || external_update != EffectivenessUpdateReason::NO_EXTERNAL_UPDATE)) {
++  auto geometry = _mc_rotors.geometry();
++  if (geometry.num_rotors == 4) {
++   for (int i = 0; i < 4; ++i) {
++    geometry.rotors[i].position = Vector3f(_morph_data[6*i], _morph_data[6*i+1], _morph_data[6*i+2]);
++    geometry.rotors[i].axis = Vector3f(_morph_data[6*i+3], _morph_data[6*i+4], _morph_data[6*i+5]);
++   }
++   const int added = ActuatorEffectivenessRotors::computeEffectivenessMatrix(geometry,
++    configuration.effectiveness_matrices[0], 0);
++   // Multirotor attitude control requests three torques and body-Z thrust.
++   // Lateral forces from tilted propellers remain in the physics model,
++   // but are not two extra independent controls on a four-motor vehicle.
++   configuration.effectiveness_matrices[0].row(3) = 0.f;
++   configuration.effectiveness_matrices[0].row(4) = 0.f;
++   configuration.actuatorsAdded(ActuatorType::MOTORS, added);
++   struct Ack { uint32_t magic; uint32_t seq; } ack{0x41555631u, _morph_seq};
++   sockaddr_in dest{}; dest.sin_family = AF_INET; dest.sin_port = htons(14781);
++   dest.sin_addr.s_addr = htonl(INADDR_LOOPBACK);
++   ::sendto(_morph_fd, &ack, sizeof(ack), MSG_DONTWAIT, reinterpret_cast<sockaddr *>(&dest), sizeof(dest));
++   return added == 4;
++  }
++ }
++#endif
++ if (external_update == EffectivenessUpdateReason::NO_EXTERNAL_UPDATE) { return false; }
+ 
+ 	// Motors
+ 	const bool rotors_added_successfully = _mc_rotors.addActuators(configuration);

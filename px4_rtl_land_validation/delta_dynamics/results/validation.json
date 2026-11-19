@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "half_step_static_torque_difference_nm": 8.77791083161994e-06,
+  "half_step_support_force_difference_n": 0.000132428284306374,
+  "freefall_control": {
+    "passed": true,
+    "measured_drop_m": 0.07167029039999998,
+    "expected_freefall_drop_m": 0.0715612032,
+    "duration_end_s": 0.1212,
+    "support_force_n": [
+      0,
+      0,
+      0
+    ]
+  },
+  "model_audit": {
+    "passive_motion_overrides_found": [],
+    "all_manipulator_links_gravity_enabled": true,
+    "native_ball_joint_count": 6,
+    "actuated_revolute_count": 3,
+    "world_gravity": "0 0 -9.81"
+  },
+  "comparison": "comparison.json",
+  "flight_started": false
+}

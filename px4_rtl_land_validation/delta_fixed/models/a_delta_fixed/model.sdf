@@ -1,0 +1,721 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sdf version="1.9">
+  <model name="a_delta_fixed">
+    <pose>0 0 0.65 0 0 0</pose>
+    <self_collide>false</self_collide>
+    <link name="base_link">
+      <pose>0 0 0 0 0 0</pose>
+      <inertial>
+        <mass>1</mass>
+        <inertia>
+          <ixx>0.001</ixx>
+          <iyy>0.001</iyy>
+          <izz>0.001</izz>
+        </inertia>
+      </inertial>
+      <gravity>false</gravity>
+      <visual name="base_link">
+        <geometry>
+          <mesh>
+            <uri>model://a_delta_fixed/meshes/aircraft.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.38 0.48 0.60 1</ambient>
+          <diffuse>0.38 0.48 0.60 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    <joint name="base_fixed" type="fixed">
+      <parent>world</parent>
+      <child>base_link</child>
+    </joint>
+    <link name="upper_0">
+      <pose>-0.03471582802 -0.0352442973052 -0.0701268694227 0 0 0</pose>
+      <inertial>
+        <mass>0.03</mass>
+        <inertia>
+          <ixx>.0005</ixx>
+          <iyy>.0005</iyy>
+          <izz>.0005</izz>
+        </inertia>
+      </inertial>
+      <gravity>false</gravity>
+      <visual name="upper_0">
+        <geometry>
+          <mesh>
+            <uri>model://a_delta_fixed/meshes/upper_0.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.95 0.45 0.12 1</ambient>
+          <diffuse>0.95 0.45 0.12 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    <joint name="act_0" type="revolute">
+      <parent>base_link</parent>
+      <child>upper_0</child>
+      <axis>
+        <xyz>0.712800237777 -0.7013671086 1.18004959136e-14</xyz>
+        <limit>
+          <lower>-.6</lower>
+          <upper>.6</upper>
+          <effort>2</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="rod_0_0_0_frame">
+      <pose>-0.143627974346 -0.123119253291 -0.121313505884 0 0 0</pose>
+      <inertial>
+        <mass>1e-05</mass>
+        <inertia>
+          <ixx>1e-08</ixx>
+          <iyy>1e-08</iyy>
+          <izz>1e-08</izz>
+        </inertia>
+      </inertial>
+      <gravity>false</gravity>
+    </link>
+    <joint name="rod_0_0_0" type="revolute">
+      <parent>upper_0</parent>
+      <child>rod_0_0_0_frame</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>2</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="rod_0_0_1_frame">
+      <pose>-0.143627974346 -0.123119253291 -0.121313505884 0 0 0</pose>
+      <inertial>
+        <mass>1e-05</mass>
+        <inertia>
+          <ixx>1e-08</ixx>
+          <iyy>1e-08</iyy>
+          <izz>1e-08</izz>
+        </inertia>
+      </inertial>
+      <gravity>false</gravity>
+    </link>
+    <joint name="rod_0_0_1" type="revolute">
+      <parent>rod_0_0_0_frame</parent>
+      <child>rod_0_0_1_frame</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>2</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="rod_0_0">
+      <pose>-0.143627974346 -0.123119253291 -0.121313505884 0 0 0</pose>
+      <inertial>
+        <mass>0.001</mass>
+        <inertia>
+          <ixx>1e-06</ixx>
+          <iyy>1e-06</iyy>
+          <izz>1e-06</izz>
+        </inertia>
+      </inertial>
+      <gravity>false</gravity>
+      <visual name="rod_0_0">
+        <geometry>
+          <mesh>
+            <uri>model://a_delta_fixed/meshes/rod_0_0.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.24 0.68 0.48 1</ambient>
+          <diffuse>0.24 0.68 0.48 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    <joint name="rod_0_0_2" type="revolute">
+      <parent>rod_0_0_1_frame</parent>
+      <child>rod_0_0</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>2</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="rod_0_1_0_frame">
+      <pose>-0.120818366737 -0.145563000766 -0.121313505884 0 0 0</pose>
+      <inertial>
+        <mass>1e-05</mass>
+        <inertia>
+          <ixx>1e-08</ixx>
+          <iyy>1e-08</iyy>
+          <izz>1e-08</izz>
+        </inertia>
+      </inertial>
+      <gravity>false</gravity>
+    </link>
+    <joint name="rod_0_1_0" type="revolute">
+      <parent>upper_0</parent>
+      <child>rod_0_1_0_frame</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>2</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="rod_0_1_1_frame">
+      <pose>-0.120818366737 -0.145563000766 -0.121313505884 0 0 0</pose>
+      <inertial>
+        <mass>1e-05</mass>
+        <inertia>
+          <ixx>1e-08</ixx>
+          <iyy>1e-08</iyy>
+          <izz>1e-08</izz>
+        </inertia>
+      </inertial>
+      <gravity>false</gravity>
+    </link>
+    <joint name="rod_0_1_1" type="revolute">
+      <parent>rod_0_1_0_frame</parent>
+      <child>rod_0_1_1_frame</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>2</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="rod_0_1">
+      <pose>-0.120818366737 -0.145563000766 -0.121313505884 0 0 0</pose>
+      <inertial>
+        <mass>0.001</mass>
+        <inertia>
+          <ixx>1e-06</ixx>
+          <iyy>1e-06</iyy>
+          <izz>1e-06</izz>
+        </inertia>
+      </inertial>
+      <gravity>false</gravity>
+      <visual name="rod_0_1">
+        <geometry>
+          <mesh>
+            <uri>model://a_delta_fixed/meshes/rod_0_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.24 0.68 0.48 1</ambient>
+          <diffuse>0.24 0.68 0.48 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    <joint name="rod_0_1_2" type="revolute">
+      <parent>rod_0_1_1_frame</parent>
+      <child>rod_0_1</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>2</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="upper_1">
+      <pose>-0.0131645427919 0.0476869376293 -0.0701268694227 0 0 0</pose>
+      <inertial>
+        <mass>0.03</mass>
+        <inertia>
+          <ixx>.0005</ixx>
+          <iyy>.0005</iyy>
+          <izz>.0005</izz>
+        </inertia>
+      </inertial>
+      <gravity>false</gravity>
+      <visual name="upper_1">
+        <geometry>
+          <mesh>
+            <uri>model://a_delta_fixed/meshes/upper_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.95 0.45 0.12 1</ambient>
+          <diffuse>0.95 0.45 0.12 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    <joint name="act_1" type="revolute">
+      <parent>base_link</parent>
+      <child>upper_1</child>
+      <axis>
+        <xyz>-0.963801852315 -0.266619559438 -2.35404035938e-15</xyz>
+        <limit>
+          <lower>-.6</lower>
+          <upper>.6</upper>
+          <effort>2</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="rod_1_0_0_frame">
+      <pose>-0.034995020862 0.186612436115 -0.119392185386 0 0 0</pose>
+      <inertial>
+        <mass>1e-05</mass>
+        <inertia>
+          <ixx>1e-08</ixx>
+          <iyy>1e-08</iyy>
+          <izz>1e-08</izz>
+        </inertia>
+      </inertial>
+      <gravity>false</gravity>
+    </link>
+    <joint name="rod_1_0_0" type="revolute">
+      <parent>upper_1</parent>
+      <child>rod_1_0_0_frame</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>2</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="rod_1_0_1_frame">
+      <pose>-0.034995020862 0.186612436115 -0.119392185386 0 0 0</pose>
+      <inertial>
+        <mass>1e-05</mass>
+        <inertia>
+          <ixx>1e-08</ixx>
+          <iyy>1e-08</iyy>
+          <izz>1e-08</izz>
+        </inertia>
+      </inertial>
+      <gravity>false</gravity>
+    </link>
+    <joint name="rod_1_0_1" type="revolute">
+      <parent>rod_1_0_0_frame</parent>
+      <child>rod_1_0_1_frame</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>2</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="rod_1_0">
+      <pose>-0.034995020862 0.186612436115 -0.119392185386 0 0 0</pose>
+      <inertial>
+        <mass>0.001</mass>
+        <inertia>
+          <ixx>1e-06</ixx>
+          <iyy>1e-06</iyy>
+          <izz>1e-06</izz>
+        </inertia>
+      </inertial>
+      <gravity>false</gravity>
+      <visual name="rod_1_0">
+        <geometry>
+          <mesh>
+            <uri>model://a_delta_fixed/meshes/rod_1_0.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.24 0.68 0.48 1</ambient>
+          <diffuse>0.24 0.68 0.48 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    <joint name="rod_1_0_2" type="revolute">
+      <parent>rod_1_0_1_frame</parent>
+      <child>rod_1_0</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>2</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="rod_1_1_0_frame">
+      <pose>-0.0658366801361 0.178080610213 -0.119392185386 0 0 0</pose>
+      <inertial>
+        <mass>1e-05</mass>
+        <inertia>
+          <ixx>1e-08</ixx>
+          <iyy>1e-08</iyy>
+          <izz>1e-08</izz>
+        </inertia>
+      </inertial>
+      <gravity>false</gravity>
+    </link>
+    <joint name="rod_1_1_0" type="revolute">
+      <parent>upper_1</parent>
+      <child>rod_1_1_0_frame</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>2</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="rod_1_1_1_frame">
+      <pose>-0.0658366801361 0.178080610213 -0.119392185386 0 0 0</pose>
+      <inertial>
+        <mass>1e-05</mass>
+        <inertia>
+          <ixx>1e-08</ixx>
+          <iyy>1e-08</iyy>
+          <izz>1e-08</izz>
+        </inertia>
+      </inertial>
+      <gravity>false</gravity>
+    </link>
+    <joint name="rod_1_1_1" type="revolute">
+      <parent>rod_1_1_0_frame</parent>
+      <child>rod_1_1_1_frame</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>2</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="rod_1_1">
+      <pose>-0.0658366801361 0.178080610213 -0.119392185386 0 0 0</pose>
+      <inertial>
+        <mass>0.001</mass>
+        <inertia>
+          <ixx>1e-06</ixx>
+          <iyy>1e-06</iyy>
+          <izz>1e-06</izz>
+        </inertia>
+      </inertial>
+      <gravity>false</gravity>
+      <visual name="rod_1_1">
+        <geometry>
+          <mesh>
+            <uri>model://a_delta_fixed/meshes/rod_1_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.24 0.68 0.48 1</ambient>
+          <diffuse>0.24 0.68 0.48 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    <joint name="rod_1_1_2" type="revolute">
+      <parent>rod_1_1_1_frame</parent>
+      <child>rod_1_1</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>2</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="upper_2">
+      <pose>0.0478803708146 -0.0124426403297 -0.0701268694227 0 0 0</pose>
+      <inertial>
+        <mass>0.03</mass>
+        <inertia>
+          <ixx>.0005</ixx>
+          <iyy>.0005</iyy>
+          <izz>.0005</izz>
+        </inertia>
+      </inertial>
+      <gravity>false</gravity>
+      <visual name="upper_2">
+        <geometry>
+          <mesh>
+            <uri>model://a_delta_fixed/meshes/upper_2.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.95 0.45 0.12 1</ambient>
+          <diffuse>0.95 0.45 0.12 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    <joint name="act_2" type="revolute">
+      <parent>base_link</parent>
+      <child>upper_2</child>
+      <axis>
+        <xyz>0.251001614538 0.967986668038 -8.62918395661e-15</xyz>
+        <limit>
+          <lower>-.6</lower>
+          <upper>.6</upper>
+          <effort>2</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="rod_2_0_0_frame">
+      <pose>0.178633672018 -0.0628764854643 -0.120762200452 0 0 0</pose>
+      <inertial>
+        <mass>1e-05</mass>
+        <inertia>
+          <ixx>1e-08</ixx>
+          <iyy>1e-08</iyy>
+          <izz>1e-08</izz>
+        </inertia>
+      </inertial>
+      <gravity>false</gravity>
+    </link>
+    <joint name="rod_2_0_0" type="revolute">
+      <parent>upper_2</parent>
+      <child>rod_2_0_0_frame</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>2</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="rod_2_0_1_frame">
+      <pose>0.178633672018 -0.0628764854643 -0.120762200452 0 0 0</pose>
+      <inertial>
+        <mass>1e-05</mass>
+        <inertia>
+          <ixx>1e-08</ixx>
+          <iyy>1e-08</iyy>
+          <izz>1e-08</izz>
+        </inertia>
+      </inertial>
+      <gravity>false</gravity>
+    </link>
+    <joint name="rod_2_0_1" type="revolute">
+      <parent>rod_2_0_0_frame</parent>
+      <child>rod_2_0_1_frame</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>2</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="rod_2_0">
+      <pose>0.178633672018 -0.0628764854643 -0.120762200452 0 0 0</pose>
+      <inertial>
+        <mass>0.001</mass>
+        <inertia>
+          <ixx>1e-06</ixx>
+          <iyy>1e-06</iyy>
+          <izz>1e-06</izz>
+        </inertia>
+      </inertial>
+      <gravity>false</gravity>
+      <visual name="rod_2_0">
+        <geometry>
+          <mesh>
+            <uri>model://a_delta_fixed/meshes/rod_2_0.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.24 0.68 0.48 1</ambient>
+          <diffuse>0.24 0.68 0.48 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    <joint name="rod_2_0_2" type="revolute">
+      <parent>rod_2_0_1_frame</parent>
+      <child>rod_2_0</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>2</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="rod_2_1_0_frame">
+      <pose>0.186665723683 -0.031900912087 -0.120762200452 0 0 0</pose>
+      <inertial>
+        <mass>1e-05</mass>
+        <inertia>
+          <ixx>1e-08</ixx>
+          <iyy>1e-08</iyy>
+          <izz>1e-08</izz>
+        </inertia>
+      </inertial>
+      <gravity>false</gravity>
+    </link>
+    <joint name="rod_2_1_0" type="revolute">
+      <parent>upper_2</parent>
+      <child>rod_2_1_0_frame</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>2</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="rod_2_1_1_frame">
+      <pose>0.186665723683 -0.031900912087 -0.120762200452 0 0 0</pose>
+      <inertial>
+        <mass>1e-05</mass>
+        <inertia>
+          <ixx>1e-08</ixx>
+          <iyy>1e-08</iyy>
+          <izz>1e-08</izz>
+        </inertia>
+      </inertial>
+      <gravity>false</gravity>
+    </link>
+    <joint name="rod_2_1_1" type="revolute">
+      <parent>rod_2_1_0_frame</parent>
+      <child>rod_2_1_1_frame</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>2</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="rod_2_1">
+      <pose>0.186665723683 -0.031900912087 -0.120762200452 0 0 0</pose>
+      <inertial>
+        <mass>0.001</mass>
+        <inertia>
+          <ixx>1e-06</ixx>
+          <iyy>1e-06</iyy>
+          <izz>1e-06</izz>
+        </inertia>
+      </inertial>
+      <gravity>false</gravity>
+      <visual name="rod_2_1">
+        <geometry>
+          <mesh>
+            <uri>model://a_delta_fixed/meshes/rod_2_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.24 0.68 0.48 1</ambient>
+          <diffuse>0.24 0.68 0.48 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    <joint name="rod_2_1_2" type="revolute">
+      <parent>rod_2_1_1_frame</parent>
+      <child>rod_2_1</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>2</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="platform_0_frame">
+      <pose>1.8911399989e-05 0.00137033302005 -0.249070748308 0 0 0</pose>
+      <inertial>
+        <mass>1e-05</mass>
+        <inertia>
+          <ixx>1e-08</ixx>
+          <iyy>1e-08</iyy>
+          <izz>1e-08</izz>
+        </inertia>
+      </inertial>
+      <gravity>false</gravity>
+    </link>
+    <joint name="platform_0" type="prismatic">
+      <parent>base_link</parent>
+      <child>platform_0_frame</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.3</lower>
+          <upper>0.3</upper>
+          <effort>2</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="platform_1_frame">
+      <pose>1.8911399989e-05 0.00137033302005 -0.249070748308 0 0 0</pose>
+      <inertial>
+        <mass>1e-05</mass>
+        <inertia>
+          <ixx>1e-08</ixx>
+          <iyy>1e-08</iyy>
+          <izz>1e-08</izz>
+        </inertia>
+      </inertial>
+      <gravity>false</gravity>
+    </link>
+    <joint name="platform_1" type="prismatic">
+      <parent>platform_0_frame</parent>
+      <child>platform_1_frame</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.3</lower>
+          <upper>0.3</upper>
+          <effort>2</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="platform">
+      <pose>1.8911399989e-05 0.00137033302005 -0.249070748308 0 0 0</pose>
+      <inertial>
+        <mass>0.02</mass>
+        <inertia>
+          <ixx>2e-05</ixx>
+          <iyy>2e-05</iyy>
+          <izz>2e-05</izz>
+        </inertia>
+      </inertial>
+      <gravity>false</gravity>
+      <visual name="platform">
+        <geometry>
+          <mesh>
+            <uri>model://a_delta_fixed/meshes/platform.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.80 0.20 0.25 1</ambient>
+          <diffuse>0.80 0.20 0.25 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    <joint name="platform_2" type="prismatic">
+      <parent>platform_1_frame</parent>
+      <child>platform</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.3</lower>
+          <upper>0.3</upper>
+          <effort>2</effort>
+        </limit>
+      </axis>
+    </joint>
+    <plugin filename="libdelta_fixed.so" name="delta_fixed::Controller" />
+  </model>
+</sdf>

@@ -1,0 +1,6 @@
+{
+  "baseline_sha256": "ba93af857caad7387178bd98f06775df2861b14fe531601f05bf379b6b0a6e86",
+  "morph_sha256": "3cf34908f7993e34d77fbba0a8eae1cae5db8639cd5866c0b970791321807c96",
+  "source_patch": "px4-morph-geometry.patch",
+  "adapter": "opt-in loopback UDP rotor geometry, PX4 native allocation and controllers"
+}

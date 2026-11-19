@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "zero_radius_rejected": "圆半径应在 0.5–30 mm 之间",
+  "unreachable_rejected": "目标超出本轮台架的 65 mm 范围",
+  "relative_G1_executed_position_m": [
+    1.891133749e-05,
+    0.001370332559,
+    -0.2540703925
+  ],
+  "home_position_m": [
+    1.891161437e-05,
+    0.0013703326,
+    -0.2490643108
+  ],
+  "ready": true,
+  "error": null
+}
